@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: : 2024 https://github.com/bobbyxng
+#
+# SPDX-License-Identifier: MIT
+
+.snakemake*
+.ipynb_checkpoints
+__pycache__
+*dconf
+gurobi.log
+.vscode
+*.orig
+
+# Directories
+/benchmarks
+/data
+/logs
+/networks
+/resources
+/results
+
