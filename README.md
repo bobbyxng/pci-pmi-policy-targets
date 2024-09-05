@@ -2,11 +2,13 @@
 
 This repository contains the data sources and code for reproducing the workflow. The philosophy behind this repository is that no intermediary results are included, but all results are computed from raw data and code.
 
+
 ## Clone the repository - including necessary submodules!
 
 To start you need to clone the repository. Since the repository relies on git submodules ([pypsa-eur-resilient](https://github.com/resilient-project/pypsa-eur-resilient), you need to include the `--recurse-submodules` flag in your `git clone` command:
 
 `git clone --recurse-submodules https://github.com/bobbyxng/resilient-regret-matrix.git`
+
 
 ## Initialisation
 
@@ -14,7 +16,6 @@ When running the workflow for the first time, please run in this order:
 
 * `conda env create -f envs/environment.yaml` to create the environment and installing dependencies
 * `conda activate resilient-regret-matrix` to activate the environment
-* `snakemake init` to initialise the workflow directories
 
 
 ## About RESILIENT

@@ -2,32 +2,14 @@
 #
 # SPDX-License-Identifier: MIT
 
-
 ##################
 # Initialisation #
 ##################
 
-import os
-
-# Dictionary containing all needed symbolic link paths and target directories
-symlinks = {
-    "data": "submodules/pypsa-eur-resilient/data",
-    # Add more symlinks as needed
-}
-# Define a function to create symlinks if they do not exist
-def create_symlinks():
-    for link_name, target_dir in symlinks.items():
-        if not os.path.exists(link_name):
-            os.symlink(target_dir, link_name)
-            print(f"Created symlink: {link_name} -> {target_dir}")
-
-
-# Initialisation that creates needed symlinks to submodules
-rule init:
-    output:
-        directory("data")
-    run:
-        create_symlinks()
+import sys
+sys.path.append("scripts")
+from _tools import create_symlinks
+create_symlinks("data", "submodules/pypsa-eur-resilient/data")
 
 
 ####################
