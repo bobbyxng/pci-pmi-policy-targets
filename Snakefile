@@ -9,6 +9,7 @@
 import sys
 sys.path.append("scripts")
 from _tools import create_symlinks
+
 create_symlinks("data", "submodules/pypsa-eur-resilient/data")
 
 
@@ -18,6 +19,7 @@ create_symlinks("data", "submodules/pypsa-eur-resilient/data")
 
 # Define the configuration file
 configfile: "submodules/pypsa-eur-resilient/config/config.default.yaml"
+configfile: "config/config.yaml"
 
 # Include the Snakemake workflow from the submodule
 module resilient:

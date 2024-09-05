@@ -3,7 +3,7 @@
 This repository contains the data sources and code for reproducing the workflow. The philosophy behind this repository is that no intermediary results are included, but all results are computed from raw data and code.
 
 
-## Clone the repository - including necessary submodules!
+## Clone the repository
 
 To start you need to clone the repository. Since the repository relies on git submodules ([pypsa-eur-resilient](https://github.com/resilient-project/pypsa-eur-resilient), you need to include the `--recurse-submodules` flag in your `git clone` command:
 

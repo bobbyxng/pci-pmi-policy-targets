@@ -12,9 +12,13 @@ gurobi.log
 
 # Directories
 /benchmarks
+/config/*
+/cutouts
 /data
 /logs
 /networks
 /resources
 /results
 
+# Exceptions
+!/config/config.yaml
