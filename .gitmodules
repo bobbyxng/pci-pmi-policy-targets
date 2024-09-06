@@ -1,4 +1,4 @@
-[submodule "submodules/pypsa-eur-resilient"]
-	path = submodules/pypsa-eur-resilient
+[submodule "workflow/submodules/pypsa-eur-resilient"]
+	path = workflow/submodules/pypsa-eur-resilient
 	url = https://github.com/resilient-project/pypsa-eur-resilient.git
 	branch = resilient-regret-matrix

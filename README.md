@@ -14,7 +14,7 @@ To start you need to clone the repository. Since the repository relies on git su
 
 When running the workflow for the first time, please run in this order:
 
-* `conda env create -f envs/environment.yaml` to create the environment and installing dependencies
+* `conda env create -f workflow/envs/environment.yaml` to create the environment and installing dependencies
 * `conda activate resilient-regret-matrix` to activate the environment
 
 
