@@ -49,7 +49,7 @@ scenario:
   ll:
   - v1.2
   clusters:
-  - 20
+  - 50
   opts:
   - ''
   sector_opts:
@@ -611,7 +611,7 @@ sector:
   SMR: true
   SMR_cc: true
   regional_methanol_demand: false
-  regional_oil_demand: false
+  regional_oil_demand: true
   regional_coal_demand: false
   regional_co2_sequestration_potential:
     enable: true
@@ -976,8 +976,8 @@ solving:
     cbc-default: {} # Used in CI
     glpk-default: {} # Used in CI
 
-  mem_mb: 30000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
-  runtime: 6h #runtime in humanfriendly style https://humanfriendly.readthedocs.io/en/latest/
+  mem_mb: 120000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
+  runtime: 48h #runtime in humanfriendly style https://humanfriendly.readthedocs.io/en/latest/
 
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#plotting

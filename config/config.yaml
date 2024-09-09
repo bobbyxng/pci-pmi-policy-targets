@@ -15,8 +15,8 @@ private:
     entsoe_api:
 
 remote:
-  ssh: ""
-  path: ""
+  ssh: zecm
+  path: ~/scratch/projects/resilient-regret-matrix
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#run
 run:
