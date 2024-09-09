@@ -14,3 +14,5 @@ workflow/submodules/pypsa-eur-resilient/config
 
 # Temporary upload of data/gem
 workflow/submodules/pypsa-eur-resilient/data/gem
+
+# resources
