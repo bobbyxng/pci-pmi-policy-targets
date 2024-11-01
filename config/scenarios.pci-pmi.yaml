@@ -1,0 +1,93 @@
+### PCI/PMI study
+
+targets+pci-pmi: # base scenario
+  sector:
+    H2_network: true
+    co2network: true
+  pci-pmi-projects:
+    enable: true
+    haversine_distance: true
+    include:
+      lines_electricity_transmission: true
+      links_electricity_transmission: true
+      links_hydrogen_pipeline: true
+      links_co2_pipeline: true
+      stores_hydrogen: true
+      stores_co2: true # Note all CO2 sinks are removed, when stores_co2 (75 Mt) are enabled
+    lines:
+      s_max_pu: 0.7
+      s_nom_max: .inf
+      s_nom_extendable: false
+      max_extension: 20000 #MW
+    links:
+      p_max_pu: 1.0
+      p_nom_max: .inf
+      p_nom_extendable: false
+      max_extension: 30000 #MW
+    non_pci_pmi_extendable:
+      H2: all # TODO: additional scenario, allow all
+      CO2: all
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    electrolyser_target: 40000 # MW # TODO: wasserstoff p1 über lhv umrechnen
+
+targets+pci-pmi-national-h2-expansion: # base scenario
+  sector:
+    H2_network: true
+    co2network: true
+  pci-pmi-projects:
+    enable: true
+    haversine_distance: true
+    include:
+      lines_electricity_transmission: true
+      links_electricity_transmission: true
+      links_hydrogen_pipeline: true
+      links_co2_pipeline: true
+      stores_hydrogen: true
+      stores_co2: true # Note all CO2 sinks are removed, when stores_co2 (75 Mt) are enabled
+    lines:
+      s_max_pu: 0.7
+      s_nom_max: .inf
+      s_nom_extendable: false
+      max_extension: 20000 #MW
+    links:
+      p_max_pu: 1.0
+      p_nom_max: .inf
+      p_nom_extendable: false
+      max_extension: 30000 #MW
+    non_pci_pmi_extendable:
+      H2: national # TODO: additional scenario, allow all
+      CO2: all
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    electrolyser_target: 40000 # MW # TODO: wasserstoff p1 über lhv umrechnen
+
+targets+greenfield-infra: # validation scenario
+  sector:
+    H2_network: true
+    co2network: true # retroffiting
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    electrolyser_target: 40000 # MW
+
+targets+no-infra: # scenario A
+  sector:
+    H2_network: false
+    co2network: false
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    electrolyser_target: 40000 # MW
+
+only-emission-targets+no-infra: # scenario B
+  sector:
+    H2_network: false
+    co2network: false
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: false
+    electrolyser_target: false
