@@ -88,7 +88,7 @@ scenario_b_no_targets_no_pipelines: # scenario B
 targets_greenfield_pipelines: # validation scenario
   sector:
     H2_network: true
-    co2network: true # retroffiting
+    co2network: true 
   pci-pmi-projects:
     enable: false
   custom_constraints:
@@ -96,7 +96,7 @@ targets_greenfield_pipelines: # validation scenario
     h2_production_target: 10000000 # tH2
     electrolyser_target: false
 
-baseline-5mth2: # base scenario
+baseline--5mth2: # base scenario
   sector:
     H2_network: true
     co2network: true
@@ -128,7 +128,7 @@ baseline-5mth2: # base scenario
     h2_production_target: 5000000 # tH2
     electrolyser_target: false
 
-baseline_extended-5mth2: # base scenario
+baseline_extended--5mth2: # base scenario
   sector:
     H2_network: true
     co2network: true
@@ -160,7 +160,7 @@ baseline_extended-5mth2: # base scenario
     h2_production_target: 5000000 # tH2
     electrolyser_target: false
 
-scenario_a_targets_no_pipelines-5mth2: # scenario A
+scenario_a_targets_no_pipelines--5mth2: # scenario A
   sector:
     H2_network: false
     co2network: false
@@ -171,13 +171,115 @@ scenario_a_targets_no_pipelines-5mth2: # scenario A
     h2_production_target: 5000000 # tH2
     electrolyser_target: false
 
-targets_greenfield_pipelines-5mth2: # validation scenario
+targets_greenfield_pipelines--5mth2: # validation scenario
   sector:
     H2_network: true
-    co2network: true # retroffiting
+    co2network: true
   pci-pmi-projects:
     enable: false
   custom_constraints:
     co2_sequestration_target: 50000000 # tCO2
     h2_production_target: 5000000 # tH2
+    electrolyser_target: false
+
+baseline--gaspipeline_retrofit: # base scenario
+  sector:
+    H2_network: true
+    co2network: true
+    H2_retrofit: false
+  pci-pmi-projects:
+    enable: true
+    haversine_distance: true
+    include:
+      lines_electricity_transmission: true
+      links_electricity_transmission: true
+      links_hydrogen_pipeline: true
+      links_co2_pipeline: true
+      stores_hydrogen: true
+      stores_co2: true # Note all CO2 sinks are removed, when stores_co2 (75 Mt) are enabled
+    lines:
+      s_max_pu: 0.7
+      s_nom_max: .inf
+      s_nom_extendable: false
+      max_extension: 20000 #MW
+    links:
+      p_max_pu: 1.0
+      p_nom_max: .inf
+      p_nom_extendable: false
+      max_extension: 30000 #MW
+    non_pci_pmi_extendable:
+      H2: national # TODO: additional scenario, allow all
+      CO2: all
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    h2_production_target: 10000000 # tH2
+    electrolyser_target: false
+
+baseline_extended--gaspipeline_retrofit: # base scenario
+  sector:
+    H2_network: true
+    co2network: true
+    H2_retrofit: false
+  pci-pmi-projects:
+    enable: true
+    haversine_distance: true
+    include:
+      lines_electricity_transmission: true
+      links_electricity_transmission: true
+      links_hydrogen_pipeline: true
+      links_co2_pipeline: true
+      stores_hydrogen: true
+      stores_co2: true # Note all CO2 sinks are removed, when stores_co2 (75 Mt) are enabled
+    lines:
+      s_max_pu: 0.7
+      s_nom_max: .inf
+      s_nom_extendable: false
+      max_extension: 20000 #MW
+    links:
+      p_max_pu: 1.0
+      p_nom_max: .inf
+      p_nom_extendable: false
+      max_extension: 30000 #MW
+    non_pci_pmi_extendable:
+      H2: all # TODO: additional scenario, allow all
+      CO2: all
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    h2_production_target: 10000000 # tH2
+    electrolyser_target: false
+
+scenario_a_targets_no_pipelines--gaspipeline_retrofit: # scenario A
+  sector:
+    H2_network: false
+    co2network: false
+    H2_retrofit: false
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    h2_production_target: 10000000 # tH2
+    electrolyser_target: false
+
+scenario_b_no_targets_no_pipelines--gaspipeline_retrofit: # scenario B
+  sector:
+    H2_network: false
+    co2network: false
+    H2_retrofit: false
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: false
+    h2_production_target: false
+    electrolyser_target: false
+
+targets_greenfield_pipelines--gaspipeline_retrofit: # validation scenario
+  sector:
+    H2_network: true
+    co2network: true 
+    H2_retrofit: false
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: 50000000 # tCO2
+    h2_production_target: 10000000 # tH2
     electrolyser_target: false

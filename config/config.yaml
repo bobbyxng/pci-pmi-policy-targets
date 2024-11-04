@@ -27,10 +27,15 @@ run:
     - scenario_a_targets_no_pipelines
     - scenario_b_no_targets_no_pipelines
     - targets_greenfield_pipelines
-    - baseline-5mth2
-    - baseline_extended-5mth2
-    - scenario_a_targets_no_pipelines-5mth2
-    - targets_greenfield_pipelines-5mth2
+    - baseline--5mth2
+    - baseline_extended--5mth2
+    - scenario_a_targets_no_pipelines--5mth2
+    - targets_greenfield_pipelines--5mth2
+    - baseline--gaspipeline_retrofit
+    - baseline_extended--gaspipeline_retrofit
+    - scenario_a_targets_no_pipelines--gaspipeline_retrofit
+    - scenario_b_no_targets_no_pipelines--gaspipeline_retrofit
+    - targets_greenfield_pipelines--gaspipeline_retrofit
   scenarios:
     enable: true
     file: config/scenarios.yaml
