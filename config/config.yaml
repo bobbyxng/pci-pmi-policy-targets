@@ -27,6 +27,10 @@ run:
     - scenario_a_targets_no_pipelines
     - scenario_b_no_targets_no_pipelines
     - targets_greenfield_pipelines
+    - baseline-5mth2
+    - baseline_extended-5mth2
+    - scenario_a_targets_no_pipelines-5mth2
+    - targets_greenfield_pipelines-5mth2
   scenarios:
     enable: true
     file: config/scenarios.yaml
@@ -152,6 +156,7 @@ pci-pmi-projects:
 
 custom_constraints:
   co2_sequestration_target: false
+  h2_production_target: false
   electrolyser_target: false
 
 debug:
@@ -898,7 +903,7 @@ clustering:
       ramp_limit_down: max
   temporal:
     resolution_elec: false
-    resolution_sector: 2190seg
+    resolution_sector: 3h
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#adjustments
 adjustments:
