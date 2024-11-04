@@ -19,7 +19,9 @@ create_symlinks("data", "workflow/submodules/pypsa-eur-resilient/data")
 
 # Define the configuration file
 configfile: "workflow/submodules/pypsa-eur-resilient/config/config.default.yaml"
+configfile: "workflow/submodules/pypsa-eur-resilient/config/plotting.default.yaml"
 configfile: "config/config.yaml"
+configfile: "config/plotting.yaml"
 
 # Include the Snakemake workflow from the submodule
 module resilient:
