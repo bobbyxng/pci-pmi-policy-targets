@@ -20,19 +20,19 @@ remote:
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#run
 run:
-  prefix: "2030-targets-updated"
+  prefix: "2030-targets"
   name: 
-    - baseline
-    - baseline_extended
-    - scenario_a_targets_no_pipelines
-    - scenario_b_no_targets_no_pipelines
-    - targets_greenfield_pipelines
+    - targets+pci-pmi
+    - targets+pci-pmi-national-h2-expansion
+    - targets+greenfield-infra
+    - targets+no-infra
+    - only-emission-targets+no-infra
   scenarios:
     enable: true
-    file: config/scenarios.yaml
+    file: config/scenarios.old.yaml
   disable_progressbar: false
   shared_resources:
-    policy: 2030-targets-updated
+    policy: 2030-targets
     exclude: []
   shared_cutouts: true
 
@@ -643,10 +643,12 @@ sector:
   regional_oil_demand: true
   regional_coal_demand: false
   regional_co2_sequestration_potential:
-    enable: true
+    enable: false
     attribute:
-    - conservative estimate GAS Mt # aquifiers disabled
+    - conservative estimate Mt
+    - conservative estimate GAS Mt
     - conservative estimate OIL Mt
+    - conservative estimate aquifer Mt
     include_onshore: false
     min_size: 3
     max_size: 25

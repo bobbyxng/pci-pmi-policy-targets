@@ -1,6 +1,6 @@
 ### PCI/PMI study
 
-targets+pci-pmi: # base scenario
+targets+pci-pmi:
   sector:
     H2_network: true
     co2network: true
