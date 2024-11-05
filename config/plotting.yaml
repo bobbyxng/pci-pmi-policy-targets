@@ -38,7 +38,7 @@ plotting:
   # settings for energy balance maps
   balance_map:
     ext: pdf
-    carriers_to_plot: ["AC", "H2", "gas", "co2_stored"]
+    carriers_to_plot: ["AC", "H2", "gas", "oil"]
     alpha: 1
     region_alpha: 0.6
     figsize: [5, 6.5]
