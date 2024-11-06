@@ -85,6 +85,25 @@ scenario_b_no_targets_no_pipelines: # scenario B
     h2_production_target: false
     electrolyser_target: false
 
+# Sensitivity with lower SMR capture rate
+scenario_b_no_targets_no_pipelines_smr_0.5_capture_rate: # scenario B
+  sector:
+    H2_network: false
+    co2network: false
+  pci-pmi-projects:
+    enable: false
+  custom_constraints:
+    co2_sequestration_target: false
+    h2_production_target: false
+    electrolyser_target: false
+  adjustments:
+    sector:
+      absolute:
+        Link:
+          SMR CC:
+            efficiency2: 0.099 # 0.5 * gas_efficiency (0.198), 0.5 is lower capture rate of SMR CC (bus2 atmosphere)
+            efficiency3: 0.099 # 0.5 * gas_efficiency (0.198), 0.5 is lower capture rate of SMR CC (bus3 co2 stored)
+    
 targets_greenfield_pipelines: # validation scenario
   sector:
     H2_network: true
