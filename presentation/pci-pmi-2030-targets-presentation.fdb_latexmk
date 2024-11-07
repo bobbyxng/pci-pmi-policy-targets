@@ -1,9 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1730919312.74773 "/home/bobby/projects/pci-pmi-2030-targets/presentation/pci-pmi-2030-targets-presentation.tex" "pci-pmi-2030-targets-presentation.pdf" "pci-pmi-2030-targets-presentation" 1730919316.1121 0
-  "../workflow/notebooks/figures/pci_pmi_projects_map.pdf" 1730918185.59828 624275 ed4349ddd51856bd959a1a19c0c594e1 ""
-  "../workflow/notebooks/figures/system_costs.pdf" 1730902673.06123 24414 74037257a56b948864d845d789702429 ""
+["pdflatex"] 1730994679.55912 "/home/bobby/projects/pci-pmi-2030-targets/.snakemake/shadow/tmp3qnw0nbb/presentation/pci-pmi-2030-targets-presentation.tex" "pci-pmi-2030-targets-presentation.pdf" "pci-pmi-2030-targets-presentation" 1730994683.26432 0
+  "../workflow/notebooks/figures/pci_pmi_projects_map.pdf" 1730986136.49097 624407 1c5bedcebe6bcf21c3f38fbab6f5ff1b ""
+  "../workflow/notebooks/figures/system_costs.pdf" 1730982109.42692 25202 3066312c2d9b77914c92d2826dcf149e ""
   "/etc/texmf/web2c/texmf.cnf" 1718836894.47968 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/bobby/projects/pci-pmi-2030-targets/presentation/pci-pmi-2030-targets-presentation.tex" 1730919312.47473 13326 2436f00e34714abdb6c0c25b40fc6bcf ""
+  "/home/bobby/projects/pci-pmi-2030-targets/.snakemake/shadow/tmp3qnw0nbb/presentation/pci-pmi-2030-targets-presentation.tex" 1730994679.34185 17338 32a52bbeec3f3e3d1b70eaa50e3ff0cf ""
+  "/usr/share/texlive/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc" 1576101225 2976 14f3c84565dd1bc57c13b9dc0aaeea06 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc" 1576101225 2974 729e60f1953f7d28deb744dead16208c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/google/roboto/Roboto-Bold-lf-ot1.tfm" 1576101225 5132 36e4323b9418655123aad26ec4adb724 ""
@@ -48,6 +49,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm" 1136768653 768 d7b9a2629a0c353102ad947dc9221d49 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1136768653 520 4889cce2180234b97cad636b6039c722 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb" 1576101225 200063 9ca44329cc831cd6ca9d60e3d58e1c33 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb" 1576101225 224430 4a69b9a2c1e1afa2cb2cc923e400973a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb" 1576101225 212275 725f6c6c319ad18a129858989d00cf22 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1248133631 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb" 1509395996 11767 1689f192b3621a5be44996e5940b6bb6 ""
@@ -286,10 +288,10 @@
   "graphics/other/multisector_diagram.pdf" 1702061502 38888 21615d7e9c78bcd291fd867890f1b028 ""
   "graphics/other/pypsa_eur_elec.png" 1701798129 1779165 a360ac4fdacdea58c4f57dab506c1c19 ""
   "graphics/other/resilient_partners.png" 1701798129 322267 06b6eb0a75c1600ca05bbd253a8436a1 ""
-  "pci-pmi-2030-targets-presentation.aux" 1730919316.02174 3702 a3e55502376131d5c98cfd54367b4185 "pdflatex"
-  "pci-pmi-2030-targets-presentation.nav" 1730919316.02274 2292 fb92cdb854d3994a7dfac2943bf97eaa "pdflatex"
-  "pci-pmi-2030-targets-presentation.out" 1730919316.02274 603 2a83ef4139f23eb4aaa62a188651dfc4 "pdflatex"
-  "pci-pmi-2030-targets-presentation.tex" 1730919312.47473 13326 2436f00e34714abdb6c0c25b40fc6bcf ""
+  "graphics/pci_pmi_map.png" 1730994189.36582 754709 850060fef5ef7ba33e8bf0cc588b9acb ""
+  "pci-pmi-2030-targets-presentation.aux" 1730994683.15985 3877 098c643474d31dd16e8bf4c5a97b5b13 "pdflatex"
+  "pci-pmi-2030-targets-presentation.nav" 1730994683.15985 2416 7470f032f1628724e18c75f3c838916b "pdflatex"
+  "pci-pmi-2030-targets-presentation.out" 1730994683.15985 687 67013b526ded0ffe0c7dece71fa0767d "pdflatex"
   (generated)
   "pci-pmi-2030-targets-presentation.aux"
   "pci-pmi-2030-targets-presentation.log"

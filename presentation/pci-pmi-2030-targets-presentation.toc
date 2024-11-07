@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Case study: PCI/PMI + 2030 targets}{5}{0}{2}
-\beamer@sectionintoc {3}{First results}{8}{0}{3}
-\beamer@sectionintoc {4}{Outlook}{10}{0}{4}
-\beamer@sectionintoc {5}{Appendix}{11}{0}{5}
+\beamer@sectionintoc {2}{Case study: PCI-PMI + 2030 targets}{5}{0}{2}
+\beamer@sectionintoc {3}{First results}{9}{0}{3}
+\beamer@sectionintoc {4}{Outlook and next steps}{11}{0}{4}
+\beamer@sectionintoc {5}{Appendix}{12}{0}{5}

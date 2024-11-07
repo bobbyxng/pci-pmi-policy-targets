@@ -15,7 +15,7 @@ private:
     entsoe_api:
 
 remote:
-  ssh: "z1"
+  ssh: "zecm"
   path: "scratch/projects/pci-pmi-2030-targets"
 
 # docs in https://pypsa-eur.readthedocs.io/en/latest/configuration.html#run

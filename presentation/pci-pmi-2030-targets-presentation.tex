@@ -171,18 +171,18 @@
 
 \begin{frame}{PyPSA-Eur: An open-source, sector-coupled model for Europe}
   \begin{columns}
-    \begin{column}{0.45\textwidth}
+    \begin{column}{0.5\textwidth}
       \footnotesize
       \begin{itemize}
         \setlength\itemsep{.8em}
-        \item Spatially and temporally highly linear optimisation model that covers the European continent,
-        \item Built on top of the open-source toolbox PyPSA,
-        \item Includes stock of existing power plants, renewable potentials, availability time series,
-        \item Covers the electricity high-voltage grid from AC 220 kV to 750 kV (UA) and DC 150 kV upwards, option to include planned transmission projects (TYNDP and German NEP),
-        \item Maintained by the Department of Digital Transformation in Energy Systems at TU Berlin.
+        \item Spatially and temporally highly linear optimisation model that covers the \alert{European} continent,
+        \item Built on top of the open-source toolbox \alert{PyPSA},
+        \item Includes \alert{stock} of existing power plants, renewable potentials, availability \alert{time series},
+        \item Covers the \alert{electricity high-voltage grid} from AC 220 kV to 750 kV (UA) and DC 150 kV upwards, option to include planned transmission projects (TYNDP and German NEP),
+        \item Maintained by the Department of Digital Transformation in Energy Systems at \alert{TU Berlin}.
       \end{itemize}
     \end{column}
-    \begin{column}{0.55\textwidth}
+    \begin{column}{0.5\textwidth}
       \includegraphics[width=1\textwidth]{other/pypsa_eur_elec}
     \end{column}
   \end{columns}
@@ -191,10 +191,11 @@
 \end{frame}
 
 \begin{frame}{Selection of planned model developments}
+  \footnotesize
   \begin{columns}[T] % align columns
     \begin{column}{.5\textwidth}
         \begin{minipage}[t][.45\textheight]{\linewidth}
-            \begin{alertblock}{Computational methods for uncertainties}
+            \begin{alertblock}{\textbf{Computational methods for uncertainties}}
                 \begin{itemize}
                   \item decomposition techniques
                   \item large-scale stochastic optimisation
@@ -204,10 +205,10 @@
             \end{alertblock}
         \end{minipage}
         
-        \vspace{0.03\textheight} % separation between the boxes
+        \vspace{-0.03\textheight} % separation between the boxes
         
         \begin{minipage}[t][.45\textheight]{\linewidth}
-            \begin{alertblock}{Industry transformation (FORECAST)}
+            \begin{alertblock}{\textbf{Industry transformation (FORECAST)}}
               \begin{itemize}
                 \item fuel and process switching
                 \item industry relocation
@@ -221,7 +222,7 @@
     
     \begin{column}{.5\textwidth}
         \begin{minipage}[t][.45\textheight]{\linewidth}
-            \begin{alertblock}{Carbon management and biomass usage}
+            \begin{alertblock}{\textbf{Carbon management and biomass usage}}
               \begin{itemize}
                 \item \textbf{CO$_2$ network}
                 \item \textbf{CO$_2$ sequestration potentials}
@@ -231,15 +232,15 @@
             \end{alertblock}
         \end{minipage}
         
-        \vspace{0.03\textheight} % separation between the boxes
+        \vspace{-0.03\textheight} % separation between the boxes
         
         \begin{minipage}[t][.45\textheight]{\linewidth}
-            \begin{alertblock}{Global green fuel and material markets}
+            \begin{alertblock}{\textbf{Global green fuel and material markets}}
               \begin{itemize}
                 \item \textbf{imports of green energy and materials}
                 \item \textbf{effects on European infrastructure}
                 \item restructuring of value chains
-                \item risks (geopolitical, technological, etc.)
+                \item risks (geopolitical, technological, etc.) \newline
               \end{itemize}
             \end{alertblock}
         \end{minipage}
@@ -247,20 +248,98 @@
 \end{columns}
 \end{frame}
 
-\section{Case study: PCI/PMI + 2030 targets}
+\section{Case study: PCI-PMI + 2030 targets}
+\begin{frame}{Case study: Motivation and research questions}
+  \footnotesize
 
-\begin{frame}{Case study: Motivation}
-  
-  Blabla
+  The EU has set ambitious targets for 2030, including the electricity, hydrogen and CO$_2$ infrastructure sector.
 
-  \begin{multicols}{2}
-  \begin{itemize}
-    \item target 1
-  \end{itemize}
-  \end{multicols}
+  \begin{columns}[T] % align columns
+    % First column
+    \begin{column}{.3\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+            \begin{alertblock}{\textbf{55 \% emission reduction}}
+                \begin{itemize}
+                  \item \alert{Fit for 55}
+                  \item Translating to an emission allowance of ca. 2 bn. t CO$_2$ in 2030
+                  \item Covering the electricity, heat, industry, transport, buildings and agriculture sectors \newline
+                \end{itemize}
+            \end{alertblock}
+        \end{minipage}
+    \end{column}
+    
+    % Second column
+    \begin{column}{.34\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+            \begin{exampleblock}{\textbf{10 Mt p.a. H$_2$ production}}
+                \begin{itemize}
+                  \item \alert{REPowerEU}
+                  \item Accelerating the transition away from fossil fuels (esp. Russian gas), enhancing energy security through renewables
+                  \item Aligns with European Green Deal and targets scaling up renewable H$_2$ in hard-to-electrify-sectors
+                \end{itemize}
+            \end{exampleblock}
+        \end{minipage}
+    \end{column}
 
-  \source{Neumann, Zeyen, Victoria, Brown, 2023; \url{https://doi.org/10.1016/j.joule.2023.06.016}}
+    % Third column
+    \begin{column}{.3\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+            \begin{exampleblock}{\textbf{50 Mt p.a. CO$_2$ sequestration}}
+                \begin{itemize}
+                  \item \alert{Net-Zero Industry Act}
+                  \item Essential component in helping industries to reduce their net emissions
+                  \item Provides means to capture unavoidable emissions from hard-to-abate sectors like cement, steel, chemicals, etc.
+                \end{itemize}
+            \end{exampleblock}
+        \end{minipage}
+    \end{column}
+  \end{columns}
+
+  \vspace{1.3cm}
+
 \end{frame}
+
+\begin{frame}{Case study: Motivation and research questions}
+  \footnotesize
+
+  \begin{columns}[T] % align columns
+    % First column
+    \begin{column}{.62\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+            \begin{alertblock}{\textbf{What are PCI-PMI projects?}}
+                \begin{itemize}
+                  \item Projects of Common Interest (PCIs) are key cross-border infrastructure projects that link the energy systems of EU countries
+                  \item Projects of Mutual Interest (PMIs) include cooperations with countries outside the EU
+                  \item Intend ``to help the EU achieve its energy policy and climate objectives: affordable, secure and sustainable energy for all citizens and the long-term decarbonisation of the economy in accordance with the Paris Agreement''
+                  \item ``Potential overall benefits of the project must outweigh its costs''
+                \end{itemize}
+            \end{alertblock}
+        \end{minipage}
+    \end{column}
+    
+    % Second column
+    \begin{column}{.38\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+            \begin{alertblock}{\textbf{Map of projects}}
+              \centering
+              \includegraphics[width=0.9\textwidth]{pci_pmi_map}
+            \end{alertblock}
+        \end{minipage}
+    \end{column}
+
+  \end{columns}
+
+  \vspace{2cm}
+
+  \begin{enumerate}
+    \item At \alert{what cost} do we stick to the targets? How do does a \alert{delay of PCI-PMI projects} affect the system?
+    \item What is the \alert{impact} of \alert{missing} the EU 2030 policy targets on \alert{CO$_2$ sequestration} and \alert{H$_2$ production}?
+  \end{enumerate}
+
+  \source{Own illustration based on \url{https://energy.ec.europa.eu/topics/infrastructure_en} \\ and \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer/}}
+
+\end{frame}
+
 
 \begin{frame}{Case study: Model setup}
   \begin{columns}
@@ -268,11 +347,11 @@
       \footnotesize
       \begin{itemize}
         \setlength\itemsep{.8em}
-        \item Including sectors \alert{power, heat, transport, industry, agriculture}
+        \item Including sectors \alert{power, heat, transport, industry, feedstock} and \alert{agriculture}
         \item Minimising \alert{total system costs} (investment and operation) for the target
         \item \alert{Co-optimising} generation, transmission, storage, and power-to-X conversion
         \item Resolving 34 countries to \alert{90 regions} at \alert{3-hourly} temporal resolution
-        \item Implementing \alert{PCI/PMI} hydrogen and carbon infrastructure projects as well as key \alert{2030 targets}:
+        \item Implementing \alert{PCI-PMI} hydrogen and carbon infrastructure projects as well as key \alert{policy targets}:
         \vspace{0.1cm}
         \begin{itemize}
           \scriptsize
@@ -292,17 +371,17 @@
 \begin{frame}{Case study: Overview of PCI-PMI H$_2$ and CO$_2$ infrastructure}
 
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.53\textwidth}
       \footnotesize
       \begin{itemize}
         \setlength\itemsep{.8em}
-        \item Baseline scenario incorporates \alert{PCI/PMI} projects for \alert{H$_2$} and \alert{CO$_2$} infrastructure, including pipelines, storages (H$_2$) and sequestration sites (CO$_2$), commissioned by 2030
+        \item Baseline scenario incorporates \alert{PCI-PMI} projects for \alert{H$_2$} and \alert{CO$_2$} infrastructure, including pipelines, storages (H$_2$) and sequestration sites (CO$_2$), commissioned by 2030
         \item Total CO$_2$ sequestration potential sums up to \alert{75 Mt p.a.}, mostly located in the North Sea
-        \item Total H$_2$ storage capacity sums up to \alert{977 GWh}
+        \item Total H$_2$ storage capacity sums up to \alert{977 GWh$_{H_2}$ p.a.}
       \end{itemize}
     \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width=\textwidth]{pci_pmi_projects_map}
+    \begin{column}{0.47\textwidth}
+      \includegraphics[width=1\textwidth]{pci_pmi_projects_map}
     \end{column}
   \end{columns}
   \source{Own illustration based on data extracted from \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer}}
@@ -310,7 +389,7 @@
 
 \section{First results}
 
-\begin{frame}{First results}
+\begin{frame}{Case study: First results -- System costs}
   
   \begin{columns}
     \begin{column}{0.2\textwidth}
@@ -329,7 +408,7 @@
 
 \end{frame}
 
-\begin{frame}{Case study: First takeaways}
+\begin{frame}{Case study: First takeaways for modelling year 2030}
   \footnotesize
   \begin{enumerate}
     \setlength\itemsep{1em}
@@ -352,11 +431,12 @@
 
 \end{frame}
 
-\section{Outlook}
+\section{Outlook and next steps}
 \begin{frame}{Outlook}
+  \footnotesize
   \begin{itemize}
-    \item Add all PCI/PMI projects, including hybrid offshore interconnection projects (energy islands), electricity storages, etc.
-    \item  
+    \item Add all PCI-PMI projects, including hybrid offshore interconnection projects (energy islands), electricity storages, etc.
+    \item Look at the long-term role of PCI-PMI projects in the European energy system.
   \end{itemize}
 \end{frame}
 
