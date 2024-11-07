@@ -93,12 +93,12 @@ plotting:
       unit_conversion: 1e6
       region_cmap: Purples
       region_unit: €/t_${CO_2}$
-      bus_factor: 3e1
+      bus_factor: 3e-2
       branch_factor: 1e-1
       flow_factor: 0
       bus_sizes:
+      - 50
       - 20
-      - 5
       branch_sizes:
       - 50
       - 10
