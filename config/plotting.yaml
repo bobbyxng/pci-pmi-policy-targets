@@ -38,7 +38,7 @@ plotting:
   # settings for energy balance maps
   balance_map:
     ext: pdf
-    carriers_to_plot: ["AC", "H2", "gas", "oil", "co2 stored"]
+    carriers_to_plot: ["AC", "H2", "gas", "co2_stored", "urban_central_heat", "biogas", "solid_biomass"]
     alpha: 1
     region_alpha: 0.6
     figsize: [5, 6.5]
@@ -49,28 +49,28 @@ plotting:
       region_cmap: Greens
       region_unit: €/MWh$_{el}$
       bus_factor: 2e-3
-      branch_factor: 1e-2
-      flow_factor: 1e+2
+      branch_factor: 1e-1
+      flow_factor: 1e-1
       bus_sizes:
-      - 200
+      - 500
       - 100
       branch_sizes:
-      - 100
+      - 50
       - 20
     gas:
       unit: TWh$_{th}$
       unit_conversion: 1e6
-      region_cmap: Purples
+      region_cmap: Oranges
       region_unit: €/MWh$_{th}$
       bus_factor: 2e-3
-      branch_factor: 5e-2
-      flow_factor: 6e+1
+      branch_factor: 5e-3
+      flow_factor: 15e-1
       bus_sizes:
-      - 200
+      - 500
       - 100
       branch_sizes:
+      - 600
       - 100
-      - 50
     H2:
       vmin: 45
       vmax: 60
@@ -80,13 +80,13 @@ plotting:
       region_unit: €/MWh$_{H_2}$
       bus_factor: 5e-3
       branch_factor: 2e-1
-      flow_factor: 5e+1
+      flow_factor: 1e+2
       bus_sizes:
-      - 300
-      - 150
+      - 250
+      - 70
       branch_sizes:
-      - 40
       - 20
+      - 5
     co2_stored:
       bus_carrier: co2 stored
       unit: Mt
@@ -94,11 +94,11 @@ plotting:
       region_cmap: Purples
       region_unit: €/t_${CO_2}$
       bus_factor: 3e-2
-      branch_factor: 1e-1
-      flow_factor: 0
+      branch_factor: 7e-2
+      flow_factor: 2e1
       bus_sizes:
-      - 50
-      - 20
+      - 40
+      - 5
       branch_sizes:
       - 50
       - 10
@@ -108,24 +108,24 @@ plotting:
       unit_conversion: 1e6
       region_cmap: Oranges
       region_unit: €/MWh_{th}$
-      bus_factor: 5e-3
+      bus_factor: 6e-3
       branch_factor: 1e-1
       flow_factor: 1e+2
       bus_sizes:
-      - 300
-      - 100
+      - 150
+      - 50
       branch_sizes:
     methanol:
       unit: TWh$_{MeOH}$
       unit_conversion: 1e6
       region_cmap: Greens
       region_unit: €/MWh$_{MeOH}$
-      bus_factor: 5e-3
+      bus_factor: 7e-3
       branch_factor: 1e-1
       flow_factor: 1e+2
       bus_sizes:
-      - 20
-      - 10
+      - 0
+      - 170
       branch_sizes:
     biogas:
       unit: TWh$_{th}$
@@ -136,8 +136,8 @@ plotting:
       branch_factor: 1e-1
       flow_factor: 1e+2
       bus_sizes:
-      - 100
-      - 50
+      - 10
+      - 3
       branch_sizes:
     solid_biomass:
       bus_carrier: solid biomass
@@ -149,20 +149,20 @@ plotting:
       branch_factor: 1e-1
       flow_factor: 1e+2
       bus_sizes:
-      - 100
-      - 50
+      - 120
+      - 30
       branch_sizes:
     oil:
-      unit: TWh$_{th}$
-      unit_conversion: 1e6
+      unit: PWh$_{th}$
+      unit_conversion: 1e9
       region_cmap: Greys
       region_unit: €/MWh
-      bus_factor: 2e-3
+      bus_factor: 5e-1
       branch_factor: 1e-1
       flow_factor: 1e+2
       bus_sizes:
-      - 200
-      - 100
+      - 0
+      - 10
       branch_sizes:
 
   nice_names:
