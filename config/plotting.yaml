@@ -88,10 +88,12 @@ plotting:
       - 20
       - 5
     co2_stored:
+      vmin: -300
+      vmax: -200
       bus_carrier: co2 stored
       unit: Mt
       unit_conversion: 1e6
-      region_cmap: Purples
+      region_cmap: Pastel1
       region_unit: €/t_${CO_2}$
       bus_factor: 3e-2
       branch_factor: 7e-2
@@ -435,7 +437,7 @@ plotting:
     methanol: '#FF7B00'
     methanol transport: '#FF7B00'
     shipping methanol: '#468c8b'
-    industry methanol: '#468c8b'
+    industry methanol: '#25c49a'
     # co2
     CC: '#f29dae'
     CCS: '#f29dae'

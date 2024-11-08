@@ -27,6 +27,7 @@
 \usepackage{bm}
 \usepackage{tikz}
 \usepackage{adjustbox}
+\usepackage[super]{nth}
 
 \usepackage[
     type={CC},
@@ -51,6 +52,7 @@
 \graphicspath{
     {graphics/},
     {../workflow/notebooks/figures} % study results
+    {../results/2030-targets-smr-0.5}
   }
 \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
 
@@ -92,6 +94,12 @@
 \newcolumntype{L}{>{\rowfonttype}l}
 \newcolumntype{R}{>{\rowfonttype}r}
 
+% Custom commands
+\usepackage{caption}
+\renewcommand{\figurename}{} % Removes the "Figure" text
+\captionsetup[figure]{labelformat=empty, labelsep=none} % Removes numbering and colon
+
+
 % FONT
 %\usepackage{utopia}
 
@@ -101,7 +109,7 @@
 
 % TITLE PAGE
 \title{
-  ISEASA\\1st International Symposium on Energy System Analysis 
+  \textbf{ISESA}\\\nth{1} International Symposium on Energy System Analysis 
 }
 \vspace*{-.5cm}
 
@@ -175,7 +183,7 @@
       \footnotesize
       \begin{itemize}
         \setlength\itemsep{.8em}
-        \item Spatially and temporally highly linear optimisation model that covers the \alert{European} continent,
+        \item Spatially and temporally highly resolved linear optimisation model that covers the \alert{European} continent,
         \item Built on top of the open-source toolbox \alert{PyPSA},
         \item Includes \alert{stock} of existing power plants, renewable potentials, availability \alert{time series},
         \item Covers the \alert{electricity high-voltage grid} from AC 220 kV to 750 kV (UA) and DC 150 kV upwards, option to include planned transmission projects (TYNDP and German NEP),
@@ -248,7 +256,7 @@
 \end{columns}
 \end{frame}
 
-\section{Case study: PCI-PMI + 2030 targets}
+\section{Case study setup}
 \begin{frame}{Case study: Motivation and research questions}
   \footnotesize
 
@@ -261,9 +269,10 @@
             \begin{alertblock}{\textbf{55 \% emission reduction}}
                 \begin{itemize}
                   \item \alert{Fit for 55}
-                  \item Translating to an emission allowance of ca. 2 bn. t CO$_2$ in 2030
+                  \item Translating to an emission allowance of ca. 2 bn. t CO$_2$ p.a. in 2030
                   \item Covering the electricity, heat, industry, transport, buildings and agriculture sectors \newline
                 \end{itemize}
+                \vspace{0.06cm}
             \end{alertblock}
         \end{minipage}
     \end{column}
@@ -271,7 +280,7 @@
     % Second column
     \begin{column}{.34\textwidth}
         \begin{minipage}[t][.45\textheight]{\linewidth}
-            \begin{exampleblock}{\textbf{10 Mt p.a. H$_2$ production}}
+            \begin{exampleblock}{\textbf{10 Mt p.a. green H$_2$ production}}
                 \begin{itemize}
                   \item \alert{REPowerEU}
                   \item Accelerating the transition away from fossil fuels (esp. Russian gas), enhancing energy security through renewables
@@ -300,19 +309,20 @@
 \end{frame}
 
 \begin{frame}{Case study: Motivation and research questions}
-  \footnotesize
-
+  \scriptsize
   \begin{columns}[T] % align columns
     % First column
-    \begin{column}{.64\textwidth}
+    \begin{column}{.63\textwidth}
         \begin{minipage}[t][.45\textheight]{\linewidth}
             \begin{alertblock}{\textbf{What are PCI-PMI projects?}}
                 \begin{itemize}
-                  \item Projects of Common Interest (PCIs) are key cross-border infrastructure projects that link the energy systems of EU countries
+                  \setlength\itemsep{0.85em}
+                  \item Projects of Common Interest (PCIs) are key \alert{cross-border infrastructure projects} that link the energy systems of EU countries
                   \item Projects of Mutual Interest (PMIs) include cooperations with countries outside the EU
-                  \item Intend ``to help the EU achieve its energy policy and climate objectives: affordable, secure and sustainable energy for all citizens and the long-term decarbonisation of the economy in accordance with the Paris Agreement''
+                  \item Intend ``to help the EU achieve its \alert{energy policy and climate objectives}: affordable, secure and sustainable energy for all citizens and the long-term decarbonisation of the economy in accordance with the \alert{Paris Agreement}''
                   \item ``Potential overall benefits of the project must outweigh its costs'' 
-                  \item Given their lighthouse character, these projects are likely to be implemented
+                  \item Given their \alert{lighthouse character}, these projects are highly likely to be implemented. 
+                  \item Large infrastructure projects (incl. PCI-PMI) are however commonly facing delays due to permitting, procurement bottlenecks, etc.
                 \end{itemize}
             \end{alertblock}
         \end{minipage}
@@ -321,7 +331,7 @@
     % Second column
     \begin{column}{.36\textwidth}
         \begin{minipage}[t][.45\textheight]{\linewidth}
-            \begin{alertblock}{\textbf{Map of projects}}
+            \begin{alertblock}{\textbf{Project map}}
               \centering
               \includegraphics[width=1\textwidth]{pci_pmi_map}
             \end{alertblock}
@@ -330,14 +340,14 @@
 
   \end{columns}
 
-  \vspace{2.3cm}
+  \vspace{2.2cm}
 
   \begin{enumerate}
     \item At \alert{what cost} do we stick to the targets? How does a \alert{delay of PCI-PMI projects} affect the system?
     \item What is the \alert{impact} of \alert{missing} the EU 2030 policy targets for \alert{CO$_2$ sequestration} and \alert{H$_2$ production}?
   \end{enumerate}
 
-  \source{Own illustration based on \url{https://energy.ec.europa.eu/topics/infrastructure_en} \\ and \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer/}}
+  \source{\url{https://energy.ec.europa.eu/topics/infrastructure_en} \\ and \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer}}
 
 \end{frame}
 
@@ -349,10 +359,10 @@
       \begin{itemize}
         \setlength\itemsep{.8em}
         \item Including sectors \alert{power, heat, transport, industry, feedstock} and \alert{agriculture}
-        \item Minimising \alert{total system costs} (investment and operation) for the target
+        \item Minimising \alert{total system costs} (investment and operation) for the target year \alert{2030}
         \item \alert{Co-optimising} generation, transmission, storage, and power-to-X conversion
         \item Resolving 34 countries to \alert{90 regions} at \alert{3-hourly} temporal resolution
-        \item Implementing \alert{PCI-PMI} hydrogen and carbon infrastructure projects as well as key \alert{policy targets}:
+        \item Implementing \alert{PCI-PMI} HVAC, HVDC, hydrogen and carbon infrastructure projects as well as key \alert{policy targets}:
         \vspace{0.1cm}
         \begin{itemize}
           \scriptsize
@@ -369,16 +379,71 @@
   \source{\url{https://pypsa-eur.readthedocs.io}}
 \end{frame}
 
-\begin{frame}{Case study: Overview of PCI-PMI H$_2$ and CO$_2$ infrastructure}
+\begin{frame}{Case study: Scenario setup}
+  \vspace{-2.1cm}
+  \footnotesize
+  \begin{columns}
+    \begin{column}{.31\textwidth}
+      \begin{minipage}[t][.45\textheight]{\linewidth}
+        \begin{alertblock}{\textbf{Base}\\(All targets)}
+          \scriptsize
+          \begin{itemize}
+            \item \alert{Including PCI-PMI} HVAC, HVDC, H$_2$ and CO$_2$ infrastructure projects with a planned commissioning date by 2030
+            \item Including exogenous CO$_2$ sequestration and H$_2$ storage sites
+            \item Endogeneous expansion of CO$_2$ pipelines and national H$_2$ pipelines 
+            \item Endogeneous expansion of H$_2$ storage sites
+            \item 55 \% emission reduction target
+            \item 10 Mt p.a. H$_2$ production target
+            \item 50 Mt p.a. CO$_2$ sequestration target
+          \end{itemize}
+        \end{alertblock}
+      \end{minipage}
+    \end{column}
+
+    % Second column
+    \begin{column}{.31\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+          \begin{exampleblock}{\textbf{Scenario A. PCI-PMI delay}\\(All targets)}
+            \scriptsize
+            \begin{itemize}
+              \item \alert{Delay of all PCI-PMI projects}, no H$_2$ and CO$_2$ pipelines will be ready by 2030
+              \item \alert{Endogeneous expansion of H$_2$ storage sites and CO$_2$ sequestration sites} -- according to technical sequestration potential (Hofmann et al., 2024)
+              \item 55 \% emission reduction target
+              \item 10 Mt p.a. H$_2$ production target
+              \item 50 Mt p.a. CO$_2$ sequestration target
+            \end{itemize}
+          \end{exampleblock}
+        \end{minipage}
+    \end{column}
+
+    % Third column
+    \begin{column}{.31\textwidth}
+        \begin{minipage}[t][.45\textheight]{\linewidth}
+          \begin{exampleblock}{\textbf{Scenario B. PCI-PMI delay}\\(Emission target only)}
+            \scriptsize
+            \begin{itemize}
+              \item \alert{Delay of all PCI-PMI projects, no H$_2$ and CO$_2$ pipelines will be ready by 2030}
+              \item \alert{Dropping H$_2$ production and CO$_2$ sequestration targets}
+              \item \alert{Endogeneous expansion of H$_2$ storage sites and CO$_2$ sequestration sites} -- according to technical sequestration potential (Hofmann et al., 2024)
+              \item 55 \% emission reduction target
+            \end{itemize}
+          \end{exampleblock}
+        \end{minipage}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{Case study: Base --- Modelled PCI-PMI H$_2$ and CO$_2$ infrastructure}
 
   \begin{columns}
     \begin{column}{0.53\textwidth}
       \footnotesize
       \begin{itemize}
         \setlength\itemsep{.8em}
-        \item Baseline scenario incorporates \alert{PCI-PMI} projects for \alert{H$_2$} and \alert{CO$_2$} infrastructure, including pipelines, storages (H$_2$) and sequestration sites (CO$_2$), commissioned by 2030
+        \item \textbf{Base} scenario incorporates \alert{PCI-PMI} projects for \alert{H$_2$} and \alert{CO$_2$} infrastructure, including pipelines, storages (H$_2$) and sequestration sites (CO$_2$), as well as new/upgraded \alert{high-voltage AC} and \alert{high-voltage DC} lines \alert{commissioned by 2030}
         \item Total CO$_2$ sequestration capacity sums up to \alert{75 Mt p.a.}, mostly located in the North Sea
-        \item Total H$_2$ storage capacity sums up to \alert{977 GWh$_{H_2}$ p.a.}
+        \item Total H$_2$ storage capacity sums up to \alert{977 GWh$_{H_2}$}
       \end{itemize}
     \end{column}
     \begin{column}{0.47\textwidth}
@@ -388,69 +453,224 @@
   \source{Own illustration based on data extracted from \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer}}
 \end{frame} 
 
-\section{First results}
+\section{First results 2030}
 
-\begin{frame}{Case study: First results --- Total system costs}
+\begin{frame}{First results: Base (All targets)}
   
+  \centering
+
   \begin{columns}
-    \begin{column}{0.2\textwidth}
+    \begin{column}{0.5\textwidth}
       \footnotesize
-      \begin{itemize}
-        \setlength\itemsep{.8em}
-        \item test
-      \end{itemize}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{baseline/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf}
+      \end{figure}
     \end{column}
-    \begin{column}{0.8\textwidth}
-      \includegraphics[width=\textwidth]{system_costs}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{baseline/maps/base_s_90_lv1.05__-balance_map_co2_stored_2030.pdf}
+      \end{figure}
     \end{column}
   \end{columns}
-
-  \source{Own illustration based on first results}
+  \source{Own illustration.}
 
 \end{frame}
+
+\begin{frame}{First results: Scenario A. PCI-PMI delay (All targets)}
+  
+  \centering
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{scenario_a_targets_no_pipelines/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{scenario_a_targets_no_pipelines/maps/base_s_90_lv1.05__-balance_map_co2_stored_2030.pdf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+
+\end{frame}
+
+\begin{frame}{First results: Scenario B. PCI-PMI delay (Emission target only)}
+  
+  \centering
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{scenario_b_no_targets_no_pipelines/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{scenario_b_no_targets_no_pipelines/maps/base_s_90_lv1.05__-balance_map_co2_stored_2030.pdf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+
+\end{frame}
+
+\begin{frame}{First results: Total system costs}
+  
+  \centering
+  \includegraphics[height=0.75\paperheight]{system_costs}
+
+  \source{Own illustration.}
+
+\end{frame}
+
 
 \begin{frame}{Case study: First takeaways for modelling year 2030}
   \footnotesize
   \begin{enumerate}
-    \setlength\itemsep{1em}
-      \item Reaching the 2030 EU targets translates into around 20 bn. € p.a. in total system costs for all included sectors
-      \item By omitting a H$_2$ target, almost no electrolysers are installed and hydrogen is produced. Industrial hydrogen demand is then met by decentral steam methane reforming (SMR).
-      \item With a potential delay of all planned PCI-PMI H$_2$ and CO$_2$ infrastructure projects, all three \alert{EU policy targets for 2030 can still be achieved}, however with some implications
-      \item PCI-PMI H$_2$ pipelines help distribute more \alert{affordable green hydrogen} from northern and south-western Europe to high-demand regions central Europe
-    % \item Imports of green energy could reduce cost of European net-zero system
-    %   \alert{by 1-14\%}.
-  
-    % \item \alert{Diminishing returns} for larger import volumes; \alert{preference} for steel, MeOH and H$_2$.
-
-    % \item Infrastructure policy needs \alert{coordination} with import strategy \& carbon management.
-  
-    % \item Protect against interannual weather variability, e.g.~with \alert{(green) fuel reserves}.
-
-    % \item Maneuvering space to accommodate non-cost factors: \alert{geopolitics},
-    % \alert{reuse} of infrastructure, \alert{resilience} of supply chains,
-    % diversification, and reduced land usage..
-
-    
+    \setlength\itemsep{0.3em}
+      \item Reaching the EU's 2030 H$_2$ production and CO$_2$ sequestration targets translates into around \alert{20 bn. € p.a. in total system costs} for all included sectors, with or without PCI-PMI H$_2$ and CO$_2$ infrastructure projects.
+      \item By omitting a H$_2$ target, almost no electrolysers are installed. \alert{Around 8 Mt of H$_2$} are still produced to cover industrial H$_2$ and methanol (primarily shipping) demand. Instead of through electrolysis, this demand is met by decentral steam methane reforming (SMR). 
+      \item Setting a policy target may however be essential to \alert{kick-start the H$_2$ economy}. H$_2$ is then primarily created through electrolysis and used as a \alert{precursor} for methanolisation and to meet industrial demand. 
+      \item Without specifying a CO$_2$ sequestration target, the system still captures and sequesters \alert{around 21 Mt of CO$_2$ p.a.} (primarily from process emissions).
+      \item While all three \alert{EU policy targets for 2030 can still be achieved} without PCI-PMI infrastructure, they bring additional benefits:
+      \begin{itemize}
+        \footnotesize
+        \item PCI-PMI H$_2$ pipelines help distribute more \alert{affordable green H$_2$} from northern and south-western Europe to high-demand regions central Europe
+        \item PCI-PMI CO$_2$ pipelines connect \alert{industrial sites} and their process emissions to \alert{major offshore sequestration sites in the North Sea} (DK, NO, NL).
+      \end{itemize}
   \end{enumerate}
 
 \end{frame}
+
 
 \section{Outlook and next steps}
 \begin{frame}{Outlook}
   \footnotesize
   \begin{itemize}
-    \item Add all PCI-PMI projects, including hybrid offshore interconnection projects (energy islands), electricity storages, etc.
-    \item Look at the long-term role of PCI-PMI projects in the European energy system.
+    \item Including \alert{all relevant PCI-PMI projects}, i.e. hybrid offshore interconnectors (energy islands), electricity storages, CO$_2$ shipping routes
+    \item Looking at the \alert{long-term value of PCI-PMI projects} in a sector-coupled European energy system through modelling pathways towards 2040 and 2050
+    \item Incorporating technology-specific \alert{build-out rate limits} for earlier target years, e.g. for electrolysis
+    \item Assessing the impact of \alert{sector-specific} PCI-PMI project delays
   \end{itemize}
+\end{frame}
+\begin{frame}
+  \setbeamercolor{background canvas}{bg=red}
+  \centering
+  \fcolorbox{white}{tub-red}{\parbox[c][0.9\textheight][c]{\textwidth}{%
+      \centering \color{white}\Large{\textbf{Thank you.}} \\ 
+      \scriptsize
+      \vspace{0.5cm}
+      \href{https://github.com/pypsa/pypsa-eur}{\textcolor{white}{$\hookrightarrow$ github.com/pypsa/pypsa-eur}} \\
+      \vspace{0.5cm}
+      Department of\\\textbf{Digital Transformation in Energy Systems (ENSYS)} \\
+      \vspace{0.5cm}
+      \textbf{Bobby Xiong}\\
+      \href{mailto:xiong@tu-berlin.de}{\textcolor{white}{$\hookrightarrow$ xiong@tu-berlin.de}} \\
+      \href{https://github.com/bobbyxng}{\textcolor{white}{$\hookrightarrow$ github.com/bobbyxng}} \\
+  }}
 \end{frame}
 
 % Appendix
-
 \section{Appendix}
 
-
-\begin{frame}{\textbf{Appendix}}
+\begin{frame}
+  \setbeamercolor{background canvas}{bg=red}
+  \centering
+  \fcolorbox{white}{tub-red}{\parbox[c][0.9\textheight][c]{\textwidth}{%
+      \centering \color{white}\Large{\textbf{Appendix}}
+  }}
 \end{frame}
+
+\begin{frame}{Case study: Sensitivity --- Base ext. (All targets)}
+  
+  \centering
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{baseline_extended/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{baseline_extended/maps/base_s_90_lv1.05__-balance_map_co2_stored_2030.pdf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+
+\end{frame}
+\begin{frame}{Case study: Sensitivity --- Greenfield Pipelines (All targets)}
+  
+  \centering
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{targets_greenfield_pipelines/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.72\textwidth]{targets_greenfield_pipelines/maps/base_s_90_lv1.05__-balance_map_co2_stored_2030.pdf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+
+\end{frame}
+
+\begin{frame}{First results: Total system costs}
+  
+  \centering
+  \includegraphics[height=0.75\paperheight]{system_costs_all}
+
+  \source{Own illustration.}
+
+\end{frame}
+
+\begin{frame}{First results: Hydrogen balance}
+  
+  \centering
+  \includegraphics[height=0.75\paperheight]{h2_balance_all}
+
+  \source{Own illustration.}
+\end{frame}
+
+\begin{frame}{First results: Carbon balance}
+  \centering
+  \includegraphics[height=0.75\paperheight]{co2_stored_balance_all}
+
+  \source{Own illustration.}
+
+\end{frame}
+
+\begin{frame}{First results: Methanol balance}
+  
+  \centering
+  \includegraphics[height=0.75\paperheight]{methanol_balance_all}
+
+  \source{Own illustration.}
+
+\end{frame}
+
+
 
 \begin{frame}{\textbf{Why H$_2$?} Most H$_2$ is used for derivative fuels and chemicals!}
   
@@ -472,7 +692,7 @@
   \end{itemize}
   \end{multicols}
 
-  \source{Neumann, Zeyen, Victoria, Brown, 2023; \url{https://doi.org/10.1016/j.joule.2023.06.016}}
+  \source{Neumann, Zeyen, Victoria, Brown, 2023\\\url{https://doi.org/10.1016/j.joule.2023.06.016}}
 \end{frame}
 
 \begin{frame}{Transporting \textbf{CO$_2$ to H$_2$} or transporting \textbf{H$_2$ to CO$_2$}?}
@@ -481,7 +701,7 @@
   \includegraphics[width=0.35\textwidth]{other/carbon_networks_balance_map_carbon}
   \includegraphics[width=0.35\textwidth]{other/carbon_networks_balance_map_hydrogen}
 
-  \source{Hofmann, Tries, Neumann, Zeyen, Brown, 2024; \url{https://arxiv.org/abs/2402.19042}}
+  \source{Hofmann, Tries, Neumann, Zeyen, Brown, 2024\\\url{https://arxiv.org/abs/2402.19042}}
 
 \end{frame}
 
@@ -492,6 +712,7 @@
     \includegraphics[height=0.73\textheight]{other/carbon_networks_cost_bar}
     \includegraphics[height=0.71\textheight]{other/carbon_networks_balance_bar_carbon}
 
+    \vspace{-0.25cm}
     \footnotesize
     \begin{itemize}
       \item \alert{CCS} for process emissions (for instance, in cement industry)
@@ -501,7 +722,18 @@
 
   \end{center}
 
-  \source{Hofmann, Tries, Neumann, Zeyen, Brown, 2024; \url{https://arxiv.org/abs/2402.19042}}
+  \source{Hofmann, Tries, Neumann, Zeyen, Brown, 2024\\\url{https://arxiv.org/abs/2402.19042}}
+
+\end{frame}
+
+\begin{frame}{Maximum sequestration potential}
+  
+  \begin{center}
+    \includegraphics[height=0.9\textheight]{other/sequestration_map}
+
+  \end{center}
+
+  \source{Hofmann, Tries, Neumann, Zeyen, Brown, 2024\\\url{https://arxiv.org/abs/2402.19042}}
 
 \end{frame}
 
@@ -524,10 +756,9 @@
       \includegraphics[width=1\textwidth]{osm_map}
     \end{column}
   \end{columns}
-  \source{Own illustration based on data extracted from \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer}}
+  \source{Own illustration based on data extracted using Overpass Turbo API\\\url{https://openstreetmap.org}}
   
   
 \end{frame}
-
 
 \end{document}
