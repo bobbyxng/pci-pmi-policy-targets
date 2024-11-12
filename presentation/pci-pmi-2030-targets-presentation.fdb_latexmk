@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1731080263.1304 "/home/bobby/projects/pci-pmi-2030-targets/presentation/pci-pmi-2030-targets-presentation.tex" "pci-pmi-2030-targets-presentation.pdf" "pci-pmi-2030-targets-presentation" 1731080267.12789 0
+["pdflatex"] 1731327760.05205 "/home/bobby/projects/pci-pmi-2030-targets/presentation/pci-pmi-2030-targets-presentation.tex" "pci-pmi-2030-targets-presentation.pdf" "pci-pmi-2030-targets-presentation" 1731327768.54532 0
   "../results/2030-targets-smr-0.5/baseline/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf" 1731078572.66292 1020753 bfd209231164bcaf007af43260766c40 ""
   "../results/2030-targets-smr-0.5/baseline/maps/base_s_90_lv1.05__-balance_map_co2_stored_2030.pdf" 1731078561.52894 1035803 59d12ac42d26b3e34c44a4ee4c833319 ""
   "../results/2030-targets-smr-0.5/baseline_extended/maps/base_s_90_lv1.05__-balance_map_H2_2030.pdf" 1731078627.81586 1024521 22957768e6f3a1deb9e291fb17d6c8d5 ""
@@ -17,7 +17,7 @@
   "../workflow/notebooks/figures/system_costs.pdf" 1731074477.79454 24094 18b4a341cf6956a28a3a28a5d2b28b1f ""
   "../workflow/notebooks/figures/system_costs_all.pdf" 1731071669.8606 26111 847cefca57e14a3ed9a4917585f76b4d ""
   "/etc/texmf/web2c/texmf.cnf" 1718836894.47968 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/bobby/projects/pci-pmi-2030-targets/presentation/pci-pmi-2030-targets-presentation.tex" 1731080262.91143 27909 7a38c9981beca3ffe5d3e5aaec566512 ""
+  "/home/bobby/projects/pci-pmi-2030-targets/presentation/pci-pmi-2030-targets-presentation.tex" 1731327759.52497 27935 19757bf7daa37a70e6f612e0a7f98825 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc" 1576101225 2976 14f3c84565dd1bc57c13b9dc0aaeea06 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc" 1576101225 3314 42351250ac95a91f488e14b5633f75ce ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc" 1576101225 2974 729e60f1953f7d28deb744dead16208c ""
@@ -314,12 +314,13 @@
   "graphics/other/multisector_diagram.pdf" 1702061502 38888 21615d7e9c78bcd291fd867890f1b028 ""
   "graphics/other/pypsa_eur_elec.png" 1701798129 1779165 a360ac4fdacdea58c4f57dab506c1c19 ""
   "graphics/other/resilient_partners.png" 1701798129 322267 06b6eb0a75c1600ca05bbd253a8436a1 ""
+  "graphics/other/resilient_project_structure.png" 1701798129 622203 e1c8d19f3392b19b974ee317c893dc94 ""
   "graphics/other/sequestration_map.png" 1726474200 497217 1e048d904f43cfb79dce353f0726ad3c ""
   "graphics/pci_pmi_map.png" 1730994189.36582 754709 850060fef5ef7ba33e8bf0cc588b9acb ""
-  "pci-pmi-2030-targets-presentation.aux" 1731080267.02243 5509 95d881b5de5f7cc522716ea75631c69f "pdflatex"
-  "pci-pmi-2030-targets-presentation.nav" 1731080267.02343 3592 4b9f10aa8ed7f8c02a0d2801985314b2 "pdflatex"
-  "pci-pmi-2030-targets-presentation.out" 1731080267.02343 616 54c310536fbab5f6341ad2a15c38960b "pdflatex"
-  "pci-pmi-2030-targets-presentation.tex" 1731080262.91143 27909 7a38c9981beca3ffe5d3e5aaec566512 ""
+  "pci-pmi-2030-targets-presentation.aux" 1731327768.42897 5639 986aa2aa12d902a000640f3be1d7b688 "pdflatex"
+  "pci-pmi-2030-targets-presentation.nav" 1731327768.42997 3686 c9304e2846df25df555e8b5ee828eb11 "pdflatex"
+  "pci-pmi-2030-targets-presentation.out" 1731327768.42997 616 54c310536fbab5f6341ad2a15c38960b "pdflatex"
+  "pci-pmi-2030-targets-presentation.tex" 1731327759.52497 27935 19757bf7daa37a70e6f612e0a7f98825 ""
   (generated)
   "pci-pmi-2030-targets-presentation.aux"
   "pci-pmi-2030-targets-presentation.log"
