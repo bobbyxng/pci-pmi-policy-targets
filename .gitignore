@@ -44,3 +44,5 @@ gurobi.log
 # BibTeX
 *.bbl
 *.blg
+
+*.fls
