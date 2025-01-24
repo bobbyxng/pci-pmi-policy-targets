@@ -1,5 +1,5 @@
 \documentclass[10pt]{article}
-\usepackage[left=2.7cm,right=2.7cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
 % -------------------------------------------------------------------
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}									
@@ -7,21 +7,35 @@
 % -------------------------------------------------------------------
 \usepackage{amsmath,amsfonts,amssymb,amsthm,cancel,siunitx,
 calculator,calc,mathtools,empheq,latexsym}
+\usepackage[version=4]{mhchem}
+\usepackage[official]{eurosym}
 % -------------------------------------------------------------------
-\usepackage{subfig,epsfig,tikz,float}
-\usepackage{hyperref}
+\usepackage{subcaption,epsfig,tikz,float}
 \usepackage{xcolor}
+\usepackage{booktabs,multicol,multirow,tabularx,array}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{csquotes}
+\usepackage[super]{nth}
+\usepackage[numbers]{natbib}
+\usepackage{xurl}
+\usepackage[breaklinks]{hyperref}
+\urlstyle{same}
 \hypersetup{
     colorlinks,
+    breaklinks=true,
     linkcolor={black!50!black},
     citecolor={blue!50!blue},
     urlcolor={blue!80!blue}
 }
-% -------------------------------------------------------------------
-\usepackage{booktabs,multicol,multirow,tabularx,array}
-\usepackage{lipsum}
-\usepackage{csquotes}
-\usepackage[super]{nth}
+	
+
+% Commands
+\newcommand*{\doi}[1]{\href{http://dx.doi.org/#1}{doi: #1}}
+
+% Aliases
+\let\autocite\cite
+
 % -------------------------------------------------------------------
 % \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
@@ -29,31 +43,38 @@ calculator,calc,mathtools,empheq,latexsym}
 \columnsep .5cm
 % -------------------------------------------------------------------
 \title{\renewcommand{\baselinestretch}{1.17}\normalsize\bf%
-\uppercase{Title tbd.}
+\uppercase{The Role of Projects of Common Interest\\in Reaching European Energy Policy Targets}\\--- working title ---
 }
 % -------------------------------------------------------------------
-% Autorias
-\author{%
+% Authos
+\author{%s
 Bobby Xiong$^{1,*}$, Iegor Riepin$^{1}$, Tom Brown$^{1}$\\ 
 }
-% -------------------------------------------------------------------
-\begin{document}
-
 \date{}
+% -------------------------------------------------------------------
+
+% GRAPHICS	
+\graphicspath{
+    {graphics/}
+  }
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
+
+
+\begin{document}
 
 \maketitle
 
-\vspace{-0.5cm}
+\vspace{-1cm}
 
 \begin{center}
 {\footnotesize 
 $^1$Technische Universität Berlin, Department of Digital Transformation in Energy Systems, Germany \\
 $^*$Presenting author: \href{mailto:xiong@tu-berlin.de}{xiong@tu-berlin.de}
 }\\
-\bigskip
+\smallskip
 \footnotesize
 \textbf{Tags}: resilience, infrastructure, energy system modelling, energy policy \\
-\bigskip
+\medskip
 \textbf{\nth{43} International Energy Workshop --- relevant conference topics:}\\(1) Reaching net-zero emissions and climate neutrality \textbullet{} (2) Role of renewable energy in the energy transition \textbullet{} (3) Role of hydrogen, ammonia, e-fuels and e-methane in the energy transition \textbullet{} (4) Managing power system transitions --- integration of variable renewable energy and power-to-X \textbullet{} (5) Sectoral pathways for the energy transition --- transport, industry, and buildings \textbullet{} (6) Energy transition infrastructure --- assessment of infrastructure to enable the energy transition, including electrical transmission, storage, EV charging, and hydrogen distribution, CCS and CDR \textbullet{} (12) Climate resilience of energy systems \textbullet{} (13) Utilisation of scenarios by governments
 \end{center}
 
@@ -64,28 +85,65 @@ $^*$Presenting author: \href{mailto:xiong@tu-berlin.de}{xiong@tu-berlin.de}
 
 Summary
 
-\section*{Introduction}
+\section*{Introduction and motivation}
 
-In the research project RESILIENT\footnote{\href{https://resilient-project.github.io/}{https://resilient-project.github.io/}}, our team develops the first truly multi-vector energy infrastructure planning tool that can handle uncertain environments. We build upon the open-source, widely-used, multi-vector energy planning tool PyPSA-Eur\footnote{\href{https://pypsa-eur.readthedocs.io/en/latest/}{https://pypsa-eur.readthedocs.io/}}, and improve its ability to optimise energy infrastructure in a resilient way. 
+In the research project RESILIENT\footnote{\href{https://resilient-project.github.io/}{https://resilient-project.github.io/}}, our team develops the first truly multi-vector energy infrastructure planning tool that can handle uncertain environments. We build upon the open-source, widely-used, multi-vector energy planning tool PyPSA-Eur \autocite{horschPyPSAEurOpenOptimisation2018}, and improve its ability to optimise energy infrastructure in a resilient way. 
 
 \section*{Methodology}
 
-Methodology
+We use the open-source, sector-coupled energy system model PyPSA-Eur \autocite{horschPyPSAEurOpenOptimisation2018} to optimise investment into generation, storage, and transmission infrastructure (including electricity, natural gas, hydrogen, \ce{CO2}, and Power-to-X conversion) as well as operation/dispatch. The model is spatially and temporally highly resolved and covers the entire European continent, including stocks of existing power plants, renewable potentials, and availability time series. It covers today's high-voltage transmission grid (AC \SI{220}{kV} to \SI{750}{kV} and DC \SI{150}{kV} upwards) \autocite{xiongModellingHighVoltageGrid2024}.
 
+By accessing the REST API of the PCI-PMI Transparency Platform \autocite{europeancommissionPCIPMITransparencyPlatform2024} and associated public project sheets provided by the European Commission, we implement the PCI-PMI projects into the PyPSA-Eur model to assess their impact in the power, heat, transport, industry, feedstock, and agriculture sector.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.55\textwidth]{pci_pmi_projects_map}
+    \caption{PCI-PMI projects implemented in the PyPSA-Eur model. Own illustration based on data from the European Commission \autocite{europeancommissionPCIPMITransparencyPlatform2024}.}
+    \label{fig:pci_pmi_projects_map}
+\end{figure}
+
+\newpage
 \section*{Results (preliminary)}
+First results for the modelling year 2030 show that reaching the EU's 2030 \ce{H2} production and \ce{CO2} sequestration targets translates into around 20 bn. \euro{} p.a. in total system costs for all included sectors, with or without PCI-PMI infrastructure projects (see Figure \ref{fig:system_costs}).
 
-Results
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{system_costs}
+    \caption{Results --- Total system costs by technology and infrastructure. Own illustration.}
+    \label{fig:system_costs}
+\end{figure}
 
-\section*{Conclusion}
+By omitting an \ce{H2} target, almost no electrolysers are installed. Around \SI{8}{Mt} are still produced to cover industrial \ce{H2} and methanol (primarily shipping) demand. However, this demand is met by decentral steam methane reforming instead of electrolysers. Setting an \ce{H2} target may however be essential to kick-start the \ce{H2} economy. \ce{H2} is then primarily produced through electrolysis and used as a precursor for methanolisation to meet industrial and shipping demand.
 
-Conclusion
+Without specifying a \ce{CO2} sequestration target, the system still captures and sequesters around \SI{21}{Mt} of \ce{CO2} p.a. primarily from process emissions in the industry sector. 
 
-\section*{References}
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.495\textwidth} % [t] aligns at the top
+        \vspace{0pt}
+        \includegraphics[width=\textwidth]{balance_map_h2} % Replace with your image
+        \caption{\ce{H2} regional balances and flows.}
+        \label{fig:balance_map_h2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.495\textwidth} % [t] aligns at the top
+        \vspace{0pt}
+        \includegraphics[width=\textwidth]{balance_map_co2} % Replace with your image
+        \caption{\ce{CO2} regional balances and flows.}
+        \label{fig:balance_map_co2}
+    \end{subfigure}
+    \caption{Results --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport. Own illustration.}
+    \label{fig:balance_maps}
+\end{figure}
 
-References
+\section*{Conclusion (preliminary)}
+We conclude that while all three EU policy targets for 2030 can be achieved without PCI-PMI infrastructure, they bring additional benefits: i) \ce{H2} pipelines projects help distribute more affordable green H$_2$ from northern and south-western Europe to high-demand regions in central Europe; ii) \ce{CO2} transport and storage projects help decarbonising the industry by connecting major industrial sites and their process emissions to offshore sequestration sites in the North Sea (Denmark, Norway, and the Netherlands).
+
+\textbf{Research outlook} --- Next steps include the implementation of remaining PCI-PMI projects, such as hybrid offshore interconnectors (energy islands), electricity storages, and \ce{CO2} shipping routes. To evaluate the long-term value of PCI-PMI projects in a sector-coupled European energy system, we will model pathway dependencies towards 2050. We will also assess the sensitivity of the infrastructure to technology-specific build-out rates.
 
 % % -----------------------------
-% \bibliographystyle{IEEEtran}
-% \bibliography{refs.bib}
+
+\bibliographystyle{plainnat}
+\bibliography{references.bib}
 
 \end{document}
