@@ -37,7 +37,7 @@ calculator,calc,mathtools,empheq,latexsym}
 \let\autocite\cite
 
 % -------------------------------------------------------------------
-% \setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
 % \textheight 19.5cm
 \columnsep .5cm
@@ -87,13 +87,23 @@ Summary
 
 \section*{Introduction and motivation}
 
-In the research project RESILIENT\footnote{\href{https://resilient-project.github.io/}{https://resilient-project.github.io/}}, our team develops the first truly multi-vector energy infrastructure planning tool that can handle uncertain environments. We build upon the open-source, widely-used, multi-vector energy planning tool PyPSA-Eur \autocite{horschPyPSAEurOpenOptimisation2018}, and improve its ability to optimise energy infrastructure in a resilient way. 
+On the pathway to a climate-neutral by 2050, the European Union (EU) has set ambitious targets for 2030, three of the most prominent including \SI{55}{\percent} greenhouse gas emission reduction \autocite{europeancommissionFit55Delivering2021}, \SI{10}{Mt} p.a. green \ce{H2} production \autocite{europeancommissionREPowerEUPlanCommunication2022}, and \SI{50}{Mt} p.a. \ce{CO2} sequestration \autocite{europeanparliamentRegulationEU20242024}. 
+
+To support reaching these targets, the EU has identified a list of Projects of Common Interest (PCI) which are key cross-border infrastructure projects that link the energy systems of EU countries, ranging from storages, over transmission lines to pipelines and carbon sinks \autocite{europeancommissionCommissionDelegatedRegulation2023}. Projects of Mutual Interest (PMI) further include cooperations with countries outside the EU, such as the United Kingdom. In order for projects to be eligible for PCI-PMI status, their potential benefits need to outweigh their costs \autocite{europeancommissionCommissionDelegatedRegulation2023}. Given the political and lighthouse character, these projects are highly likely to be implemented. However, any large infrastructure project, including PCI-PMI projects, are commonly facing delays due to permitting, financing, procurement bottlenecks, etc. \autocite{acerConsolidatedReportProgress2023}.
+
+From the ambitious policy targets and the nature of PCI-PMI projects, we derive the following key research questions:
+
+\begin{enumerate}
+    \item At what cost do we stick to reaching the EU policy targets?
+    \item How does a delay of PCI-PMI projects affect the system, its costs, and the ability to reach the EU policy targets?
+    \item What is the impact of missing the EU 2030 policy targets for \ce{CO2} sequestration and \ce{H2} production?
+ \end{enumerate}
 
 \section*{Methodology}
 
 We use the open-source, sector-coupled energy system model PyPSA-Eur \autocite{horschPyPSAEurOpenOptimisation2018} to optimise investment into generation, storage, and transmission infrastructure (including electricity, natural gas, hydrogen, \ce{CO2}, and Power-to-X conversion) as well as operation/dispatch. The model is spatially and temporally highly resolved and covers the entire European continent, including stocks of existing power plants, renewable potentials, and availability time series. It covers today's high-voltage transmission grid (AC \SI{220}{kV} to \SI{750}{kV} and DC \SI{150}{kV} upwards) \autocite{xiongModellingHighVoltageGrid2024}.
 
-By accessing the REST API of the PCI-PMI Transparency Platform \autocite{europeancommissionPCIPMITransparencyPlatform2024} and associated public project sheets provided by the European Commission, we implement the PCI-PMI projects into the PyPSA-Eur model to assess their impact in the power, heat, transport, industry, feedstock, and agriculture sector.
+\paragraph{Feature implementation} By accessing the REST API of the PCI-PMI Transparency Platform \autocite{europeancommissionPCIPMITransparencyPlatform2024} and associated public project sheets provided by the European Commission, we implement the PCI-PMI projects into the PyPSA-Eur model to assess their impact in the power, heat, transport, industry, feedstock, and agriculture sector. Our implementation can adapt to the needs and configuration of the model, including selected technologies, geographical and temporal resolution, as well as the level of sector-coupling. An overview of the implemented PCI-PMI projects is shown in Figure \ref{fig:pci_pmi_projects_map}.
 
 \begin{figure}[!htbp]
     \centering
@@ -102,7 +112,33 @@ By accessing the REST API of the PCI-PMI Transparency Platform \autocite{europea
     \label{fig:pci_pmi_projects_map}
 \end{figure}
 
-\newpage
+\paragraph{Scenario setup} As of the date of submission, we model three key scenarios for the target year 2030 which will set the base year for pathways towards 2050: a `Base' scenario in which all all projects are commissioned on time and policy targets are achieved and two PCI-PMI delay scenarios `A' and `B'. Table \ref{tab:scenarios} gives an overview of the scenarios' key assumptions.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Scenarios setup. Own illustration.}
+    \begin{tabular}{lccc}
+        \toprule
+        Assumption \textbackslash{} Scenario & Base & A. All targets & B. Emission target only \\
+        \midrule
+        PCI-PMI projects & on time & delayed & delayed \\
+        \midrule
+        \ce{CO2} emission target & \SI{-55}{\percent}/\SI{2}{Gt} p.a. & \SI{-55}{\percent}/\SI{2}{Gt} p.a. & \SI{-55}{\percent}/\SI{2}{Gt} p.a. \\
+        \ce{CO2} sequestration target & \SI{50}{Mt} p.a. & \SI{50}{Mt} p.a. & --- \\
+        \ce{H2} target & \SI{10}{Mt} p.a. & \SI{10}{Mt} p.a. & --- \\
+        \midrule
+        \ce{CO2} sequestration sites & PCI-PMI & endogeneous & endogeneous \\
+        \ce{CO2} pipelines & PCI-PMI + endogen. expansion & --- & --- \\
+        \ce{H2} storage & PCI-PMI & endogeneous & endogeneous \\
+        \ce{H2} pipelines & PCI-PMI +  endogen. expansion & --- & --- \\
+        AC and DC transmission & PCI-PMI & --- & --- \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:scenarios}
+\end{table}
+
+\paragraph{Solving} We solve all scenarios by minimising total system costs, resolving 34 countries to 90 buses at 3-hourly temporal resolution.
+
 \section*{Results (preliminary)}
 First results for the modelling year 2030 show that reaching the EU's 2030 \ce{H2} production and \ce{CO2} sequestration targets translates into around 20 bn. \euro{} p.a. in total system costs for all included sectors, with or without PCI-PMI infrastructure projects (see Figure \ref{fig:system_costs}).
 
@@ -136,10 +172,11 @@ Without specifying a \ce{CO2} sequestration target, the system still captures an
     \label{fig:balance_maps}
 \end{figure}
 
+\newpage
 \section*{Conclusion (preliminary)}
 We conclude that while all three EU policy targets for 2030 can be achieved without PCI-PMI infrastructure, they bring additional benefits: i) \ce{H2} pipelines projects help distribute more affordable green H$_2$ from northern and south-western Europe to high-demand regions in central Europe; ii) \ce{CO2} transport and storage projects help decarbonising the industry by connecting major industrial sites and their process emissions to offshore sequestration sites in the North Sea (Denmark, Norway, and the Netherlands).
 
-\textbf{Research outlook} --- Next steps include the implementation of remaining PCI-PMI projects, such as hybrid offshore interconnectors (energy islands), electricity storages, and \ce{CO2} shipping routes. To evaluate the long-term value of PCI-PMI projects in a sector-coupled European energy system, we will model pathway dependencies towards 2050. We will also assess the sensitivity of the infrastructure to technology-specific build-out rates.
+\paragraph{Research outlook} Next steps include the implementation of remaining PCI-PMI projects, such as hybrid offshore interconnectors (energy islands), electricity storages, and \ce{CO2} shipping routes. To evaluate the long-term value of PCI-PMI projects in a sector-coupled European energy system, we will model pathway dependencies towards 2050. We will also assess the sensitivity of the infrastructure to technology-specific build-out rates.
 
 % % -----------------------------
 
