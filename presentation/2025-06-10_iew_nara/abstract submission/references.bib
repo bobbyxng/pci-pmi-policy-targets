@@ -78,6 +78,91 @@
   file = {/home/bobby/Zotero/storage/J5WAJFSJ/2024 - Regulation (EU) 20241735 of the European Parliament and of the Council of 13 June 2024 on establish.pdf;/home/bobby/Zotero/storage/DVA684Z5/HTML.html}
 }
 
+@article{frysztackiComparisonClusteringMethods2022,
+  title = {A Comparison of Clustering Methods for the Spatial Reduction of Renewable Electricity Optimisation Models of {{Europe}}},
+  author = {Frysztacki, Martha Maria and Recht, Gereon and Brown, Tom},
+  year = {2022},
+  month = may,
+  journal = {Energy Informatics},
+  volume = {5},
+  number = {1},
+  pages = {4},
+  issn = {2520-8942},
+  doi = {10.1186/s42162-022-00187-7},
+  urldate = {2024-08-01},
+  abstract = {Modeling the optimal design of the future European energy system involves large data volumes and many mathematical constraints, typically resulting in a significant computational burden. As a result, modelers often apply reductions to their model that can have a significant effect on the accuracy of their results. This study investigates methods for spatially clustering electricity system models at transmission level to overcome the computational constraints. Spatial reduction has a strong effect both on flows in the electricity transmission network and on the way wind and solar generators are aggregated. Clustering methods applied in the literature are typically oriented either towards preserving network flows or towards preserving the properties of renewables, but both are important for future energy systems. In this work we adapt clustering algorithms to accurately represent both networks and renewables. To this end we focus on hierarchical clustering, since it preserves the topology of the transmission system. We test improvements to the similarity metrics used in the clustering by evaluating the resulting regions with measures on renewable feed-in and electrical distance between nodes. Then, the models are optimised under a brownfield capacity expansion for the European electricity system for varying spatial resolutions and renewable penetration. Results are compared to each other and to existing clustering approaches in the literature and evaluated on the preciseness of siting renewable capacity and the estimation of power flows. We find that any of the considered methods perform better than the commonly used approach of clustering by country boundaries and that any of the hierarchical methods yield better estimates than the established method of clustering with k-means on the coordinates of the network with respect to the studied parameters.},
+  langid = {english},
+  keywords = {Clustering by political borders,Electrical distance,Energy system modelling,Hierarchical clustering,K-means clustering,Open source modelling,Power flow,Renewable energy,Spatial network clustering},
+  file = {/home/bobby/Zotero/storage/D54SGPMC/Frysztacki et al. - 2022 - A comparison of clustering methods for the spatial.pdf}
+}
+
+@article{glaumOffshorePowerHydrogen2024,
+  title = {Offshore Power and Hydrogen Networks for {{Europe}}'s {{North Sea}}},
+  author = {Glaum, Philipp and Neumann, Fabian and Brown, Tom},
+  year = {2024},
+  month = sep,
+  journal = {Applied Energy},
+  volume = {369},
+  pages = {123530},
+  issn = {0306-2619},
+  doi = {10.1016/j.apenergy.2024.123530},
+  urldate = {2024-08-01},
+  abstract = {The European North Sea has a vast renewable energy potential and can be a powerhouse for Europe's energy transition. However, currently there is uncertainty about how much offshore wind energy can be integrated, whether offshore grids should be meshed and to what extent offshore hydrogen should play a role. To address these questions, we use the open-source energy system optimization model PyPSA-Eur to model a European carbon-neutral sector-coupled energy system in high spatial and temporal resolution. We let the model endogenously decide how much offshore wind is deployed and which infrastructure is used to integrate the offshore wind. We find that with point-to-point connections like we have today, 310 GW offshore wind can be integrated in the North Sea. However, if we allow meshed networks and hydrogen, we find that this can be raised to 420 GW with cost savings up to 15 bn{\texteuro}/a. Furthermore, we only observe significant amounts of up to 75 GW of floating wind turbines in the North Sea if we have offshore hydrogen production. Generally, the model opts for offshore wind integration through a mix of both electricity and hydrogen infrastructure. However, the bulk of the offshore energy is transported as hydrogen, which is twice as much as the amount transported as electricity. Moreover, we find that the offshore power network is mainly used for offshore wind integration, with only a small portion used for inter-country transmission.},
+  keywords = {Energy system,Floating wind,Hydrogen,North Sea,Offshore grid,Offshore network},
+  file = {/home/bobby/Zotero/storage/AHLF2I7B/Glaum et al. - 2024 - Offshore power and hydrogen networks for Europe’s .pdf;/home/bobby/Zotero/storage/QMU4TDJQ/S0306261924009139.html}
+}
+
+@article{gotzensPerformingEnergyModelling2019,
+  title = {Performing Energy Modelling Exercises in a Transparent Way - {{The}} Issue of Data Quality in Power Plant Databases},
+  author = {Gotzens, Fabian and Heinrichs, Heidi and H{\"o}rsch, Jonas and Hofmann, Fabian},
+  year = {2019},
+  month = jan,
+  journal = {Energy Strategy Reviews},
+  volume = {23},
+  pages = {1--12},
+  issn = {2211-467X},
+  doi = {10.1016/j.esr.2018.11.004},
+  urldate = {2024-08-02},
+  abstract = {In energy modelling, open data and open source code can help enhance traceability and reproducibility of model exercises which contribute to facilitate controversial debates and improve policy advice. While the availability of open power plant databases increased in recent years, they often differ considerably from each other and their data quality has not been systematically compared to proprietary sources yet. Here, we introduce the python-based `powerplantmatching' (PPM), an open source toolset for cleaning, standardizing and combining multiple power plant databases. We apply it once only with open databases and once with an additional proprietary database in order to discuss and elaborate the issue of data quality, by analysing capacities, countries, fuel types, geographic coordinates and commissioning years for conventional power plants. We find that a derived dataset purely based on open data is not yet on a par with one in which a proprietary database has been added to the matching, even though the statistical values for capacity matched to a large degree with both datasets. When commissioning years are needed for modelling purposes in the final dataset, the proprietary database helps crucially to increase the quality of the derived dataset.},
+  keywords = {Energy system analysis,Europe,Open data,Power plant data,Power system model},
+  file = {/home/bobby/Zotero/storage/PY6F7765/Gotzens et al. - 2019 - Performing energy modelling exercises in a transpa.pdf;/home/bobby/Zotero/storage/HNKPEDWJ/S2211467X18301056.html}
+}
+
+@article{hofmannAtliteLightweightPython2021,
+  title = {Atlite: {{A Lightweight Python Package}} for {{Calculating Renewable Power Potentials}} and {{Time Series}}},
+  shorttitle = {Atlite},
+  author = {Hofmann, Fabian and Hampp, Johannes and Neumann, Fabian and Brown, Tom and H{\"o}rsch, Jonas},
+  year = {2021},
+  month = jun,
+  journal = {Journal of Open Source Software},
+  volume = {6},
+  number = {62},
+  pages = {3294},
+  issn = {2475-9066},
+  doi = {10.21105/joss.03294},
+  urldate = {2024-08-01},
+  abstract = {Hofmann et al., (2021). atlite: A Lightweight Python Package for Calculating Renewable Power Potentials and Time Series. Journal of Open Source Software, 6(62), 3294, https://doi.org/10.21105/joss.03294},
+  langid = {english},
+  file = {/home/bobby/Zotero/storage/BRDARVXC/Hofmann et al. - 2021 - atlite A Lightweight Python Package for Calculati.pdf}
+}
+
+@misc{hofmannH2CO2Network2024,
+  title = {H2 and {{CO2 Network Strategies}} for the {{European Energy System}}},
+  author = {Hofmann, Fabian and Tries, Christoph and Neumann, Fabian and Zeyen, Elisabeth and Brown, Tom},
+  year = {2024},
+  month = feb,
+  number = {arXiv:2402.19042},
+  eprint = {2402.19042},
+  primaryclass = {physics},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2402.19042},
+  urldate = {2024-09-03},
+  abstract = {Hydrogen and carbon dioxide transport can both play an essential role in climate-neutral energy systems. Hydrogen networks help serve regions with high energy demand, while excess emissions are transported away in carbon dioxide networks. For the synthesis of carbonaceous fuels, it is less clear which input should be transported: hydrogen to carbon point sources or carbon to low-cost hydrogen. We explore both networks' potential synergies and competition in a cost-optimal carbon-neutral European energy system. In direct comparison, a hydrogen network is more cost-effective than a carbon network, since it serves to transport hydrogen to demand and to point source of carbon for utilization. However, in a hybrid scenario where both networks are present, the carbon network effectively complements the hydrogen network, promoting carbon capture from biomass and reducing reliance on direct air capture. Our analysis suggests integrating hydrogen and carbon dioxide networks into European energy policy for a robust, carbon-neutral or carbon-negative future energy system.},
+  archiveprefix = {arXiv},
+  keywords = {Physics - Physics and Society},
+  file = {/home/bobby/Zotero/storage/99XUDDM2/Hofmann et al. - 2024 - H2 and CO2 Network Strategies for the European Ene.pdf;/home/bobby/Zotero/storage/EVQXDREA/2402.html}
+}
+
 @article{horschPyPSAEurOpenOptimisation2018,
   title = {{{PyPSA-Eur}}: {{An}} Open Optimisation Model of the {{European}} Transmission System},
   shorttitle = {{{PyPSA-Eur}}},
@@ -93,6 +178,23 @@
   abstract = {PyPSA-Eur, the first open model dataset of the European power system at the transmission network level to cover the full ENTSO-E area, is presented. It contains 6001 lines (alternating current lines at and above 220\,kV voltage level and all high voltage direct current lines), 3657 substations, a new open database of conventional power plants, time series for electrical demand and variable renewable generator availability, and geographic potentials for the expansion of wind and solar power. The model is suitable both for operational studies and generation and transmission expansion planning studies. The continental scope and highly resolved spatial scale enables a proper description of the long-range smoothing effects for renewable power generation and their varying resource availability. The restriction to freely available and open data encourages the open exchange of model data developments and eases the comparison of model results. A further novelty of the dataset is the publication of the full, automated software pipeline to assemble the load-flow-ready model from the original datasets, which enables easy replacement and improvement of the individual parts. This paper focuses on the description of the network topology, the compilation of a European power plant database and a top-down load time-series regionalisation. It summarises the derivation of renewable wind and solar availability time-series from re-analysis weather datasets and the estimation of renewable capacity potentials restricted by land-use. Finally, validations of the dataset are presented, including a new methodology to compare geo-referenced network datasets to one another.},
   keywords = {Electricity system model,finished,Power plant dataset,Renewable power generation,Transmission network},
   file = {/home/bobby/Zotero/storage/KJWZEGWI/Hörsch et al. - 2018 - PyPSA-Eur An open optimisation model of the Europ.pdf}
+}
+
+@article{neumannPotentialRoleHydrogen2023,
+  title = {The Potential Role of a Hydrogen Network in {{Europe}}},
+  author = {Neumann, Fabian and Zeyen, Elisabeth and Victoria, Marta and Brown, Tom},
+  year = {2023},
+  month = aug,
+  journal = {Joule},
+  volume = {7},
+  number = {8},
+  pages = {1793--1817},
+  issn = {2542-4351},
+  doi = {10.1016/j.joule.2023.06.016},
+  urldate = {2024-05-29},
+  abstract = {Europe's electricity transmission expansion suffers many delays, despite its significance for integrating renewable electricity. A~hydrogen network reusing the existing gas network could not only help to supply the demand for low-emission fuels but could also balance variations in wind and solar energies across the continent and thus avoid power grid expansion. Our investigation varies the allowed expansion of electricity and hydrogen grids in net-zero CO2 scenarios for a sector-coupled European energy system, capturing transmission bottlenecks, renewable supply and demand variability, and pipeline retrofitting and geological storage potentials. We find that a hydrogen network connecting regions with low-cost and abundant renewable potentials to demand centers, electrofuel production, and cavern storage sites reduces system costs by up to 26 bn{\texteuro}/a (3.4\%). Although expanding both networks together can achieve the largest cost reductions, by 9.9\%, the expansion of neither is essential for a net-zero system as long as higher costs can be accepted and flexibility options allow managing transmission bottlenecks.},
+  keywords = {carbon-neutrality,energy system modeling,energy systems,Europe,hot,hydrogen network,pipeline retrofitting,PyPSA,read,renewable energy,sector-coupling,transmission},
+  file = {/home/bobby/Zotero/storage/KYXTCJVL/Neumann et al. - 2023 - The potential role of a hydrogen network in Europe.pdf}
 }
 
 @article{xiongModellingHighVoltageGrid2024,
