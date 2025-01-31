@@ -38,7 +38,8 @@ plotting:
   # settings for energy balance maps
   balance_map:
     ext: pdf
-    carriers_to_plot: ["AC", "H2", "gas", "co2_stored", "urban_central_heat", "biogas", "solid_biomass"]
+    # carriers_to_plot: ["AC", "H2", "gas", "co2_stored", "urban_central_heat", "biogas", "solid_biomass"]
+    carriers_to_plot: ["H2", "co2_stored"]
     alpha: 1
     region_alpha: 0.6
     figsize: [5, 6.5]
@@ -72,8 +73,8 @@ plotting:
       - 600
       - 100
     H2:
-      vmin: 45
-      vmax: 60
+      vmin: 20
+      vmax: 100
       unit: TWh$_{H_2}$
       unit_conversion: 1e6
       region_cmap: Blues
@@ -88,12 +89,12 @@ plotting:
       - 20
       - 5
     co2_stored:
-      vmin: -300
-      vmax: -200
+      vmin: -80
+      vmax: 80
       bus_carrier: co2 stored
       unit: Mt
       unit_conversion: 1e6
-      region_cmap: Pastel1
+      region_cmap: PuOr
       region_unit: €/t_${CO_2}$
       bus_factor: 3e-2
       branch_factor: 7e-2
