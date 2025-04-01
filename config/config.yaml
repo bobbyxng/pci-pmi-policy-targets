@@ -238,10 +238,11 @@ clustering:
     resolution_elec: false
     resolution_sector: 3h
 
-solver_options:
-  mem_mb: 200000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
-  memory_logging_frequency: 30 # in seconds
-  runtime: 80h #runtime in humanfriendly style https://humanfriendly.readthedocs.io/en/latest/
+solving:
+  solver_options:
+    mem_mb: 200000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
+    memory_logging_frequency: 30 # in seconds
+    runtime: 80h #runtime in humanfriendly style https://humanfriendly.readthedocs.io/en/latest/
 
 plotting:
   balance_map:
