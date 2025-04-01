@@ -40,11 +40,11 @@ run:
   prefix: "investment-all-targets"
   name: 
   - pcipmi
-  # - pcipmi-delay-10years
-  # - pcipmi-national-expansion
-  # - pcipmi-national-international-expansion
-  # - no-pipelines
-  # - greenfield-pipelines
+  - pcipmi-delay-10years
+  - pcipmi-national-expansion
+  - pcipmi-national-international-expansion
+  - no-pipelines
+  - greenfield-pipelines
   scenarios:
     enable: true
     file: config/investment-all-targets.scenarios.yaml
@@ -167,11 +167,11 @@ sector:
   co2_sequestration_potential:
     2020: 0
     2025: 0
-    2030: 50
-    2035: 100
-    2040: 200
-    2045: 200
-    2050: 200
+    2030: 286
+    2035: 286
+    2040: 286
+    2045: 286
+    2050: 286
   co2_sequestration_cost: 10
   co2_sequestration_lifetime: 50
   co2_spatial: true
