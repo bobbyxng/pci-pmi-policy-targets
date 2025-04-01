@@ -46,3 +46,6 @@ gurobi.log
 *.blg
 
 *.fls
+
+.sync-receive
+.sync-send

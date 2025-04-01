@@ -12,24 +12,24 @@ logging:
 
 remote:
   ssh: z1
-  path: scratch/dev/pypsa-eur-resilient
+  path: scratch/projects/pci-pmi-policy-targets
 
 # PCI-PMI policy paper settings
 pcipmi_policy_paper:
   co2_sequestration_min_mt:
-    enable: false
+    enable: true
     targets:
       2030: 50
       2040: 150
       2050: 250 # https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52024DC0062
   h2_production_min_mt:
-    enable: false
+    enable: true
     targets: 
       2030: 10
       2040: 27.5
       2050: 45 # https://www.isi.fraunhofer.de/en/blog/2023/europa-energiesystem-2050-wasserstoff-industrie.html
   electrolyser_capacity_min_gw:
-    enable: false
+    enable: true
     targets:
       2030: 40
       2040: 110 # proportional based on 2030
@@ -208,7 +208,7 @@ clustering:
     SE: 0.05
   temporal:
     resolution_elec: false
-    resolution_sector: 2190seg
+    resolution_sector: 337h
 
 solving:
   mem_mb: 200000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
