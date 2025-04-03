@@ -1,4 +1,4 @@
-# RESILIENT: Decision under uncertainty using regret-matrix approach 
+# PCI PMI policy targets
 
 This repository contains the data sources and code for reproducing the workflow. The philosophy behind this repository is that no intermediary results are included, but all results are computed from raw data and code.
 
@@ -7,15 +7,15 @@ This repository contains the data sources and code for reproducing the workflow.
 
 To start you need to clone the repository. Since the repository relies on git submodules ([pypsa-eur-resilient](https://github.com/resilient-project/pypsa-eur-resilient), you need to include the `--recurse-submodules` flag in your `git clone` command:
 
-`git clone --recurse-submodules https://github.com/bobbyxng/resilient-regret-matrix.git`
+`git clone --recurse-submodules https://github.com/bobbyxng/pcipmi-policy-targets.git`
 
 
 ## Initialisation
 
 When running the workflow for the first time, please run in this order:
 
-* `conda env create -f workflow/envs/environment.yaml` to create the environment and installing dependencies
-* `conda activate resilient-regret-matrix` to activate the environment
+* `conda env create -f workflow/pypsa-eur-resilient/envs/environment.yaml` to create the environment and installing dependencies
+* `conda activate pypsa-eur` to activate the environment
 
 
 ## About RESILIENT
