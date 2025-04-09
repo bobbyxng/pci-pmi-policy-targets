@@ -16,13 +16,13 @@ def fill_missing_carriers(n):
     for c in n.iterate_components(n.one_port_components | n.branch_components):
         new_carriers = set(c.df.carrier.unique()) - set(n.carriers.index)
         if new_carriers:
-            n.madd("Carrier", list(new_carriers), nice_name=list(new_carriers))
+            n.add("Carrier", list(new_carriers), nice_name=list(new_carriers))
 
 
 def add_carrier_groups(n, config):
 
-    groups = pd.Series(config["plotting"]["technology_groups"])
-    colors = pd.Series(config["plotting"]["technology_group_colors"])
+    groups = pd.Series(config["grouping"])
+    colors = pd.Series(config["group_colors"])
     n.carriers["group"] = groups.reindex(n.carriers.index, fill_value="")
     n.carriers["group_color"] = n.carriers.group.map(colors).fillna("")
 
