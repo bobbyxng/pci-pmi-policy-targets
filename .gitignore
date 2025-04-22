@@ -48,5 +48,11 @@ gurobi.log
 *.fls
 *.spl
 
+# Additional LaTeX
+*.acn
+*.glo
+*.ist
+
+# Other
 .sync-receive
 .sync-send
