@@ -162,7 +162,7 @@
 
 %% Keywords
 \begin{keyword}
-energy system modelling \sep energy policy \sep infrastructure \sep resilience \sep Europe \sep hydrogen \sep carbon  
+energy system modelling \sep policy targets \sep infrastructure \sep resilience \sep hydrogen \sep carbon \sep Europe 
 %% keywords here, in the form: keyword \sep keyword
 
 %% PACS codes here, in the form: \PACS code \sep code
@@ -186,11 +186,16 @@ energy system modelling \sep energy policy \sep infrastructure \sep resilience \
 
 \begin{itemize}[left=0pt, label={}, itemsep=0pt, parsep=0pt, topsep=0pt]
   \item \textbf{AC} \enspace Alternating Current
-  \item \textbf{DC} \enspace Direct Current
   \item \textbf{API} \enspace Application Programming Interface
+  \item \textbf{CC} \enspace Carbon Capture
+  \item \textbf{CU} \enspace Carbon Utilisation
+  \item \textbf{CS} \enspace Carbon Storage
+  \item \textbf{CCUS} \enspace Carbon Capture, Utilisation, and Storage
+  \item \textbf{DAC} \enspace Direct Air Capture
+  \item \textbf{DC} \enspace Direct Current
   \item \textbf{EU} \enspace European Union
   \item \textbf{GHG} \enspace Greenhouse gas
-  \item \textbf{NEP} \enspace Netzentwicklungsplan (grid development plan Germany)
+  \item \textbf{NEP} \enspace Netzentwicklungsplan (German grid development plan)
   \item \textbf{PCI} \enspace Projects of Common Interest
   \item \textbf{PMI} \enspace Projects of Mutual Interest
   \item \textbf{REST} \enspace Representational State Transfer 
@@ -206,12 +211,75 @@ On the pathway to a climate-neutral Europe by 2050, the European Union (EU) has 
 
 To support reaching these targets, the European Commission bi-annually identifies a list of Projects of Common Interest (PCI), which are key cross-border infrastructure projects that link the energy systems of the EU members, including transmission and storage projects for electricity, hydrogen and \ce{CO2} \cite{europeancommissionCommissionDelegatedRegulation2023}. 
 The pool of project sutable for PCI status is based on projects submitted by transmission system operators, consortia, or third parties. Projects of Mutual Interest (PMI) further include cooperations with countries outside the EU, such as Norway or the United Kingdom. With a PCI-PMI status, project awardees receive strong political support and are, amongst others, eligible for financial support (e.g. through funding of the Connecting Europe Facility) and see accelerated permitting processes. On the other hand, project promoters are obliged to undergo comprehensive reporting and monitoring processes. 
-In order for projects to be eligible for PCI-PMI status, their \textit{potential benefits need to outweigh their costs} \cite{europeancommissionCommissionDelegatedRegulation2023}. Given the political and lighthouse character, these projects are highly likely to be implemented. However, any large infrastructure project, including PCI-PMI projects, commonly face delays due to permitting, financing, procurement bottlenecks, etc. \cite{acerConsolidatedReportProgress2023}.
+In order for projects to be eligible for PCI-PMI status, their \textit{potential benefits need to outweigh their costs} \cite{europeancommissionCommissionDelegatedRegulation2023}. Given the political and lighthouse character, these projects are highly likely to be implemented. However, any large infrastructure project, including PCI-PMI projects, commonly face delays due to permitting, financing, procurement bottlenecks, etc. \cite
+{acerConsolidatedReportProgress2023}.
+
+\begin{itemize}
+  \item Net zero law by 2050 \citet{europeanparliamentRegulationEU20242024}
+\end{itemize}
 
 \subsection{Fuels, carriers, targets}
-test
+\paragraph{Hydrogen (\ce{H2})}
+\begin{itemize}
+  \item "net zero systems: H2 feedstock for synthetic fuels, fuel transportation sector, feedstock and heat source in industry," \cite{greevenbroekLittleLoseCase2024}, \cite{beresWillHydrogenSynthetic2024}
+\end{itemize}
 
 \subsection{Projects of Common/Mutual Interest}
+
+
+\newpage
+\section{Literature review}
+\label{sec:literature_review}
+We structure the literature review into three main sections: (i) the value of \ce{CO2} and \ce{H2} in low-carbon energy systems, (ii) transporting \ce{CO2} and \ce{H2} through pipelines, and (iii) addressing uncertainty in energy system models. Based on this review, identify research gaps and position our work as a novel contribution to the current state of the art (iv).
+
+\subsection{The value of \ce{CO2} and \ce{H2} in low-carbon energy systems}
+A growing body of literature has been investigating the long-term role of \ce{H2} and \ce{CO2} in low-carbon or net-zero energy systems. Both carriers see their primary value outside the electricity sector, i.e., in the decarbonisation of hard-to-abate sectors such as industry, transport, shipping, and aviation \cite{reigstadMovingLowcarbonHydrogen2022}. While there are direct use cases for \ce{H2} in the industry sector such as steel production, it is primarily expected to serve as a precursor for synthetic fuels, including methanol, Fischer-Tropsch fuels (e.g. synthetic kerosene and naphta) and methane. The demand for these fuels is driven by the aviation, shipping, industry, and agriculture sectors \cite{neumannPotentialRoleHydrogen2023}. To produce these carbonaceous fuels, \ce{CO2} is required as a feedstock (Carbon Utilisation --- CU). The \ce{CO2} can be captured from the atmosphere via Direct Air Capture (DAC) or from industrial and process emissions (e.g. cement, steel, ammonia production) in combination with Carbon Capture (CC) units.
+
+van Greevenbroek et al. \cite{greevenbroekLittleLoseCase2024}: Look at near optimal solution space by assessing a wide range. Derived from a wide set of literature, modelling hydrogen and CS, CU \cite{fleiterHydrogenInfrastructureFuture2025,beresWillHydrogenSynthetic2024,blancoPotentialHydrogenPowertoLiquid2018,pickeringDiversityOptionsEliminate2022,schreyerDistinctRolesDirect2024,seckHydrogenDecarbonizationEnergy2022,neumannPotentialRoleHydrogen2023,zeyenEndogenousLearningGreen2023,kountourisUnifiedEuropeanHydrogen2024}
+
+Range of assessed CO2 sequestration potential from 275 Mtpa, 550 Mtpa,  up to 1100 Mtpa. Range of green hydrogen production in 2050 goes up to 90 Mtpa. Page 3: Europe has little to loose by committing to targets like 25 Mt pa H2 production by 2040, moderate taregt, feasible.
+
+"Cost optimal modelling results with a central planning approach may not capture system designs that are politically more viable but slightly more costly." from Koens paper, \cite{trutnevyteDoesCostOptimization2016}
+
+\subsection{Transporting \ce{CO2} and \ce{H2} through pipelines}
+Recent publications show that transporting \ce{CO2} and \ce{H2} via dedicated pipeline infrastructure can unlock additional benefits and net cost-savings in a sector-coupled energy system. Victoria et al. \cite{victoriaSpeedTechnologicalTransformations2022a} ... TODO
+
+Neumann et al. \cite{neumannPotentialRoleHydrogen2023} examine the complex interaction between electricity grid expansion and a European-wide deployment of hydrogen pipelines in a net-zero system (new and retrofitting of existing gas pipelines). While \ce{H2} pipelines are not essential, their build-out can significantly reduce system costs by up to 26 bn. \euro{} p.a. (\SI{3.4}{\percent} of annual CAPEX and OPEX) by connecting regions with excessive renewable potential, storage sites and load centres. 
+Extending their previous work, Neumann et al. \cite{neumannEnergyImportsInfrastructure2024} investigate the trade-off between relying on different energy import strategies and domestric infrastructure build-out. By coupling the global energy supply chain model TRACE \cite{hamppImportOptionsChemical2023} and the sector-coupled PyPSA-Eur model, they assess different energy vector import combinations (e.g. electricity, \ce{H2} or \ce{H2} derivatives) and their impact on Europe's infrastructural needs. By
+
+In a study by Kontouris et al. \cite{kountourisUnifiedEuropeanHydrogen2024}, the authors explore
+BALMOREL
+
+
+Fleiter et al. \cite{fleiterHydrogenInfrastructureFuture2025} modelled the future hydrogen infrastructure in Europe, including the conversion of existing natural gas pipelines to hydrogen transport. They found that a significant share of the hydrogen infrastructure could be built on existing natural gas pipelines, which would reduce costs and accelerate the deployment of hydrogen infrastructure.
+
+Fleiter et al. \cite{fleiterHydrogenInfrastructureFuture2025}, single node per country, modelled as net transfer capacities, assumed "that 70 percent of hydrogen pipelines will be converted from existing natural gas pipelines"
+
+Hofmann et al. \cite{hofmannH2CO2Network2025} address previous research gap in assessing the interaction between \ce{H2} and \ce{CO2} infrastructure, including their production, transport, storage, utilisation, and sequestration. They find that ...
+\subsection{Addressing uncertainty in energy system models}
+
+\begin{itemize}
+  \item Regret analysis common in economics, also in energy system modelling
+  \item Carbon networks
+  \item Regret
+  \item Cite Hobbs, Iegor, Koen, Fhofmann
+\end{itemize}
+
+Möbius and Riepin two-stage, stochastic, regret approach  \cite{mobiusRegretAnalysisInvestment2020a}
+PCI projects gas
+
+\section{Research gaps and our contribution}
+
+TODO NOVELTIES:
+\begin{itemize}
+  \item MEGA carbon
+  \item real planned projects
+  \item high spatial and temporal resolution
+  \item regret matrix approach
+  \item Time, myopic, iterative dimension, usually studies look directly at the target 2050, yielding overly optimistic results (overnight 2050 optimisation will yield different result than pathway-dependent solutions)
+\end{itemize}
+
+Chicken and egg problem. Assess real planned projects
 
 This paper aims to evaluate the impact of PCI-PMI projects on the European energy system and EU energy policies. We focus on the following key research questions:
 
@@ -221,28 +289,27 @@ This paper aims to evaluate the impact of PCI-PMI projects on the European energ
   \item Do the green hydrogen production and carbon sequestration targets conflict with the cost-effective achievement of the greenhouse gas emission reduction goals? 
 \end{enumerate}
 
-\newpage
-\section{Literature review}
-\label{sec:literature_review}
+Key motivations for the questions as the EU targets especially for 2030 have have been criticised as unrealistic, primarily politically motivated. \cite{europeancourtofauditorsEUsIndustrialPolicy2024,greevenbroekLittleLoseCase2024}
+
 
 \newpage
 \section{Methodology}
 \label{sec:methodology}
 
-We build on the open-source, sector-coupled energy system model PyPSA-Eur \cite{neumannPotentialRoleHydrogen2023,frysztackiComparisonClusteringMethods2022,glaumOffshorePowerHydrogen2024,horschPyPSAEurOpenOptimisation2018} to optimize investment and dispatch decisions in the European energy system. The model's endogenous decisions include the expansion and dispatch of renewable energy sources, dispatchable power plants, electricity storage, power-to-X conversion capacities, and transmission infrastructure for power, hydrogen, and \ce{CO2}. It also encompasses heating technologies and various hydrogen production methods (gray, blue, green).
+We build on the open-source, sector-coupled energy system model PyPSA-Eur \cite{neumannPotentialRoleHydrogen2023,frysztackiComparisonClusteringMethods2022,glaumOffshorePowerHydrogen2024,horschPyPSAEurOpenOptimisation2018} to optimise investment and dispatch decisions in the European energy system. The model's endogenous decisions include the expansion and dispatch of renewable energy sources, dispatchable power plants, electricity storage, power-to-X conversion capacities, and transmission infrastructure for power, hydrogen, and \ce{CO2}. It also encompasses heating technologies and various hydrogen production methods (gray, blue, green).
 PyPSA-Eur integrates multiple energy carriers (e.g., electricity, heat, hydrogen, \ce{CO2}, methane, methanol, liquid hydrocarbons, and biomass) with corresponding conversion technologies across multiple sectors (i.e., electricity, transport, heating, biomass, industry, shipping, aviation, agriculture and fossil fuel feedstock). The model features high spatial and temporal resolution across Europe, incorporating existing power plant stocks \cite{gotzensPerformingEnergyModelling2019}, renewable potentials, and availability time series \cite{hofmannAtliteLightweightPython2021}. It includes the current high-voltage transmission grid (AC \SI{220}{kV} to \SI{750}{kV} and DC \SI{150}{kV} and above) \cite{xiongModellingHighvoltageGrid2025}.
 
-\subsection{Model configuration}
-\label{sec:model_configuration}
+\subsection{Model setup}
+\label{sec:model_setup}
 
 
 \paragraph{Temporal resolution}
 \label{sec:temporal_resolution}
-To assess the long-term impact of PCI-PMI projects on European policy targets across all sectors, we optimise the sector-coupled network for three key planning horizons 2030, 2040, and 2050, myopically. The myopic approach ensures that investment decisions across all planning horizons are coherent and build on top of the previous planning horizon. We use the built-in Time Series Aggregation Module (tsam) to solve the model for 2190 time steps, yielding an average resolution of four hours. tsam is a Python package developed by Kotzur et al. \cite{kotzurImpactDifferentTime2018} to aggregate time series data into representative time slices to reduce computational complexity while maintaining its specific characteristics. 
+To assess the long-term impact of PCI-PMI projects on European policy targets across all sectors, we optimise the sector-coupled network for three key planning horizons 2030, 2040, and 2050, myopically. The myopic approach ensures that investment decisions across all planning horizons are coherent and build on top of the previous planning horizon. We use the built-in Time Series Aggregation Module (tsam) to solve the model for 2190 time steps, yielding an average resolution of four hours. tsam is a Python package developed by Kotzur et al. \cite{kotzurImpactDifferentTime2018} to aggregate time series data into representative time slices to reduce computational complexity while maintaining their specific intertemporal characteristics, such as renewable infeed variability, demand fluctuations, and seasonal storage needs.
 
 \paragraph{Geographical scope} 
 \label{sec:geographical_scope}
-We model 34 European countries, including 25 of the EU27 member states (excluding Cyprus and Malta), as well as Norway, Switzerland, the United Kingdom, Albania, Bosnia and Herzegovina, Montenegro, North Macedonia, Serbia, and Kosovo. Regional clustering is based on administrative NUTS boundaries, with higher spatial resolution applied to regions hosting planned PCI-PMI infrastructure, producing 99 onshore regions (see Table \ref{tab:regional_clustering}). Depending on the scenario, additional offshore buses are introduced to appropriately represent offshore sequestration sites and PCI-PMI projects.
+We model 34 European countries, including 25 of the EU27 member states (excluding Cyprus and Malta), as well as Norway, Switzerland, the United Kingdom, Albania, Bosnia and Herzegovina, Montenegro, North Macedonia, Serbia, and Kosovo. Regional clustering is based on administrative NUTS boundaries, with higher spatial resolution applied to regions hosting planned PCI-PMI infrastructure, producing 99 onshore regions (see Table \ref{tab:regional_clustering}). Depending on the scenario, additional offshore buses are introduced to appropriately represent offshore sequestration sites and PCI-PMI projects. In our application, Europe is self-sufficient, we do not allow for any imports or exports of the assessed carriers.a
 
 \paragraph{Technology assumptions} 
 \label{sec:technology_assumptions}
@@ -271,10 +338,25 @@ Note that we use standardised costs \cite{zeyenPyPSATechnologydataV01012025} for
 \label{sec:co2_sequestration_sites}
 TODO: Add description on all co2 sequestration sites, cite Fabian Hofmann, connection to closest onshore link, accounting for offshore connection, total sequestration potential. Not allowing for onshore sequestration and not accounting for even higher technical sequestration potential. NIMBY behaviour, low acceptance by society, fear of leakage, cite sources. 
 
+TODO: Add potential increase over years for co2 sequestration sites
+In total around 400 Mtp.a. (total potential), enough to offset XXX Mtpa of non-abatle process emissions (160 Mt?)
+
+
 \subsection{Scenario setup}
 \label{sec:scenario_setup}
 
+
+\subsection{Technology stack}
+\label{sec:technology_stack}
+\begin{itemize}
+  \item Limited use of fossil fuels in 2050 technically still possible, emissions compensation by DAC/CO2 removal or capturing at source (CC) with capture rate of 90 Percent.
+\end{itemize}
+
+TODO:DESCRIBE REGRET APPROACH
+
 As of the date of submission, we model three key scenarios for the target year 2030 which will set the base year for pathways towards 2050: a \textit{Base} scenario in which policy targets are achieved and all projects are commissioned on time as well as two PCI-PMI delay scenarios \textit{A} and \textit{B}. Table \ref{tab:scenarios} gives an overview of the scenarios' key assumptions and their differences. Depending on the scenario, we formulate and activate additional constraints to ensure the fulfilment of the EU policy targets.
+
+Regret-matrix approach, resulting in 60 runs (15 long-term investments and their individual performance in three short-term scenarios for each year) see Table \ref{tab:scenarios}
 
 \begin{table*}[htbp]
   \centering
@@ -286,11 +368,11 @@ As of the date of submission, we model three key scenarios for the target year 2
     \textbf{Short-term} & \textbf{Reduced targets} & \textbf{Delayed pipelines} & \textbf{No pipelines} \\
     \midrule
     \textbf{Long-term scenarios} & & & \\
-    Decentral Islands (DI) & $\blacksquare$ & -- & -- \\
-    PCI-PMI (PP) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
-    PCI-PMI Exp (PPE) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$\\
-    PCI-PMI Exp+ (PPE+) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
-    Central Planning (CP) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    Decentral Islands (\textbf{DI}) & $\blacksquare$ & -- & -- \\
+    PCI-PMI (\textbf{PP}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    PCI-PMI Exp (\textbf{PPE}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$\\
+    PCI-PMI Exp+ (\textbf{PPE+}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    Central Planning (\textbf{CP}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
     \midrule
     \textbf{Targets} & & & \\
     GHG emission reduction &  $\blacksquare$ &  $\blacksquare$ &  $\blacksquare$ \\
@@ -334,7 +416,7 @@ As of the date of submission, we model three key scenarios for the target year 2
     \midrule
     \textbf{\ce{H2} storage} & & & & & \\
     Endogenous build-out & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
-    PCI-PMI \ce{H2} storage sites & -- & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    PCI-PMI storage sites & -- & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
     \midrule
     \textbf{\ce{CO2} pipelines} & & & & & \\
     to depleted oil \& gas fields & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
@@ -422,6 +504,10 @@ Overall, the results for the modelling year 2030 show that reaching the EU's 203
   \item ...
 \end{itemize}
 
+Our study focuses primarily on the effects on real, planned infrastructure in the European energy system. Most final energy demand is given exogenously, naturally a key driver of infrastructure utilisation. We somewhat reduce the impact with the reduced targets scenario where at least the key carriers H2 and CO2 are freely optimised.
+
+Single weather year assessment, this particular year has the properties, ...
+
 \newpage
 \section{Conclusion}
 \label{sec:conclusion}
@@ -432,7 +518,7 @@ We conclude that although all three EU policy targets for 2030 can be achieved w
 
 \newpage
 \section*{CRediT authorship contribution statement}
-\textbf{Bobby Xiong}: Conceptualisation, Methodology, Software, Validation, Investigation, Data curation, Writing, Visualisation. \textbf{Iegor Riepin}: Conceptualisation, Methodology, Investigation, Writing, Supervision, Funding acquisition. \textbf{Tom Brown}: Investigation, Resources, Writing, Supervision, Funding acquisition.
+\textbf{Bobby Xiong}: Conceptualisation, Methodology, Software, Validation, Investigation, Data Curation, Writing --- Original Draft, Review \& Editing, Visualisation. \textbf{Iegor Riepin}: Conceptualisation, Methodology, Investigation, Writing --- Review \& Editing, Project Administration, Funding acquisition. \textbf{Tom Brown}: Investigation, Resources, Writing --- Review \& Editing, Supervision, Funding acquisition.
 
 \section*{Declaration of competing interest}
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
@@ -457,7 +543,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
   \caption{Regional clustering: A total of 99 regions are modelled, excl. offshore buses.}
   \label{tab:regional_clustering}
   \scriptsize
-  \begin{tabularx}{\textwidth}{R{4.1cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
      & \textbf{Country} & \textbf{Buses} \\
     \midrule
@@ -465,7 +551,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
     NUTS2 & Finland (FI) & 4 \\
           & Norway (NO) & 6 \\
     \midrule
-    NUTS1 & Belgium (BE)* & 2 \\
+    NUTS1 & Belgium (BE)** & 2 \\
           & Switzerland (CH) & 1 \\
           & Czech Republic (CZ) & 1 \\
           & Germany (DE)* & 13 \\
@@ -500,9 +586,27 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
           & Kosovo (XK) & 1 \\
     \bottomrule
   \end{tabularx}
-  \caption*{\scriptsize * City-states (i.e., Berlin, Bremen, Hamburg, Madrid, and London) and regions without substations are merged with neighbours. The islands of Sardinia and Sicily are modelled as two separate regions.}
+  \caption*{\scriptsize City-states (*) (i.e., Berlin, Bremen, Hamburg, Madrid, and London) and regions without substations (**) (one in BE) are merged with neighbours. Sardinia and Sicily are modelled as two separate regions.}
 \end{table*}
 
+\begin{table*}
+  \centering
+  \caption{DUMMY Overview of technology cost assumptions. TODO compare with FLEITER PAPER TABLE 9}
+  \label{tab:cost_assumptions}
+  \scriptsize
+  \begin{tabularx}{\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    & \textbf{Unit} & \textbf{2030} & \textbf{2040} & \textbf{2050} \\
+    \midrule
+    \textbf{Technology} & & & & \\
+    CO2 pipelines & XX & 1000 & 1000 & 1000 \\
+    Onshore, offshore & XX & 1000 & 1000 & 1000 \\
+    Electrolysers & XX & 1000 & 1000 & 1000 \\
+    \bottomrule
+  \end{tabularx}
+\end{table*}
+
+\newpage
 \newpage
 \section{Supplementary material --- Results and discussion}
 \label{app:results_and_discussion}
