@@ -19,8 +19,8 @@
 %% SP 2008/03/01
 %% $Id: elsarticle-template-num.tex 249 2024-04-06 10:51:24Z rishi $
 %%
-\documentclass[preprint,12pt]{elsarticle}
-% \documentclass[final,5p,times,twocolumn]{elsarticle}
+\documentclass[preprint,12pt,sort&compress]{elsarticle}
+% \documentclass[final,5p,times,twocolumn,sort&compress]{elsarticle}
 
 %% Custom packages
 \usepackage[super]{nth}
@@ -233,28 +233,27 @@ In order for projects to be eligible for PCI-PMI status, their \textit{potential
 We structure the literature review into three main sections: (i) the value of \ce{CO2} and \ce{H2} in low-carbon energy systems, (ii) transporting \ce{CO2} and \ce{H2} through pipelines, and (iii) addressing uncertainty in energy system models. Based on this review, identify research gaps and position our work as a novel contribution to the current state of the art (iv).
 
 \subsection{The value of \ce{CO2} and \ce{H2} in low-carbon energy systems}
-A growing body of literature has been investigating the long-term role of \ce{H2} and \ce{CO2} in low-carbon or net-zero energy systems. Both carriers see their primary value outside the electricity sector, i.e., in the decarbonisation of hard-to-abate sectors such as industry, transport, shipping, and aviation \cite{reigstadMovingLowcarbonHydrogen2022}. While there are direct use cases for \ce{H2} in the industry sector such as steel production, it is primarily expected to serve as a precursor for synthetic fuels, including methanol, Fischer-Tropsch fuels (e.g. synthetic kerosene and naphta) and methane. The demand for these fuels is driven by the aviation, shipping, industry, and agriculture sectors \cite{neumannPotentialRoleHydrogen2023}. To produce these carbonaceous fuels, \ce{CO2} is required as a feedstock (Carbon Utilisation --- CU). The \ce{CO2} can be captured from the atmosphere via Direct Air Capture (DAC) or from industrial and process emissions (e.g. cement, steel, ammonia production) in combination with Carbon Capture (CC) units.
+A growing body of literature has been investigating the long-term role of \ce{H2} and \ce{CO2} in low-carbon or net-zero energy systems. Both carriers see their primary value outside the electricity sector, i.e., in the decarbonisation of hard-to-abate sectors such as industry, transport, shipping, and aviation \cite{reigstadMovingLowcarbonHydrogen2022}. While there are direct use cases for \ce{H2} in the industry sector such as steel production, it is primarily expected to serve as a precursor for synthetic fuels, including methanol, Fischer-Tropsch fuels (e.g. synthetic kerosene and naphta) and methane. The demand for these fuels is driven by the aviation, shipping, industry, and agriculture sectors \cite{neumannPotentialRoleHydrogen2023}. To produce these carbonaceous fuels, \ce{CO2} is required as a feedstock (Carbon Utilisation --- CU). This \ce{CO2} can be captured from the atmosphere via Direct Air Capture (DAC) or from industrial and process emissions (e.g. cement, steel, ammonia production) in combination with Carbon Capture (CC) units.
 
-van Greevenbroek et al. \cite{greevenbroekLittleLoseCase2024}: Look at near optimal solution space by assessing a wide range. Derived from a wide set of literature, modelling hydrogen and CS, CU \cite{fleiterHydrogenInfrastructureFuture2025,beresWillHydrogenSynthetic2024,blancoPotentialHydrogenPowertoLiquid2018,pickeringDiversityOptionsEliminate2022,schreyerDistinctRolesDirect2024,seckHydrogenDecarbonizationEnergy2022,neumannPotentialRoleHydrogen2023,zeyenEndogenousLearningGreen2023,kountourisUnifiedEuropeanHydrogen2024}
+Van Greevenbroek et al. \cite{greevenbroekLittleLoseCase2024}: Look at near optimal solution space by assessing a wide range. Derived from a wide set of literature, modelling hydrogen and CS, CU \cite{fleiterHydrogenInfrastructureFuture2025,beresWillHydrogenSynthetic2024,blancoPotentialHydrogenPowertoLiquid2018,pickeringDiversityOptionsEliminate2022,schreyerDistinctRolesDirect2024,seckHydrogenDecarbonizationEnergy2022,neumannPotentialRoleHydrogen2023,zeyenEndogenousLearningGreen2023,kountourisUnifiedEuropeanHydrogen2024}
 
 Range of assessed CO2 sequestration potential from 275 Mtpa, 550 Mtpa,  up to 1100 Mtpa. Range of green hydrogen production in 2050 goes up to 90 Mtpa. Page 3: Europe has little to loose by committing to targets like 25 Mt pa H2 production by 2040, moderate taregt, feasible.
 
 "Cost optimal modelling results with a central planning approach may not capture system designs that are politically more viable but slightly more costly." from Koens paper, \cite{trutnevyteDoesCostOptimization2016}
 
-\subsection{Transporting \ce{CO2} and \ce{H2} through pipelines}
+\subsection{Transporting \ce{H2} and \ce{CO2} through pipelines}
 Recent publications show that transporting \ce{CO2} and \ce{H2} via dedicated pipeline infrastructure can unlock additional benefits and net cost-savings in a sector-coupled energy system. Victoria et al. \cite{victoriaSpeedTechnologicalTransformations2022a} ... TODO
 
-Neumann et al. \cite{neumannPotentialRoleHydrogen2023} examine the complex interaction between electricity grid expansion and a European-wide deployment of hydrogen pipelines in a net-zero system (new and retrofitting of existing gas pipelines). While \ce{H2} pipelines are not essential, their build-out can significantly reduce system costs by up to 26 bn. \euro{} p.a. (\SI{3.4}{\percent} of annual CAPEX and OPEX) by connecting regions with excessive renewable potential, storage sites and load centres. 
-Extending their previous work, Neumann et al. \cite{neumannEnergyImportsInfrastructure2024} investigate the trade-off between relying on different energy import strategies and domestric infrastructure build-out. By coupling the global energy supply chain model TRACE \cite{hamppImportOptionsChemical2023} and the sector-coupled PyPSA-Eur model, they assess different energy vector import combinations (e.g. electricity, \ce{H2} or \ce{H2} derivatives) and their impact on Europe's infrastructural needs. By
+Neumann et al. \cite{neumannPotentialRoleHydrogen2023} examine the interaction between electricity grid expansion and a European-wide deployment of hydrogen pipelines in a net-zero system (new and retrofitting of existing gas pipelines). While \ce{H2} pipelines are not essential, their build-out can significantly reduce system costs by up to 26 bn. \euro{} p.a. (\SI{3.4}{\percent} of annual CAPEX and OPEX) by connecting regions with excessive renewable potential to storage sites and load centres. 
+Extending their previous work, Neumann et al. \cite{neumannEnergyImportsInfrastructure2024} investigate the trade-off between relying on different energy import strategies and domestric infrastructure build-out. By coupling the global energy supply chain model TRACE \cite{hamppImportOptionsChemical2023} and the sector-coupled PyPSA-Eur model, they assess different energy vector import combinations (e.g. electricity, \ce{H2} or \ce{H2} derivatives) and their impact on Europe's infrastructural needs. Depending on the import costs, they observe up to \SI{14}{\percent} in system cost savings. Further, with an increasing share of \ce{H2} imports, the need for domestic \ce{H2} pipelines would decrease. 
 
-In a study by Kontouris et al. \cite{kountourisUnifiedEuropeanHydrogen2024}, the authors explore
-BALMOREL
+In a study by Kontouris et al. \cite{kountourisUnifiedEuropeanHydrogen2024}, the authors explore pathways for a potential integrated hydrogen infrastructure in Europe while considering sector-coupling and energy imports. Using the European energy system model Balmorel \cite{wieseBalmorelOpenSource2018}, the authors implement three scenarios varying between domestic and imported \ce{H2} levels as well as \ce{H2} production technologies. In their findings they identify main \ce{H2} transport corridors from Spain and France, Ireland and the United Kingdom, Italy, and Southeastern Europe. When synergies through sector-coupling are exploited, domestic \ce{H2} production can be competitive, seeing an increase in up to \SI{3}{\percent} in system costs.
 
+Fleiter et al. \cite{fleiterHydrogenInfrastructureFuture2025} use a mixed simulation and optimisation method to model \ce{H2} uptake and transport by coupling three models, (i) FORECAST for buildings and industry, (ii) ALADIN for transport together with (iii) the European energy system model Enertile. Total demand for \ce{H2} ranges from \SI{690}{TWh} to \SI{2800}{TWh} in 2050, \SI{600}{TWh} to \SI{1400}{TWh} for synthetic fuels. In their study, the  chemical and steel industry in Northwest Europe (incl. western regions of Germany, Netherlands and northern regions of Belgium), display a demand of more than \SI{100}{TWh} each. With regard to crossborder transport, they mainly obser hydrogen flows from Norway, UK and Ireland to continental Europe (around \SI{53}{TWh} to \SI{72}{TWh}). Depending on the scenario, the Iberian Peninsula exports around \SI{72}{TWh} to \SI{235}{TWh} via and to France.
 
-Fleiter et al. \cite{fleiterHydrogenInfrastructureFuture2025} modelled the future hydrogen infrastructure in Europe, including the conversion of existing natural gas pipelines to hydrogen transport. They found that a significant share of the hydrogen infrastructure could be built on existing natural gas pipelines, which would reduce costs and accelerate the deployment of hydrogen infrastructure.
+On the carbon networks side, \cite{bakkenLinearModelsOptimization2008}
 
-Fleiter et al. \cite{fleiterHydrogenInfrastructureFuture2025}, single node per country, modelled as net transfer capacities, assumed "that 70 percent of hydrogen pipelines will be converted from existing natural gas pipelines"
-
+Do both!
 Hofmann et al. \cite{hofmannH2CO2Network2025} address previous research gap in assessing the interaction between \ce{H2} and \ce{CO2} infrastructure, including their production, transport, storage, utilisation, and sequestration. They find that ...
 \subsection{Addressing uncertainty in energy system models}
 
@@ -329,7 +328,7 @@ Note that we use standardised costs \cite{zeyenPyPSATechnologydataV01012025} for
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\linewidth]{regional_scope_map}
+  \includegraphics[width=0.9\linewidth]{map_adm_pcipmi}
   \caption{Map of the regional scope including clustered onshore (grey) and offshore regions (blue), as well as PCI-PMI \ce{CO2} and \ce{H2} pipelines, storage and sequestration sites. Depleted offshore oil and gas fields (red) provide additional \ce{CO2} sequestration potential \cite{hofmannH2CO2Network2025}.}
   \label{fig:regional_scope_map}
 \end{figure}
@@ -369,9 +368,9 @@ Regret-matrix approach, resulting in 60 runs (15 long-term investments and their
     \midrule
     \textbf{Long-term scenarios} & & & \\
     Decentral Islands (\textbf{DI}) & $\blacksquare$ & -- & -- \\
-    PCI-PMI (\textbf{PP}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
-    PCI-PMI Exp (\textbf{PPE}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$\\
-    PCI-PMI Exp+ (\textbf{PPE+}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    PCI-PMI (\textbf{PCI}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+    PCI-PMI Exp (\textbf{PCI-n}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$\\
+    PCI-PMI Exp+ (\textbf{PCI-in}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
     Central Planning (\textbf{CP}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
     \midrule
     \textbf{Targets} & & & \\
@@ -405,9 +404,9 @@ Regret-matrix approach, resulting in 60 runs (15 long-term investments and their
     \toprule
     \textbf{Long-term scenarios} & 
     \textbf{DI} & 
-    \textbf{PP} & 
-    \textbf{PPE} & 
-    \textbf{PPE+} & 
+    \textbf{PCI} & 
+    \textbf{PCI-n} & 
+    \textbf{PCI-in} & 
     \textbf{CP} \\
     \midrule
     \textbf{\ce{CO2} sequestration} & & & & & \\
@@ -463,22 +462,114 @@ Utilisation of \ce{H2} pipelines vary strongly across the PCI-PMI projects. In m
 
 \begin{figure*}[htbp]
   \centering
-  \begin{subfigure}[t]{0.47\textwidth} % [t] aligns at the top
+  \includegraphics[width=\textwidth]{totex_heatmap.pdf}
+  \caption{Annual system costs by long-term scenario and planning horizon.}
+  \label{fig:totex_heatmap}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{regret_matrix}
+  \caption{Regret matrix. Calculating regret terms by subtracting system costs of long-term scenarios (columns) from short-term scenarios (rows). Positive values reflect higher costs in the short-term scenarios compared to the long-term ones.}
+  \label{fig:regret_matrix}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{balances_overview_co2 stored}
+  \caption{ce{CO2} balances in long-term scenarios.}
+  \label{fig:balances_overview_co2_stored}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{balances_overview_H2}
+  \caption{\ce{H2} balances in long-term scenarios.}
+  \label{fig:balances_overview_H2_stored}
+\end{figure*}
+
+
+\begin{itemize}
+  \item Regarding DAC Fig. \ref{fig:delta_balances_dac}
+  \item No DAC in 2030 yet, primarily from CC from point sources
+  \item 2040 sees strong effect in shor-term runs, delaying the pipelines means a much higher utilisation in DAC to compensate for missing pipelines
+\end{itemize}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_DAC}
+  \caption{Delta balances --- \ce{CO2} from Direct Air Capture.}
+  \label{fig:delta_balances_dac}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_H2 Electrolysis}
+  \caption{Delta balances --- Electrolytic \ce{H2} production}
+  \label{fig:delta_balances_h2_electrolysis}
+\end{figure}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
       \vspace{0pt}
-      \includegraphics[width=0.9\textwidth]{balance_map_h2_base} % Replace with your image
-      \vspace{0.3cm}
-      \caption{\ce{H2} regional balances and flows (all \ce{H2} produced).}
-      \label{fig:balance_map_h2_base}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2030_h2}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[t]{0.47\textwidth} % [t] aligns at the top
+  \begin{subfigure}[t]{0.49\textwidth}
       \vspace{0pt}
-      \includegraphics[width=0.9\textwidth]{balance_map_co2_base} % Replace with your image
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
       \caption{\ce{CO2} regional balances and flows.}
-      \label{fig:balance_map_co2_base}
+      \label{fig:PCI-in_lt_2030_co2}
   \end{subfigure}
-  \caption{Results \textit{Base} scenario --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport in the Base scenario.}
-  \label{fig:balance_maps_base}
+  \caption{\textit{PCI-in long-term} scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI-in_lt_2030}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2040_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2040_co2}
+  \end{subfigure}
+  \caption{\textit{PCI-in long-term} scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI-in_lt_2040}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances.}
+      \label{fig:PCI-in_lt_2050_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2050_co2}
+  \end{subfigure}
+  \caption{\textit{PCI-in long-term} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI-in_lt_2050}
 \end{figure*}
 
 \paragraph{Scenario A compared to Base} PCI-PMI infrastructure account for a total of around 30 bn. \euro{} p.a. in additional total system costs, indicating that for the target year 2030, the projects are not cost-optimal. With a delay of PCI-PMI projects in scenario \textit{A}, Europe's policy targets can still be achieved at significantly lower cost. However, this comes at the expense of a less interconnected energy system, which may lead to higher costs in the long run. Further, \ce{H2} prices vary more strongly across regions, seeing higher costs in southeastern Europe due to industrial demand and lower renewable potentials (Figure \ref{fig:balance_map_h2_scenario_a}). We make similar observations for \ce{CO2} --- a lack of pipeline infrastructure increases spread of \ce{CO2} prices, seeing higher values for \ce{CO2} in regions with high demand (e.g. for industrial processes or methanolisation). 
@@ -606,68 +697,189 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
   \end{tabularx}
 \end{table*}
 
-\newpage
-\newpage
+\clearpage
 \section{Supplementary material --- Results and discussion}
 \label{app:results_and_discussion}
-
-\begin{figure}[htbp]
+\subsection{Total energy balances}
+\begin{figure*}[htbp]
   \centering
-  \includegraphics[width=0.9\linewidth]{h2_balance}
-  \caption{Results --- \ce{H2} balance.}
-  \label{fig:h2_balance}
-\end{figure}
+  \includegraphics[width=\textwidth]{balances_overview_extended_co2 stored}
+  \caption{$\Delta$\ce{CO2} balances --- Long-term minus short-term runs.}
+  \label{fig:balances_overview_extended_co2_stored}
+\end{figure*}
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
   \centering
-  \includegraphics[width=0.9\linewidth]{co2_balance}
-  \caption{Results --- \ce{CO2} balance.}
-  \label{fig:co2_balance}
-\end{figure}
+  \includegraphics[width=\textwidth]{balances_overview_extended_H2}
+  \caption{$\Delta$\ce{H2} balances --- Long-term minus short-term runs.}
+  \label{fig:balances_overview_extended_H2_stored}
+\end{figure*}
 
-\begin{figure*}[!htbp]
+\clearpage
+\subsection{Maps}
+
+\subsubsection{Decentral Islands}
+\begin{figure*}[htbp]
   \centering
-  \begin{subfigure}[t]{0.47\textwidth}
+  \begin{subfigure}[t]{0.49\textwidth}
       \vspace{0pt}
-      \includegraphics[width=\textwidth]{balance_map_h2_scenario_a}
-      \vspace{0.3cm}
-      \vspace{-0.3cm}
-      \caption{\ce{H2} regional balances and flows (Scenario A, all \ce{H2} produced).}
-      \label{fig:balance_map_h2_scenario_a}
+      \includegraphics[width=1\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2030-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:DI_lt_2030_h2}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[t]{0.47\textwidth}
+  \begin{subfigure}[t]{0.49\textwidth}
       \vspace{0pt}
-      \includegraphics[width=\textwidth]{balance_map_co2_scenario_a}
+      \includegraphics[width=1\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2030-balance_map_co2_stored} 
       \vspace{-0.7cm}
-      \caption{\ce{CO2} regional balances and flows (Scenario A).}
-      \label{fig:balance_map_co2_scenario_a}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:DI_lt_2030_co2}
   \end{subfigure}
+  \caption{\textit{Decentral Islands} scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:DI_lt_2030}
+\end{figure*}
 
-  \vspace{0.2cm} % Adds spacing between rows
-
-  \begin{subfigure}[t]{0.47\textwidth}
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
       \vspace{0pt}
-      \includegraphics[width=\textwidth]{balance_map_h2_scenario_b}
-      \vspace{0.3cm}
-      \vspace{-0.3cm}
-      \caption{\ce{H2} regional balances and flows (Scenario B, all \ce{H2} produced).}
-      \label{fig:balance_map_h2_scenario_b}
+      \includegraphics[width=1\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2040-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:DI_lt_2040_h2}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[t]{0.47\textwidth}
+  \begin{subfigure}[t]{0.49\textwidth}
       \vspace{0pt}
-      \includegraphics[width=\textwidth]{balance_map_co2_scenario_b}
+      \includegraphics[width=1\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2040-balance_map_co2_stored} 
       \vspace{-0.7cm}
-      \caption{\ce{CO2} regional balances and flows (Scenario B).}
-      \label{fig:balance_map_co2_scenario_b}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:DI_lt_2040_co2}
   \end{subfigure}
+  \caption{\textit{Decentral Islands} scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:DI_lt_2040}
+\end{figure*}
 
-  \caption{Results scenarios \textit{A} and \textit{B} --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
-  \label{fig:balance_maps_scenarios_a_b}
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:DI_lt_2050_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:DI_lt_2050_co2}
+  \end{subfigure}
+  \caption{\textit{Decentral Islands} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:DI_lt_2050}
+\end{figure*}
+
+\clearpage
+\subsubsection{Central Planning}
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/greenfield-pipelines/base_s_adm___2030-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:CP_lt_2030_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/greenfield-pipelines/base_s_adm___2030-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:CP_lt_2030_co2}
+  \end{subfigure}
+  \caption{\textit{Central Planning} scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:CP_lt_2030}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/greenfield-pipelines/base_s_adm___2040-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:CP_lt_2040_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/greenfield-pipelines/base_s_adm___2040-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:CP_lt_2040_co2}
+  \end{subfigure}
+  \caption{\textit{Central Planning} scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:CP_lt_2040}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/greenfield-pipelines/base_s_adm___2050-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:CP_lt_2050_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/greenfield-pipelines/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:CP_lt_2050_co2}
+  \end{subfigure}
+  \caption{\textit{Central Planning} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:CP_lt_2050}
 \end{figure*}
 
 \newpage
+\subsection{Delta balances}
+\label{app:delta_balances}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_process emissions CC}
+  \caption{Delta balances --- Process emissions including Carbon Capture.}
+  \label{fig:delta_balances_process_emissions_CC}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_solid biomass for industry CC}
+  \caption{Delta balances --- \ce{CO2} captured from solid biomass for industry point sources.}
+  \label{fig:delta_balances_biomass_industry_cc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_SMR CC}
+  \caption{Delta balances --- \ce{CO2} captured from steam methane reforming point sources.}
+  \label{fig:delta_balances_smr_cc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_gas for industry CC}
+  \caption{Delta balances --- \ce{CO2} captured from gas for industry point sources.}
+  \label{fig:delta_balances_gas_for_industry}
+\end{figure}
+
+\clearpage
 \bibliographystyle{elsarticle-num} 
 \bibliography{references.bib}
 
