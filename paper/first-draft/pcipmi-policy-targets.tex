@@ -196,6 +196,7 @@ energy system modelling \sep policy targets \sep infrastructure \sep resilience 
   \item \textbf{EU} \enspace European Union
   \item \textbf{GHG} \enspace Greenhouse gas
   \item \textbf{NEP} \enspace Netzentwicklungsplan (German grid development plan)
+  \item \textbf{NUTS} \enspace Nomenclature of Territorial Units for Statistics
   \item \textbf{PCI} \enspace Projects of Common Interest
   \item \textbf{PMI} \enspace Projects of Mutual Interest
   \item \textbf{REST} \enspace Representational State Transfer 
@@ -308,7 +309,7 @@ To assess the long-term impact of PCI-PMI projects on European policy targets ac
 
 \paragraph{Geographical scope} 
 \label{sec:geographical_scope}
-We model 34 European countries, including 25 of the EU27 member states (excluding Cyprus and Malta), as well as Norway, Switzerland, the United Kingdom, Albania, Bosnia and Herzegovina, Montenegro, North Macedonia, Serbia, and Kosovo. Regional clustering is based on administrative NUTS boundaries, with higher spatial resolution applied to regions hosting planned PCI-PMI infrastructure, producing 99 onshore regions (see Table \ref{tab:regional_clustering}). Depending on the scenario, additional offshore buses are introduced to appropriately represent offshore sequestration sites and PCI-PMI projects. In our application, Europe is self-sufficient, we do not allow for any imports or exports of the assessed carriers.a
+We model 34 European countries, including 25 of the EU27 member states (excluding Cyprus and Malta), as well as Norway, Switzerland, the United Kingdom, Albania, Bosnia and Herzegovina, Montenegro, North Macedonia, Serbia, and Kosovo. Regional clustering is based on administrative NUTS boundaries, with higher spatial resolution applied to regions hosting planned PCI-PMI infrastructure, producing 99 onshore regions (see Table \ref{tab:regional_clustering}). Depending on the scenario, additional offshore buses are introduced to appropriately represent offshore sequestration sites and PCI-PMI projects. To isolate the effect of PCI-PMI projects, Europe is self-sufficient in our study, i.e., we do not allow any imports or exports of the assessed carriers like electricity, \ce{H2}, or \ce{CO2}. 
 
 \paragraph{Technology assumptions} 
 \label{sec:technology_assumptions}
@@ -318,13 +319,12 @@ As part of the PyPSA-Eur model, we source all technology-specific assumptions in
 \label{sec:demand_and_co2_emissions}
 Energy and fuel carrier demand in the modelled sectors, as well as non-abatable \ce{CO2} process emissions are taken from various sources \cite{mantzosJRCIDEES20152018,eurostatCompleteEnergyBalances2022,manzGeoreferencedIndustrialSites2018,muehlenpfordtTimeSeries2019,krienOemofDemandlibV0222025}. Regionally and temporally resolved demand includes electricity, heat, gas, biomass and transport. Internal combustion engine vehicles in land transport are expected to fully phase out in favour of electric vehicles by 2050 \cite{zeyenShiftingBurdensHow2025a}. Demand for hydrocarbons, including methanol and kerosene are primarily driven by the shipping, aviation and industry sector and are not spatially resolved.
 
-To reach net-zero \ce{CO2} emissions by 2050, the yearly emission budget follows the EU's 2030 (\SI{-55}{\percent}) and 2040 (\SI{-90}{\percent}) targets \cite{europeancommissionFit55Delivering2021, europeancommission.directorategeneralforclimateaction.IndepthReportResults2024}, translating into a carbon budget of \SI{2072}{Mtpa} in 2030 and \SI{460}{Mtpa} in 2040, respectively
+To reach net-zero \ce{CO2} emissions by 2050, the yearly emission budget follows the EU's 2030 (\SI{-55}{\percent}) and 2040 (\SI{-90}{\percent}) targets \cite{europeancommissionFit55Delivering2021, europeancommission.directorategeneralforclimateaction.IndepthReportResults2024}, translating into a carbon budget of \SI{2072}{Mtpa} in 2030 and \SI{460}{Mtpa} in 2040, respectively (see Table \ref{tab:targets}).
+
 \subsection{PCI-PMI projects implementation}
 \label{sec:pci-pmi_projects_implementation}
 
-By accessing the REST API of the PCI-PMI Transparency Platform and associated public project sheets provided by the European Commission \cite{europeancommissionPCIPMITransparencyPlatform2024}. We add all \ce{CO2} sequestration sites and connected pipelines, \ce{H2} pipelines and storage sites, as well as proposed pumped-hydro storages and transmission lines (AC and DC) to the PyPSA-Eur model. To isolate the effect of the \ce{CO2} and \ce{H2} infrastructure, PCI-PMI projects representing single hybrid interconnectors/energy islands or offshore wind farms are not considered within the scope of our research. We consider the exact geographic information, build year, as well as available static technical parameters when adding individual assets to the respective modelling year. Our implementation can adapt to the needs and configuration of the model, including selected technologies, geographical and temporal resolution, as well as the level of sector-coupling.
-
-Note that we use standardised costs \cite{zeyenPyPSATechnologydataV01012025} for all existing brownfield, model-endogenous greenfield and PCI-PMI projects, equally. There are two major reasons for this approach: (i) Cost data provided by project promoters can be incomplete and may not include the same cost components, assumptions, risk margins, etc., and (ii) to ensure comparability and level-playing field between all potential projects, including both PCI-PMI and model-endogenous investments. An overview of the implemented PCI-PMI projects is shown in Figure \ref{fig:regional_scope_map}.
+We implement all PCI-PMI projects of the electricity, \ce{CO2} and \ce{H2} sectors (excl. offshore energy islands and hybrid interconnectors, as they are not the focus of our research) by accessing the REST API of the PCI-PMI Transparency Platform and associated public project sheets provided by the European Commission \cite{europeancommissionPCIPMITransparencyPlatform2024}. We add all \ce{CO2} sequestration sites and connected pipelines, \ce{H2} pipelines and storage sites, as well as proposed pumped-hydro storages and transmission lines (AC and DC) to the PyPSA-Eur model. We consider the exact geographic information, build year, as well as available static technical parameters when adding individual assets to the respective modelling year. Our implementation can adapt to the needs and configuration of the model, including selected technologies, geographical and temporal resolution, as well as the level of sector-coupling. An overview of the implemented PCI-PMI projects is provided in Figure \ref{fig:regional_scope_map}.
 
 \begin{figure}[htbp]
   \centering
@@ -332,6 +332,8 @@ Note that we use standardised costs \cite{zeyenPyPSATechnologydataV01012025} for
   \caption{Map of the regional scope including clustered onshore (grey) and offshore regions (blue), as well as PCI-PMI \ce{CO2} and \ce{H2} pipelines, storage and sequestration sites. Depleted offshore oil and gas fields (red) provide additional \ce{CO2} sequestration potential \cite{hofmannH2CO2Network2025}.}
   \label{fig:regional_scope_map}
 \end{figure}
+
+We apply standardised cost assumptions \cite{zeyenPyPSATechnologydataV01012025} across all existing brownfield assets, model-endogenously selected projects, and exogenously specified PCI-PMI projects, equally. Our approach is motivated by two key considerations: (i) cost data submitted by project promoters are often incomplete and may differ in terms of included components, underlying assumptions, and risk margins; and (ii) applying uniform cost assumptions ensures comparability and a level playing field across all potential investments, including both PCI-PMI and model-endogenous options. 
 
 \subsection{\ce{CO2} sequestration sites}
 \label{sec:co2_sequestration_sites}
@@ -490,7 +492,7 @@ Utilisation of \ce{H2} pipelines vary strongly across the PCI-PMI projects. In m
 
 
 \begin{itemize}
-  \item Regarding DAC Fig. \ref{fig:delta_balances_dac}
+  \item Regarding DAC Figure \ref{fig:delta_balances_dac}
   \item No DAC in 2030 yet, primarily from CC from point sources
   \item 2040 sees strong effect in shor-term runs, delaying the pipelines means a much higher utilisation in DAC to compensate for missing pipelines
 \end{itemize}
@@ -582,9 +584,9 @@ Overall, the results for the modelling year 2030 show that reaching the EU's 203
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{system_costs}
+  \includegraphics[width=\linewidth]{costs_overview.pdf}
   \caption{Results --- Total system costs by technology and infrastructure.}
-  \label{fig:system_costs}
+  \label{fig:costs_overview}
 \end{figure}
 
 \subsection{Limitations of our study}
@@ -700,13 +702,49 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
 \clearpage
 \section{Supplementary material --- Results and discussion}
 \label{app:results_and_discussion}
-\subsection{Total energy balances}
+\subsection{Delta system costs}
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{costs_overview_extended.pdf}
+  \caption{Delta system costs --- Long-term minus short-term runs.}
+  \label{fig:costs_overview_extended}
+\end{figure*}
+
+\clearpage
+\subsection{Delta balances}
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{balances_overview_extended_co2 stored}
   \caption{$\Delta$\ce{CO2} balances --- Long-term minus short-term runs.}
   \label{fig:balances_overview_extended_co2_stored}
 \end{figure*}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_process emissions CC}
+  \caption{$\Delta$\ce{CO2} balances --- Process emissions including Carbon Capture.}
+  \label{fig:delta_balances_process_emissions_CC}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_solid biomass for industry CC}
+  \caption{$\Delta$\ce{CO2} balances --- Carbon capture from solid biomass for industry point sources.}
+  \label{fig:delta_balances_biomass_industry_cc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_SMR CC}
+  \caption{$\Delta$\ce{CO2} balances --- Carbon capture from steam methane reforming point sources.}
+  \label{fig:delta_balances_smr_cc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{delta_balances_gas for industry CC}
+  \caption{$\Delta$\ce{CO2} balances --- Carbon captured from gas for industry point sources.}
+  \label{fig:delta_balances_gas_for_industry}
+\end{figure}
 
 \begin{figure*}[htbp]
   \centering
@@ -846,38 +884,6 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
   \caption{\textit{Central Planning} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:CP_lt_2050}
 \end{figure*}
-
-\newpage
-\subsection{Delta balances}
-\label{app:delta_balances}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{delta_balances_process emissions CC}
-  \caption{Delta balances --- Process emissions including Carbon Capture.}
-  \label{fig:delta_balances_process_emissions_CC}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{delta_balances_solid biomass for industry CC}
-  \caption{Delta balances --- \ce{CO2} captured from solid biomass for industry point sources.}
-  \label{fig:delta_balances_biomass_industry_cc}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{delta_balances_SMR CC}
-  \caption{Delta balances --- \ce{CO2} captured from steam methane reforming point sources.}
-  \label{fig:delta_balances_smr_cc}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{delta_balances_gas for industry CC}
-  \caption{Delta balances --- \ce{CO2} captured from gas for industry point sources.}
-  \label{fig:delta_balances_gas_for_industry}
-\end{figure}
 
 \clearpage
 \bibliographystyle{elsarticle-num} 
