@@ -1,0 +1,300 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% a0poster Portrait Poster for LiRI/UZH
+% LaTeX Template
+% Version 1.0 (22/06/13)
+% Version 2.0 (08/04/22)
+%
+% The a0poster class was created by:
+% Gerlinde Kettl and Matthias Weiser (tex@kettl.de)
+% adapted by Danny McDonald for LiRI/UZH (mcddjx@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a0,portrait]{a0poster}
+
+% control margins here
+\usepackage{geometry}
+ \geometry{
+ a0paper,
+ left=5cm,
+ top=4.5cm,
+ right=5cm,
+ bottom=4.5cm
+ }
+\addtolength{\textwidth}{4.5cm} % width of text can be adjusted if margins above are adjusted
+
+\usepackage{multicol} % This is so we can have multiple columns of text side-by-side
+\columnsep=3em % This is the amount of white space between the columns in the poster
+\columnseprule=0pt % This is the thickness of the black line between the columns in the poster
+
+% UZH colours
+\usepackage[svgnames]{xcolor}
+\definecolor{red100}{RGB}{204, 3, 1}
+\definecolor{uzhblau80}{RGB}{51,83,183}
+\definecolor{uzhockerrot100}{RGB}{220, 96, 39}
+\definecolor{uzhockerrot80}{RGB}{227, 128, 82}
+\definecolor{uzhflaschengruen100}{RGB}{42, 127, 98}
+\definecolor{uzhflaschengruen80}{RGB}{86, 157, 133}
+\definecolor{about}{RGB}{204,237,212} % 
+\definecolor{conclusion}{RGB}{204,212,237} % the conclusion box colour
+\usepackage{multirow}
+
+\usepackage{ifthen} % needed to stop horizontal line above 'Conclusions' section
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Location of the graphics files
+\usepackage{mwe,tikz}\usepackage[percent]{overpic} % overlay your photo over the background
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{wrapfig} % Allows wrapping text around tables and figures
+\usepackage{tgheros}
+\renewcommand{\sfdefault}{qhv}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[onehalfspacing]{setspace} % remove for single spacing
+\usepackage{tcolorbox} % for the conclusions box
+\usepackage{blindtext} % you can remove this once you add your content
+\usepackage[export]{adjustbox} % allow floating a graphic right
+\usepackage{titlesec} % customising section titles
+\usepackage{needspace} % prevent break between line and section title
+\usepackage{nameref} % package and command to get the name of the current section (for ifthen)
+\usepackage[version=4]{mhchem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+
+% define how our section titles will look (with ruled line)
+\titleformat{\section}
+  {\needspace{1\baselineskip}\sectionrule\huge\bfseries}
+  {\color{red100}\thesection.}
+  {1em}
+  {\color{red100}}
+
+% draw horizontal line before section unless it is conclusions (if you change name of Conclusions, you should
+% also change it here too so it is recognised and the line suppressed
+\makeatletter
+\newcommand{\sectionrule}{%
+ \ifthenelse{\equal{\@currentlabelname}{Conclusions}}
+ % use the below line instead of the above if conclusions is a section*
+ % \ifthenelse{\equal{\@currentlabelname}{}}
+  {}
+  {\vspace*{-\baselineskip}
+  %  \vrule height 1pt depth 1pt width \linewidth\vskip0.4pt
+   \bigskip}%
+}
+\makeatother
+
+
+%----------------------------------------------------------------------------------------
+%	POSTER HEADER 
+%----------------------------------------------------------------------------------------
+%\title{Creating a \LaTeX{} poster template matching UZH specifications for LiRI presentations}
+\title{The Role of PCI-PMI Infrastructure in Reaching Europe's Energy Policy Targets}
+
+% the top logo (in english!) and unit title
+% \noindent
+
+\noindent
+\begin{minipage}[b][2cm][t]{0.753\linewidth} 
+  % First Row
+  \vspace{1em}
+  \begin{minipage}{0.15\textwidth}
+    \includegraphics[height=3.5cm]{tub-logo.pdf}
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[height=4.5cm]{ensys-logo-en.pdf}
+  \end{minipage}
+  \vspace{2.3em}
+
+  % Second Row
+  \begin{minipage}{0.9\textwidth}
+    \makeatletter
+    \raggedright{\fontsize{75pt}{65pt}\selectfont\color{red100}\textbf{{\@title}}\par}
+    \makeatother
+    \color{Black}
+    \vspace{0.3cm}
+    \hspace{0.005em}
+    resilient-project.github.io $\cdot$ pypsa.org $\cdot$ github.com/PyPSA/pypsa-eur $\cdot$ github.com/bobbyxng
+  \end{minipage}
+\end{minipage}%
+%
+\begin{minipage}[b][2cm][t]{0.3\linewidth} % Second minipage
+    \begin{minipage}[t]{0.3\linewidth}
+        \includegraphics[height=13cm]{resilient_bmwk_logo.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.7\linewidth}
+        \includegraphics[height=13cm]{qr.pdf}
+    \end{minipage}%     
+\end{minipage}
+
+\vspace{15em}
+
+
+
+%----------------------------------------------------------------------------------------
+%	POSTER BODY
+%----------------------------------------------------------------------------------------
+
+\begin{multicols}{3}
+\raggedcolumns
+
+%----------------------------------------------------------------------------------------
+%	PYPSA
+%----------------------------------------------------------------------------------------
+
+\noindent \textcolor{red100}{\huge \textbf{PCI-PMI projects}}
+\\
+\textit{\ce{CO2} and \ce{H2} infrastructure}
+\\
+\noindent
+\begin{center}
+    \includegraphics[width=\linewidth]{map_adm_pcipmi.pdf}
+    \captionof{figure}{Map of the regional scope including clustered onshore (grey) and offshore regions (blue), as well as PCI-PMI \ce{CO2} and \ce{H2} pipelines, storage and sequestration sites. Depleted offshore oil and gas fields (red) provide additional \ce{CO2} sequestration potential \cite{hofmannH2CO2Network2025}.}
+    \label{fig:regional_scope_map}
+\end{center}
+\vspace{2em}
+
+\begin{center}
+    \captionof{table}{Regret matrix setup: Long-term and short-term scenarios.}
+    \label{fig:regret_matrix_setup}
+    \scriptsize
+    \begin{tabularx}{\linewidth}{R{7.5cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Short-term} & \textbf{Reduced targets} & \textbf{Delayed pipelines} & \textbf{No pipelines} \\
+        \midrule
+        \textbf{Long-term scenarios} & & & \\
+        Decentral Islands (\textbf{DI}) & $\blacksquare$ & -- & -- \\
+        PCI-PMI (\textbf{PCI}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+        PCI-PMI nat. (\textbf{PCI-n}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$\\
+        PCI-PMI internat. (\textbf{PCI-in}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+        Central Planning (\textbf{CP}) & $\blacksquare$ & $\blacksquare$ & $\blacksquare$ \\
+        \midrule
+        \textbf{Targets} & & & \\
+        GHG emission reduction &  $\blacksquare$ &  $\blacksquare$ &  $\blacksquare$ \\
+        \ce{CO2} sequestration &  -- &  $\blacksquare$ &  $\blacksquare$ \\
+        Electrolytic \ce{H2} production &  -- &  $\blacksquare$ &  $\blacksquare$ \\
+        \ce{H2} electrolysers &  -- &  $\blacksquare$ &  $\blacksquare$ \\
+        \midrule
+        \textbf{\ce{CO2} + \ce{H2} infrastructure} & & & \\
+        \ce{CO2} sequestration sites & $\blacksquare$ &  $\blacksquare$ &  $\blacksquare$ \\
+        \ce{CO2} pipelines to seq. site & $\blacksquare$ &  $\blacksquare$ &  $\blacksquare$ \\
+        \ce{CO2} pipelines & $\blacksquare$ &  $\square$ &  -- \\
+        \ce{H2} pipelines & $\blacksquare$ &  $\square$ &  -- \\
+        \bottomrule
+    \end{tabularx}
+\end{center}
+
+\columnbreak
+
+\noindent \textcolor{red100}{\huge \textbf{Results \& Discussion}}
+\\
+\textit{\ce{CO2} and \ce{H2} infrastructure}
+\\
+
+\begin{center}
+    \includegraphics[width=\linewidth]{base_s_adm___2050-balance_map_co2_stored.jpg}
+    \captionof{figure}{\textit{PCI-in long-term} scenario (2050) --- \ce{CO2} balances and distribution}
+    \label{fig:PCI-in_lt_2050_co2}
+\end{center}
+\vspace{2em}
+\begin{center}
+    \includegraphics[width=\linewidth]{base_s_adm___2050-balance_map_H2.jpg}
+    \captionof{figure}{\textit{PCI-in long-term} scenario (2050) --- \ce{H2} balances and distribution}
+    \label{fig:PCI-in_lt_2050_h2}
+\end{center}
+
+
+% \noindent \textcolor{red100}{\huge \textbf{PyPSA}}
+% \\
+% \textit{Python for Power System Analysis}
+% \\
+
+% \noindent
+% PyPSA is an open-source toolbox for \textbf{simulating and optimising modern power and energy 
+% systems} that include features such as conventional generators with unit commitment, 
+% variable wind and solar generation, storage units, coupling to other energy sectors, 
+% and mixed alternating and direct current networks. \\
+
+% \noindent \textcolor{black}{\large \textbf{Functionality}}
+
+% \noindent PyPSA can calculate:
+
+% \begin{itemize}
+%     \item static power flow (using both the full non-linear network equations and the linearised network equations)
+%     \item linear optimal power flow (least-cost optimisation of power plant and storage dispatch within network constraints, using the linear network equations, over several snapshots)
+%     \item security-constrained linear optimal power flow
+%     \item total electricity/energy system least-cost investment optimisation
+% \end{itemize}
+
+\columnbreak
+%----------------------------------------------------------------------------------------
+%	SECTIONS
+%----------------------------------------------------------------------------------------
+\noindent \textcolor{red100}{\huge \textbf{Conclusion \& Key Findings}}
+\\
+\textit{TODO FIll}
+\\
+
+
+\begin{center}
+    \includegraphics[width=\linewidth]{regret_matrix.pdf}
+    \captionof{figure}{Regret matrix. Calculating regret terms by subtracting system costs of long-term scenarios (columns) from short-term scenarios (rows). Positive values reflect higher costs in the short-term scenarios compared to the long-term ones.}
+    \label{fig:regret_matrix}
+\end{center}
+\vspace{2em}
+
+\noindent
+PyPSA-Eur is a spatially and temporally highly resolved \textbf{linear optimisation 
+model that covers the European continent}. The model is suitable both for operational studies and 
+generation and transmission expansion planning studies. The continental scope and 
+highly resolved spatial scale enables a proper description of the long-range smoothing
+effects for renewable power generation and their varying resource availability.
+
+\noindent
+
+\vspace{2em}
+\begin{tcolorbox}[width=0.95\linewidth,colback={about},frame empty,boxsep=1cm]
+\section*{RESILIENT Project}
+    Resilient Energy System Infrastructure Layouts for Industry, E-Fuels and Network Transitions 
+\end{tcolorbox}   
+
+\vspace{2em}
+\begin{tcolorbox}[width=0.95\linewidth,colback={conclusion},frame empty,boxsep=1cm]
+\section*{Open Source}
+    All tools are open-source and available on GitHub. The code is licensed under the MIT
+    license, which allows for free use and modification of the code. 
+    PyPSA and PyPSA-Eur are actively developed and maintained by the Department of Digital
+    Transformation in Energy Systems at the TU Berlin and the global \textbf{PyPSA community}.
+\end{tcolorbox}    
+
+%---------------------------------------------------------------------------------------
+%	REFERENCES
+%---------------------------------------------------------------------------------------
+
+\singlespacing
+\small
+% \nocite{*} % Print all references regardless of whether they were cited in the poster or not
+\bibliographystyle{plain} % Plain referencing style
+\bibliography{references}
+
+%---------------------------------------------------------------------------------------
+\end{multicols}
+
+% Add keywords and author in footer minipage
+\vfill % pushes footer to bottom if space allows
+\begin{center}
+  \colorbox{red100}{\parbox{1\linewidth}{
+    \centering
+    \color{white}
+    \textbf{Contact:} Bobby Xiong (xiong@tu-berlin.de) \quad
+    \textbf{Keywords:} \quad energy system modelling $\cdot$ policy targets $\cdot$ infrastructure $\cdot$ resilience $\cdot$ hydrogen $\cdot$ carbon $\cdot$ Europe 
+  }}
+\end{center}
+
+\end{document}
