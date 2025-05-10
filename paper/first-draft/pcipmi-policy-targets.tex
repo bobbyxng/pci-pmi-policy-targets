@@ -315,7 +315,7 @@ As part of the PyPSA-Eur model, we source all technology-specific assumptions in
 
 \paragraph{Demand and \ce{CO2} emissions}
 \label{sec:demand_and_co2_emissions}
-Energy and fuel carrier demand in the modelled sectors, as well as non-abatable \ce{CO2} process emissions are taken from various sources \cite{mantzosJRCIDEES20152018,eurostatCompleteEnergyBalances2022,manzGeoreferencedIndustrialSites2018,muehlenpfordtTimeSeries2019,krienOemofDemandlibV0222025}. Regionally and temporally resolved demand includes electricity, heat, gas, biomass and transport. Internal combustion engine vehicles in land transport are expected to fully phase out in favour of electric vehicles by 2050 \cite{zeyenShiftingBurdensHow2025a}. Demand for hydrocarbons, including methanol and kerosene are primarily driven by the shipping, aviation and industry sector and are not spatially resolved.
+Energy and fuel carrier demand in the modelled sectors, as well as non-abatable \ce{CO2} process emissions are taken from various sources \cite{mantzosJRCIDEES20152018,eurostatCompleteEnergyBalances2022,manzGeoreferencedIndustrialSites2018,muehlenpfordtTimeSeries2019,krienOemofDemandlibV0222025} and are shown in Figure \ref{fig:exogenous_demand}. Regionally and temporally resolved demand includes electricity, heat, gas, biomass and transport. Internal combustion engine vehicles in land transport are expected to fully phase out in favour of electric vehicles by 2050 \cite{zeyenShiftingBurdensHow2025a}. Demand for hydrocarbons, including methanol and kerosene are primarily driven by the shipping, aviation and industry sector and are not spatially resolved.
 To reach net-zero \ce{CO2} emissions by 2050, the yearly emission budget follows the EU's 2030 (\SI{-55}{\percent}) and 2040 (\SI{-90}{\percent}) targets \cite{europeancommissionFit55Delivering2021, europeancommission.directorategeneralforclimateaction.IndepthReportResults2024}, translating into a carbon budget of 2072 Mt p.a. in 2030 and 460 Mt p.a. in 2040, respectively (see Table \ref{tab:targets}).
 
 \paragraph{PCI-PMI projects implementation}
@@ -451,7 +451,7 @@ We structure the results and discussion into three main sections. First, we pres
 
 \subsection{Long-term scenarios}
 \label{sec:long-term_scenarios}
-In all long-term runs, we observe the highest total annual system costs in the planning horizon 2040, ranging from 912 to 968 bn. \euro{} p.a. (Figure \ref{fig:costs_overview}), driven by high investments. This can be primarily attributed to the strict exogenously given GHG emission reduction pathway, facing the largest net change from 2030 to 2040 --- a carbon budget reduction of more than 1600 Mt p.a. as opposed to the remaining 460 Mt p.a. in the last decade. In 2030, total system costs are lowest in the \textit{DI} and \textit{CP} scenario, as the model does not see the need for large-scale investments into \ce{H2} and \ce{CO2} infrastructure yet. With only \ce{CO2} pipelines to the depleted offshore oil and gas fields, the policy targets, incl. \ce{CO2} sequestration can be achieved at a total of 865 bn. \euro{} p.a. Adding PCI-PMI projects in 2030 increases costs by less than \SI{1}{\percent}. 
+In all long-term runs, we observe the highest total annual system costs in the planning horizon 2040, ranging from 912 to 968 bn. \euro{} p.a. (Figure \ref{fig:costs_overview}), driven by high investments. This can be primarily attributed to the strict exogenously given GHG emission reduction pathway, facing the largest net change from 2030 to 2040 --- a carbon budget reduction of more than 1600 Mt p.a. as opposed to the remaining 460 Mt p.a. in the last decade. In 2030, total system costs are lowest in the \textit{DI} and \textit{CP} scenario, as the model does not see the need for large-scale investments into \ce{H2} and \ce{CO2} infrastructure yet. With \ce{CO2} pipelines connecting depleted offshore oil and gas fields to their closest onshore region, the policy targets, incl. \ce{CO2} sequestration can be achieved at a total of 865 bn. \euro{} p.a. Adding PCI-PMI projects in 2030 increases costs by less than \SI{1}{\percent}. 
 
 \begin{figure}[htbp]
   \centering
@@ -460,14 +460,8 @@ In all long-term runs, we observe the highest total annual system costs in the p
   \label{fig:costs_overview}
 \end{figure}
 
-Starting in 2040, all scenarios with PCI-PMI and endogenous pipeline investments unlock significant cost savings, ranging from more than 30 bn. \euro{} p.a. in the \textit{PCI} up to 50 bn. \euro{} p.a. in the \textit{PCI-in} scenario. By giving the model complete freedom in pipeline expansions, additional annual cost savings of 6 to 7 bn. \euro{} are unlocked by investing in fewer, but more optimally located \ce{CO2} pipelines and \ce{H2} (see \textit{PCI-in} pipeline utilisation in Figures \ref{fig:PCI-in_lt_2030} to \ref{fig:PCI-in_lt_2050} compared to \textit{CP} pipeline utilisation in Figures \ref{fig:CP_lt_2030} to \ref{fig:CP_lt_2050}). This effect is slightly less pronounced in the 2050 model results, system costs can be reduced by 26 to 41 bn. \euro{} p.a. with PCI-PMI and endogenous pipeline investments. 
+Starting in 2040, all scenarios with PCI-PMI and endogenous pipeline investments unlock significant cost savings, from more than 30 bn. \euro{} p.a. in the \textit{PCI} up to 50 bn. \euro{} p.a. in the \textit{PCI-in} scenario. By giving the model complete freedom in pipeline expansions, additional annual cost savings of 6 to 7 bn. \euro{} are unlocked by investing in fewer, but more optimally located \ce{CO2} and \ce{H2} pipelines from a systemic perspective (see \textit{PCI-in} pipeline utilisation in Figures \ref{fig:PCI-in_lt_2030} to \ref{fig:PCI-in_lt_2050} compared to \textit{CP} pipeline utilisation in Figures \ref{fig:CP_lt_2030} to \ref{fig:CP_lt_2050}). Further, this reduces the reliance on larger investments into wind generation and more expensive Direct Air Capture (DAC) technologies near the sequestration sites. These effects are slightly less pronounced in the 2050 model results, system costs can be reduced by 26 to 41 bn. \euro{} p.a. with PCI-PMI and endogenous pipeline investments. 
 
-
-\paragraph{Base scenario} Figure \ref{fig:balance_maps_base} shows the regional distribution of the \ce{H2} and \ce{CO2} value chain in the Base scenario. Note that for the specific year of 2030, a disconnect in \ce{H2} infrastructure between central and southeastern Europe can be observed, due to the delay in commissioning of the project connecting the two networks. Within the two interconnected regions, almost homogenous average marginal prices for \ce{H2} can be observed. Note that Figure \ref{fig:balance_map_h2_base} shows the cost of all \ce{H2} produced, weighted by the respective regional demand at a certain point in time. \ce{CO2} prices are higher in demand regions for industry processes and methanolisation located in northwestern Europe --- primarily Norway and the United Kingdom (Figure \ref{fig:balance_map_co2_base}). Negative \ce{CO2} prices in souhtheastern Europe indicate a lack of demand and missing economic value.
-
-
-
-Utilisation of \ce{H2} pipelines vary strongly across the PCI-PMI projects. In most of the times, pipelines serve the purpose of transporting \ce{H2} in a single direction only, i.e. from high renewable potential regions to \ce{H2} consumption sites, where it serves as a precursor for methanolisation or direct use in industry and shipping (see Figure \ref{fig:balance_map_h2_base}). Prominent PCI-PMI projects with particularly high full-load hours include P9.9.2 \textit{Hydrogen Interconnector Denmark-Germany} (\SI{6937}{h}) and P11.2  \textit{Nordic-Baltic Hydrogen Corridor} (\SI{2295}{h}), followed by projects connecting major steel-industrial and chemical sites of Germany (southwest) with Belgium (P9.4 \textit{H2ercules West}, \SI{1634}{h}), the Netherlands (P9.6 \textit{Netherlands National Hydrogen Backbone}, \SI{1967}{h} and P9.7.3 \textit{Delta Rhine Corridor H2}, \SI{1510}{h}), and France (P9.2.2 \textit{MosaHYyc}, \SI{4662}{h}). PCI project P13.8 \textit{EU2NSEA} connects \ce{CO2} from process emissions in Germany, Belgium and the Netherlands to major geological sequestration sinks close to the Norwegian shore \textit{Smeaheia} and \textit{Luna} with an annual injection potential of \SI{20}{Mt} p.a. and {5}{Mt} p.a., respectively. 
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{balances_overview_co2 stored}
@@ -475,12 +469,83 @@ Utilisation of \ce{H2} pipelines vary strongly across the PCI-PMI projects. In m
   \label{fig:balances_overview_co2_stored}
 \end{figure*}
 
+\paragraph{Carbon capture, utilisation, and storage}
+\label{sec:ccus}
+We find that most of the differences in system cost and savings can be attributed to the production and utilisation of \ce{CO2}, as shown in Figure \ref{fig:balances_overview_co2_stored}. Lacking the option to transport \ce{CO2} from industry and other point sources to the offshore sequestration sites, the model has to invest in expensive DAC technologies in the \textit{DI} scenario. While the sequestration target of 50 Mt p.a. in 2030 is binding for the \textit{DI} scenario, all other scenarios sequester more \ce{CO2}, the higher their \ce{CO2} pipeline build-out. The 53.9 Mt p.a. \ce{CO2} sequestered in the \textit{CP} serve as an indicator for what would be a cost-optimal amount for 2030 with perfectly located pipelines. With the inclusion of PCI-PMI projects, \ce{CO2} sequestration ranges from 58.7 Mt p.a. in the \textit{PCI} to 75 Mt p.a. in the \textit{PCI-in} scenario. 
+Looking at 2040 and 2050, in place of expensive DAC in the \textit{DI} scenario, the model equips biomass-based industrial processes primarily located in Belgium, the Netherlands and Western regions of Germany (see Figures \ref{fig:PCI_lt_2030_co2}, \ref{fig:PCI_lt_2040_co2}, and \ref{fig:PCI_lt_2050_co2}). 
+
+In 2040 and 2050, all sequestration targets (Table \ref{tab:targets}) are overachieved, as the full combined \ce{CO2} sequestration potential of 398 Mt p.a. is exploited in all scenarios where PCI-PMI projects are included (\textit{PCI} to \textit{CP}. Emissions are captured from industrial processes equipped with carbon capture units, with biomass-based industry providing the largest share in carbon capture from point sources, ranging from 119 to 241 Mt p.a. in 2040 and 149 to 287 Mt p.a. in 2050, increasing with the build-out of \ce{CO2} infrastructure (from left to right, see Figure \ref{fig:balances_overview_co2_stored}). Being the most expensive carbon capture option, only up to 8 Mt p.a. of \ce{CO2} is captured from SMR CC processes in the \textit{PCI} scenario in 2050. 
+With a lower sequestration potential of 286 Mt p.a. in \textit{DI} scenario, more \ce{CO2} is used as a precursor for the synthesis of Fischer-Tropsch fuels instead --- 221 Mt p.a. vs. 115-127 Mt p.a. (2040) and 206 Mt p.a. vs 153-163 Mt p.a. (2050), to meet the emission reduction targets for 2040 and 2050, respectively. 
+Given the fixed exogenous demand for (shipping) methanol (Figure \ref{fig:exogenous_demand}), \ce{CO2} demand for methanolisation is constant across all scenarios (39 Mt p.a. in 2030, 89 Mt p.a. in 2040, and 127 Mt p.a. in 2050). 
+
+\clearpage
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.4\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth,trim=0cm 2.8cm 0cm 0cm, clip]{maps/pcipmi/base_s_adm___2030-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} 2030.}
+      \label{fig:PCI_lt_2030_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.4\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth,trim=0cm 3.2cm 0cm 0cm, clip]{maps/pcipmi/base_s_adm___2030-balance_map_co2_stored} 
+      \vspace{-0.5cm}
+      \caption{\ce{CO2} 2030.}
+      \label{fig:PCI_lt_2030_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth,trim=0cm 2.8cm 0cm 0cm, clip]{maps/pcipmi/base_s_adm___2040-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} 2040.}
+      \label{fig:PCI_lt_2040_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.4\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth,trim=0cm 3.2cm 0cm 0cm, clip]{maps/pcipmi/base_s_adm___2040-balance_map_co2_stored} 
+      \vspace{-0.5cm}
+      \caption{\ce{CO2} 2040.}
+      \label{fig:PCI_lt_2040_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth,trim=0cm 0cm 0cm 0cm, clip]{maps/pcipmi/base_s_adm___2050-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} 2050.}
+      \label{fig:PCI_lt_2050_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.4\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth,trim=0cm 0cm 0cm 0cm, clip]{maps/pcipmi/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} 2050.}
+      \label{fig:PCI_lt_2050_co2}
+  \end{subfigure}
+  \caption{\textit{PCI} long-term scenario --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI_lt_2050}
+\end{figure*}
+\clearpage
+
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{balances_overview_H2}
   \caption{\ce{H2} balances in long-term scenarios.}
   \label{fig:balances_overview_H2_stored}
 \end{figure*}
+\paragraph{Hydrogen production and utilisation}
+\label{sec:h2_production_and_utilisation}
+\ce{H2} production in the model is primarily driven by the demand in for Fischer-Tropsch fuels and methanolisation. In 2030 and 2050, the electrolytic \ce{H2} production target of 10 and 45 Mt p.a. is binding, equivalent to 333 and 1500 TWh p.a., at a lower heating value of \SI{33.33}{kWh/kg} for \ce{H2}. Only in 2040, the \ce{H2} production target of 27.5 Mt p.a. (917 TWh p.a.) is overachieved by 185-247 TWh p.a. in the \textit{PCI} to \textit{CP} scenarios. \ce{H2} production in the \textit{DI} is significantly higher, given its need for additional Fischer-Tropsch synthesis, as described in the previous section.
+In 2050, Fischer-Tropsch fuels are used to satisfy the demand for kerosene in aviation and naphta for industrial processes (see Table \ref{fig:exogenous_demand}). Only about about 93 to 173 TWh p.a. of \ce{H2} is directly used in the industry. Throughout all long-term scenarios, \ce{H2} is almost exclusively produced via electrolysis. Only without any \ce{H2} pipeline infrastructure in the \textit{DI}, the model relies on steam methane reforming (SMR) to produce 71 to 102 TWh p.a. of \ce{H2} in 2040 and 2050, respectively.
+Regionally, \ce{H2} production is concentrated in regions with high solar PV potential such as the Iberian and Italian Peninsula, as well as high wind infeed regions including Denmark, the Netherlands and Belgium. The produced \ce{H2} is then transported via \ce{H2} pipelines including PCI-PMI projects to carbon point sources  in central, continental Europe where it is used as a precursor for Fischer-Tropsch fuels. Onsite \ce{H2} production and consumption primarily occurs for methanolisation processes. Figures \ref{fig:PCI_lt_2030_h2}, \ref{fig:PCI_lt_2040_h2}, and \ref{fig:PCI_lt_2050_h2} provide a map of the regional distribution of \ce{H2} production, utilisation, and transport in the \textit{PCI} scenario.  Additional maps are provided in section \ref{sec:maps} of the appendix. Note that PCI-PMI projects or candidates (in \textit{CP} scenario) are plotted in dotted white lines.
+
+\paragraph{Base scenario} Figure \ref{fig:balance_maps_base} shows the regional distribution of the \ce{H2} and \ce{CO2} value chain in the Base scenario. Note that for the specific year of 2030, a disconnect in \ce{H2} infrastructure between central and southeastern Europe can be observed, due to the delay in commissioning of the project connecting the two networks. Within the two interconnected regions, almost homogenous average marginal prices for \ce{H2} can be observed. Note that Figure \ref{fig:balance_map_h2_base} shows the cost of all \ce{H2} produced, weighted by the respective regional demand at a certain point in time. \ce{CO2} prices are higher in demand regions for industry processes and methanolisation located in northwestern Europe --- primarily Norway and the United Kingdom (Figure \ref{fig:balance_map_co2_base}). Negative \ce{CO2} prices in souhtheastern Europe indicate a lack of demand and missing economic value.
+
+\subsection{Short-term scenarios}
 
 
 \begin{itemize}
@@ -503,68 +568,7 @@ Utilisation of \ce{H2} pipelines vary strongly across the PCI-PMI projects. In m
   \label{fig:delta_balances_h2_electrolysis}
 \end{figure}
 
-\begin{figure*}[htbp]
-  \centering
-  \begin{subfigure}[t]{0.49\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_H2}
-      \vspace{-0.5cm}
-      \caption{\ce{H2} regional balances and flows.}
-      \label{fig:PCI-in_lt_2030_h2}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[t]{0.49\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_co2_stored} 
-      \vspace{-0.7cm}
-      \caption{\ce{CO2} regional balances and flows.}
-      \label{fig:PCI-in_lt_2030_co2}
-  \end{subfigure}
-  \caption{\textit{PCI-in long-term} scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
-  \label{fig:PCI-in_lt_2030}
-\end{figure*}
 
-\begin{figure*}[htbp]
-  \centering
-  \begin{subfigure}[t]{0.49\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_H2}
-      \vspace{-0.5cm}
-      \caption{\ce{H2} regional balances and flows.}
-      \label{fig:PCI-in_lt_2040_h2}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[t]{0.49\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_co2_stored} 
-      \vspace{-0.7cm}
-      \caption{\ce{CO2} regional balances and flows.}
-      \label{fig:PCI-in_lt_2040_co2}
-  \end{subfigure}
-  \caption{\textit{PCI-in long-term} scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
-  \label{fig:PCI-in_lt_2040}
-\end{figure*}
-
-\begin{figure*}[htbp]
-  \centering
-  \begin{subfigure}[t]{0.49\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2}
-      \vspace{-0.5cm}
-      \caption{\ce{H2} regional balances.}
-      \label{fig:PCI-in_lt_2050_h2}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[t]{0.49\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored} 
-      \vspace{-0.7cm}
-      \caption{\ce{CO2} regional balances and flows.}
-      \label{fig:PCI-in_lt_2050_co2}
-  \end{subfigure}
-  \caption{\textit{PCI-in long-term} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
-  \label{fig:PCI-in_lt_2050}
-\end{figure*}
 
 \paragraph{Scenario A compared to Base} PCI-PMI infrastructure account for a total of around 30 bn. \euro{} p.a. in additional total system costs, indicating that for the target year 2030, the projects are not cost-optimal. With a delay of PCI-PMI projects in scenario \textit{A}, Europe's policy targets can still be achieved at significantly lower cost. However, this comes at the expense of a less interconnected energy system, which may lead to higher costs in the long run. Further, \ce{H2} prices vary more strongly across regions, seeing higher costs in southeastern Europe due to industrial demand and lower renewable potentials (Figure \ref{fig:balance_map_h2_scenario_a}). We make similar observations for \ce{CO2} --- a lack of pipeline infrastructure increases spread of \ce{CO2} prices, seeing higher values for \ce{CO2} in regions with high demand (e.g. for industrial processes or methanolisation). 
 
@@ -631,6 +635,16 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
 %% appendix sections are then done as normal sections
 \newpage
 \appendix
+
+\section{Supplementary material --- Data}
+\label{app:data}\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{exogenous_demand.pdf}
+  \caption{Exogenous demand.}
+  \label{fig:exogenous_demand}
+\end{figure*}
+
+\clearpage
 \section{Supplementary material --- Methodology}
 \label{app:methodology}
 
@@ -705,11 +719,33 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
 \clearpage
 \section{Supplementary material --- Results and discussion}
 \label{app:results_and_discussion}
+\subsection{Installed capacities}
+\label{sec:installed_capacities}
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{capacities_overview.pdf}
+  \caption{Installed capacities in long-term scenarios.}
+  \label{fig:capacities_overview}
+\end{figure*}
+
+\clearpage
+\subsection{Delta capacities}
+\label{sec:delta_system_costs}
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{capacities_overview_extended.pdf}
+  \caption{$\Delta$Capacities --- Short-term minus long-term runs.}
+  \label{fig:capacities_overview_extended}
+\end{figure*}
+
+
+\clearpage
 \subsection{Delta system costs}
+\label{sec:delta_system_costs}
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{costs_overview_extended.pdf}
-  \caption{Delta system costs --- Short-term minus long-term runs.}
+  \caption{$\Delta$System costs --- Short-term minus long-term runs.}
   \label{fig:costs_overview_extended}
 \end{figure*}
 
@@ -758,7 +794,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
 
 \clearpage
 \subsection{Maps}
-
+\label{sec:maps}
 \subsubsection{Decentral Islands}
 \begin{figure*}[htbp]
   \centering
@@ -777,7 +813,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
       \caption{\ce{CO2} regional balances and flows.}
       \label{fig:DI_lt_2030_co2}
   \end{subfigure}
-  \caption{\textit{Decentral Islands} scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \caption{\textit{Decentral Islands} long-term scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:DI_lt_2030}
 \end{figure*}
 
@@ -798,7 +834,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
       \caption{\ce{CO2} regional balances and flows.}
       \label{fig:DI_lt_2040_co2}
   \end{subfigure}
-  \caption{\textit{Decentral Islands} scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \caption{\textit{Decentral Islands} long-term scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:DI_lt_2040}
 \end{figure*}
 
@@ -819,11 +855,79 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
       \caption{\ce{CO2} regional balances and flows.}
       \label{fig:DI_lt_2050_co2}
   \end{subfigure}
-  \caption{\textit{Decentral Islands} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \caption{\textit{Decentral Islands} long-term scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:DI_lt_2050}
 \end{figure*}
 
 \clearpage
+
+\subsection{PCI international}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2030_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2030_co2}
+  \end{subfigure}
+  \caption{\textit{PCI} long-term scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI-in_lt_2030}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2040_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2040_co2}
+  \end{subfigure}
+  \caption{\textit{PCI-in} long-term scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI-in_lt_2040}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2}
+      \vspace{-0.5cm}
+      \caption{\ce{H2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2050_h2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored} 
+      \vspace{-0.7cm}
+      \caption{\ce{CO2} regional balances and flows.}
+      \label{fig:PCI-in_lt_2050_co2}
+  \end{subfigure}
+  \caption{\textit{PCI-in} long-term scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \label{fig:PCI-in_lt_2050}
+\end{figure*}
+
+\clearpage
+
 \subsubsection{Central Planning}
 \begin{figure*}[htbp]
   \centering
@@ -842,7 +946,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
       \caption{\ce{CO2} regional balances and flows.}
       \label{fig:CP_lt_2030_co2}
   \end{subfigure}
-  \caption{\textit{Central Planning} scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \caption{\textit{Central Planning} long-term scenario (2030) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:CP_lt_2030}
 \end{figure*}
 
@@ -863,7 +967,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
       \caption{\ce{CO2} regional balances and flows.}
       \label{fig:CP_lt_2040_co2}
   \end{subfigure}
-  \caption{\textit{Central Planning} scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \caption{\textit{Central Planning} long-term scenario (2040) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:CP_lt_2040}
 \end{figure*}
 
@@ -884,7 +988,7 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
       \caption{\ce{CO2} regional balances and flows.}
       \label{fig:CP_lt_2050_co2}
   \end{subfigure}
-  \caption{\textit{Central Planning} scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
+  \caption{\textit{Central Planning} long-term scenario (2050) --- Regional distribution of \ce{H2} and \ce{CO2} production, utilisation, storage, and transport.}
   \label{fig:CP_lt_2050}
 \end{figure*}
 

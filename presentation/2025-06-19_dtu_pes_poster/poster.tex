@@ -22,7 +22,7 @@
  left=5cm,
  top=4.5cm,
  right=5cm,
- bottom=4.5cm
+ bottom=1cm
  }
 \addtolength{\textwidth}{4.5cm} % width of text can be adjusted if margins above are adjusted
 
@@ -38,7 +38,7 @@
 \definecolor{uzhockerrot80}{RGB}{227, 128, 82}
 \definecolor{uzhflaschengruen100}{RGB}{42, 127, 98}
 \definecolor{uzhflaschengruen80}{RGB}{86, 157, 133}
-\definecolor{about}{RGB}{204,237,212} % 
+\definecolor{about}{RGB}{237,204,212} % 
 \definecolor{conclusion}{RGB}{204,212,237} % the conclusion box colour
 \usepackage{multirow}
 
@@ -64,6 +64,7 @@
 \usepackage[version=4]{mhchem}
 \usepackage{tabularx}
 \usepackage{booktabs}
+\usepackage[official]{eurosym}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
 \begin{document}
@@ -133,7 +134,7 @@
     \end{minipage}%     
 \end{minipage}
 
-\vspace{15em}
+\vspace{14em}
 
 
 
@@ -148,21 +149,27 @@
 %	PYPSA
 %----------------------------------------------------------------------------------------
 
-\noindent \textcolor{red100}{\huge \textbf{PCI-PMI projects}}
+\noindent \textcolor{red100}{\huge \textbf{Motivation}}
 \\
-\textit{\ce{CO2} and \ce{H2} infrastructure}
+\textit{EU targets and PCI-PMI projects}
 \\
 \noindent
+The European Union (EU) aims to achieve climate-neutrality by 2050, with ambitious domestic \ce{H2} production and \ce{CO2} sequestration targets next to a net-zero transition. The European Commission selects so-called Projects of Common Interest (PCI) and Projects of Mutual Interest (PMI) (Figure \ref{fig:regional_scope_map}) --- large infrastructure projects for electricity, hydrogen and \ce{CO2} transport, and storage --- that are of transnational importance as they link the energy systems of European countries.
+
+\noindent
 \begin{center}
-    \includegraphics[width=\linewidth]{map_adm_pcipmi.pdf}
+    \includegraphics[width=0.90\linewidth]{map_adm_pcipmi.pdf}
     \captionof{figure}{Map of the regional scope including clustered onshore (grey) and offshore regions (blue), as well as PCI-PMI \ce{CO2} and \ce{H2} pipelines, storage and sequestration sites. Depleted offshore oil and gas fields (red) provide additional \ce{CO2} sequestration potential \cite{hofmannH2CO2Network2025}.}
     \label{fig:regional_scope_map}
 \end{center}
+
+\noindent In this work, we evaluate the impact of PCI-PMI projects for the European energy system and EU energy policies using a \textbf{regret-analysis} approach (Table \ref{tab:regret_matrix_setup}) using the open-source sector-coupled energy system model PyPSA-Eur \cite{hofmannH2CO2Network2025,horschPyPSAEurOpenOptimisation2018,neumannPotentialRoleHydrogen2023}. More specifically, we run five long-term scenarios varying in the degree of \ce{CO2} and \ce{H2} infrastructure deployment, including the on-time commissioning of PCI-PMI projects. In a second step, we evaluate the performance of these long-term scenarios in a short-term scenario (potential realisation), i.e. (i) reduced policy targets, (ii) delay of PCI-PMI, or (iii) no pipelines at all. In total, 60 optimisations are run at 2190 snapshots (on avg. 4h resolution) for 99 NUTS regions.
+
 \vspace{2em}
 
 \begin{center}
     \captionof{table}{Regret matrix setup: Long-term and short-term scenarios.}
-    \label{fig:regret_matrix_setup}
+    \label{tab:regret_matrix_setup}
     \scriptsize
     \begin{tabularx}{\linewidth}{R{7.5cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
         \toprule
@@ -188,26 +195,43 @@
         \ce{H2} pipelines & $\blacksquare$ &  $\square$ &  -- \\
         \bottomrule
     \end{tabularx}
+    $\blacksquare$ enabled \quad $\square$ delayed by one period \quad -- disabled
 \end{center}
+\vspace{2em}
+
+\noindent
+\begin{center}
+  \includegraphics[width=\linewidth]{delta_balances_DAC.pdf}
+  \captionof{figure}{DAC utilisation}
+  \label{fig:dac_balance}
+\end{center}
+\vspace{2em}
 
 \columnbreak
 
-\noindent \textcolor{red100}{\huge \textbf{Results \& Discussion}}
+\noindent \textcolor{red100}{\huge \textbf{Key results}}
 \\
-\textit{\ce{CO2} and \ce{H2} infrastructure}
-\\
+\textit{Pipelines vs. DAC}
+
+\noindent In the \textit{PCI} scenario, \textbf{\ce{CO2} pipelines} transport \ce{CO2} from biomass-based industry process and point sources equipped with carbon capture in north-western Europe to sequestration sites in the North Sea (Figure \ref{fig:PCI-in_lt_2050_co2}). These include PCI-PMI projects (around 114 Mt p.a.) and up to 286 Mt p.a. of additional potential from depleted oil and gas fields.
 
 \begin{center}
     \includegraphics[width=\linewidth]{base_s_adm___2050-balance_map_co2_stored.jpg}
-    \captionof{figure}{\textit{PCI-in long-term} scenario (2050) --- \ce{CO2} balances and distribution}
+    \captionof{figure}{\textit{PCI} long-term scenario (2050) --- \ce{CO2} balances and distribution}
     \label{fig:PCI-in_lt_2050_co2}
 \end{center}
 \vspace{2em}
+\noindent Results show that a build-out of \ce{CO2} pipelines \textbf{reduces the reliance on expensive DAC technology} (Figure \ref{fig:dac_balance}). Seeing a delay in the commissioning of pipeline projects leads to a significant increase in the use of DAC, most visible in the year 2040. In the most extreme case, DAC utilisation in pipeline scenarios by up to 300 Mt p.a. if the pipelines are not built at all, and the system has to react on short notice through additional investments or higher utilisation of existing assets.
+
+\noindent \textbf{\ce{H2} pipelines} connect production sites at locations with high renewable energy potential to demand sites, e.g. for methanol and Fischer-Trosch synthesis or direct use in the industry (Figure \ref{fig:PCI-in_lt_2050_h2}).
+
 \begin{center}
     \includegraphics[width=\linewidth]{base_s_adm___2050-balance_map_H2.jpg}
-    \captionof{figure}{\textit{PCI-in long-term} scenario (2050) --- \ce{H2} balances and distribution}
+    \captionof{figure}{\textit{PCI} long-term scenario (2050) --- \ce{H2} balances and distribution}
     \label{fig:PCI-in_lt_2050_h2}
 \end{center}
+
+
 
 
 % \noindent \textcolor{red100}{\huge \textbf{PyPSA}}
@@ -236,42 +260,36 @@
 %----------------------------------------------------------------------------------------
 %	SECTIONS
 %----------------------------------------------------------------------------------------
-\noindent \textcolor{red100}{\huge \textbf{Conclusion \& Key Findings}}
+\noindent \textcolor{red100}{\huge \textbf{Take-aways}}
 \\
-\textit{TODO FIll}
-\\
+\textit{Preliminary}
+\begin{itemize}
+  \item PCI-PMI \ce{CO2} and \ce{H2} pipelines support reaching the European policy targets at lower costs, especially over the total lifetime of the assets (Figure \ref{fig:system_costs}).
+  \item More pipeline investments unlock even higher system cost savings of additional 7-16 bn. \euro{} p.a. in 2050 by reducing the reliance on expensive DAC technology.
+  \item Delays of projects in 2030 barely affect total system costs. However, delays of PCI projects in combination with endogenous pipeline investments can increase system costs by up to 35.2 bn \euro{} p.a. (Figure \ref{fig:regret_matrix}).
+\end{itemize}
 
-
+\vspace{0.5em}
 \begin{center}
     \includegraphics[width=\linewidth]{regret_matrix.pdf}
     \captionof{figure}{Regret matrix. Calculating regret terms by subtracting system costs of long-term scenarios (columns) from short-term scenarios (rows). Positive values reflect higher costs in the short-term scenarios compared to the long-term ones.}
     \label{fig:regret_matrix}
 \end{center}
+\vspace{0.5em}
+
+\begin{center}
+  \includegraphics[width=\linewidth]{totex_heatmap.pdf}
+  \captionof{figure}{Total system costs}
+  \label{fig:system_costs}
+\end{center}
 \vspace{2em}
 
-\noindent
-PyPSA-Eur is a spatially and temporally highly resolved \textbf{linear optimisation 
-model that covers the European continent}. The model is suitable both for operational studies and 
-generation and transmission expansion planning studies. The continental scope and 
-highly resolved spatial scale enables a proper description of the long-range smoothing
-effects for renewable power generation and their varying resource availability.
+\noindent \textcolor{red100}{\huge \textbf{RESILIENT project}}
+\\
 
-\noindent
+\noindent\includegraphics[width=\linewidth]{resilient_project_structure.png}
 
-\vspace{2em}
-\begin{tcolorbox}[width=0.95\linewidth,colback={about},frame empty,boxsep=1cm]
-\section*{RESILIENT Project}
-    Resilient Energy System Infrastructure Layouts for Industry, E-Fuels and Network Transitions 
-\end{tcolorbox}   
-
-\vspace{2em}
-\begin{tcolorbox}[width=0.95\linewidth,colback={conclusion},frame empty,boxsep=1cm]
-\section*{Open Source}
-    All tools are open-source and available on GitHub. The code is licensed under the MIT
-    license, which allows for free use and modification of the code. 
-    PyPSA and PyPSA-Eur are actively developed and maintained by the Department of Digital
-    Transformation in Energy Systems at the TU Berlin and the global \textbf{PyPSA community}.
-\end{tcolorbox}    
+\noindent This work was supported by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A (RESILIENT). This project has been funded by partners of the CETPartnership (https://cetpartnership.eu) through the Joint Call 2022. As such, this project has received funding from the European Union's Horizon Europe research and innovation programme under grant agreement no. 101069750.
 
 %---------------------------------------------------------------------------------------
 %	REFERENCES
@@ -283,17 +301,20 @@ effects for renewable power generation and their varying resource availability.
 \bibliographystyle{plain} % Plain referencing style
 \bibliography{references}
 
+
+
 %---------------------------------------------------------------------------------------
 \end{multicols}
 
 % Add keywords and author in footer minipage
 \vfill % pushes footer to bottom if space allows
+
 \begin{center}
   \colorbox{red100}{\parbox{1\linewidth}{
     \centering
     \color{white}
     \textbf{Contact:} Bobby Xiong (xiong@tu-berlin.de) \quad
-    \textbf{Keywords:} \quad energy system modelling $\cdot$ policy targets $\cdot$ infrastructure $\cdot$ resilience $\cdot$ hydrogen $\cdot$ carbon $\cdot$ Europe 
+    \textbf{Keywords:} open-source $\cdot$ energy system modelling $\cdot$ policy targets $\cdot$ infrastructure $\cdot$ resilience $\cdot$ hydrogen $\cdot$ carbon $\cdot$ Europe 
   }}
 \end{center}
 
