@@ -34,7 +34,6 @@
 \usepackage{placeins}
 \usepackage{float}
 \usepackage{tabularx}
-\usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{bm}
 \usepackage{todonotes}
@@ -230,19 +229,16 @@ In order for projects to be eligible for PCI-PMI status, their \textit{potential
 \newpage
 \section{Literature review}
 \label{sec:literature_review}
-We structure the literature review into three main sections: (i) the value of \ce{CO2} and \ce{H2} in low-carbon energy systems, (ii) transporting \ce{CO2} and \ce{H2} through pipelines, and (iii) addressing uncertainty in energy system models. Based on this review, identify research gaps and position our work as a novel contribution to the current state of the art (iv).
+We structure the literature review into three main sections: (i) the value of \ce{CO2} and \ce{H2} in low-carbon energy systems and (iii) addressing uncertainty in energy system models. Based on this review, identify research gaps and position our work as a novel contribution to the current state of the art (iii).
 
 \subsection{The value of \ce{CO2} and \ce{H2} in low-carbon energy systems} 
 A growing body of literature has been investigating the long-term role of \ce{H2} and \ce{CO2} in low-carbon or net-zero energy systems. Both carriers see their primary value outside the electricity sector, i.e., in the decarbonisation of hard-to-abate sectors such as industry, transport, shipping, and aviation \cite{reigstadMovingLowcarbonHydrogen2022}. While there are direct use cases for \ce{H2} in the industry sector such as steel production, it is primarily expected to serve as a precursor for synthetic fuels, including methanol, Fischer-Tropsch fuels (e.g. synthetic kerosene and naphta) and methane. The demand for these fuels is driven by the aviation, shipping, industry, and agriculture sectors \cite{neumannPotentialRoleHydrogen2023}. To produce these carbonaceous fuels, \ce{CO2} is required as a feedstock (Carbon Utilisation --- CU). This \ce{CO2} can be captured from the atmosphere via Direct Air Capture (DAC) or from industrial and process emissions (e.g. cement, steel, ammonia production) in combination with Carbon Capture (CC) units.
 
-Van Greevenbroek et al. \cite{greevenbroekLittleLoseCase2024}: Look at near optimal solution space by assessing a wide range. Derived from a wide set of literature, modelling hydrogen and CS, CU \cite{fleiterHydrogenInfrastructureFuture2025,beresWillHydrogenSynthetic2024,blancoPotentialHydrogenPowertoLiquid2018,pickeringDiversityOptionsEliminate2022,schreyerDistinctRolesDirect2024,seckHydrogenDecarbonizationEnergy2022,neumannPotentialRoleHydrogen2023,zeyenEndogenousLearningGreen2023,kountourisUnifiedEuropeanHydrogen2024}
+Béres et al. \cite{beresWillHydrogenSynthetic2024} evaluate the interaction between electricity, \ce{H2}, and synthetic fuel demand by linking the JRC-EU-TIMES long-term energy system model with PLEXOS. In their findings, \ce{H2} production varies between 42 (1400 TWh) and 66 Mt (2200 TWh) p.a. in 2050. 
 
-Range of assessed CO2 sequestration potential from 275 Mt p.a., 550 Mt p.a., up to 1100 Mt p.a. Range of green hydrogen production in 2050 goes up to 90 Mt p.a. Page 3: Europe has little to loose by committing to targets like 25 Mt pa H2 production by 2040, moderate target, feasible.
+Van Greevenbroek et al. \cite{greevenbroekLittleLoseCase2024} investigate the cost-optimal development of green \ce{H2} by assessing the near-optimal space of an extensive scenario set. They find a moderate level of green \ce{H2} production is cost-optimal, with production levels depending primarily on the availability of green fuel imports and carbon, capture, and storage. Eliminating green \ce{H2} entirely would come at a total system cost increase of \SI{2}{\percent}. 
 
-"Cost optimal modelling results with a central planning approach may not capture system designs that are politically more viable but slightly more costly." from Koens paper, \cite{trutnevyteDoesCostOptimization2016}
-
-\subsection{Transporting \ce{H2} and \ce{CO2} through pipelines}
-Recent publications show that transporting \ce{CO2} and \ce{H2} via dedicated pipeline infrastructure can unlock additional benefits and net cost-savings in a sector-coupled energy system. Victoria et al. \cite{victoriaSpeedTechnologicalTransformations2022a} ... TODO
+By including \ce{H2} and \ce{CO2} transport infrastructure, additional benefits and net cost-savings can be unlocked in a sector-coupled system.
 
 Neumann et al. \cite{neumannPotentialRoleHydrogen2023} examine the interaction between electricity grid expansion and a European-wide deployment of hydrogen pipelines in a net-zero system (new and retrofitting of existing gas pipelines). While \ce{H2} pipelines are not essential, their build-out can significantly reduce system costs by up to 26 bn. \euro{} p.a. (\SI{3.4}{\percent} of annual CAPEX and OPEX) by connecting regions with excessive renewable potential to storage sites and load centres. 
 Extending their previous work, Neumann et al. \cite{neumannEnergyImportsInfrastructure2024} investigate the trade-off between relying on different energy import strategies and domestric infrastructure build-out. By coupling the global energy supply chain model TRACE \cite{hamppImportOptionsChemical2023} and the sector-coupled PyPSA-Eur model, they assess different energy vector import combinations (e.g. electricity, \ce{H2} or \ce{H2} derivatives) and their impact on Europe's infrastructural needs. Depending on the import costs, they observe up to \SI{14}{\percent} in system cost savings. Further, with an increasing share of \ce{H2} imports, the need for domestic \ce{H2} pipelines would decrease. 
@@ -251,49 +247,39 @@ In a study by Kontouris et al. \cite{kountourisUnifiedEuropeanHydrogen2024}, the
 
 Fleiter et al. \cite{fleiterHydrogenInfrastructureFuture2025} use a mixed simulation and optimisation method to model \ce{H2} uptake and transport by coupling three models, (i) FORECAST for buildings and industry, (ii) ALADIN for transport together with (iii) the European energy system model Enertile. Total demand for \ce{H2} ranges from \SI{690}{TWh} to \SI{2800}{TWh} in 2050, \SI{600}{TWh} to \SI{1400}{TWh} for synthetic fuels. In their study, the  chemical and steel industry in Northwest Europe (incl. western regions of Germany, Netherlands and northern regions of Belgium), display a demand of more than \SI{100}{TWh} each. With regard to crossborder transport, they mainly obser hydrogen flows from Norway, UK and Ireland to continental Europe (around \SI{53}{TWh} to \SI{72}{TWh}). Depending on the scenario, the Iberian Peninsula exports around \SI{72}{TWh} to \SI{235}{TWh} via and to France.
 
-On the carbon networks side, \cite{bakkenLinearModelsOptimization2008}
-
-Doing both:
-Hofmann et al. \cite{hofmannH2CO2Network2025} address previous research gap in assessing the interaction between \ce{H2} and \ce{CO2} infrastructure, including their production, transport, storage, utilisation, and sequestration. They find that ...
-WORK-IN-PROGRESS-INCOMPLETE. 
+On the carbon networks side, Bakken and Velken \cite{bakkenLinearModelsOptimization2008} formulate linear models for the optimisation of \ce{CO2} infrastructure, including pipelines, shipping, \ce{CO2} capture, and storage and demonstrate the applicability in a regional case study for Norway.
+Hofmann et al. \cite{hofmannH2CO2Network2025} address previous research gap in assessing the interaction between \ce{H2} and \ce{CO2} infrastructure, by combining the the production, transport, storage, and utilisation of both \ce{H2}, \ce{CO2} and their products. They specifically raise the question whether \ce{H2} should be transported to \ce{CO2} point sources or vice versa. They find that most cost savings can be achieved in a hybrid setup where both networks are present, as the \ce{CO2} network complements the \ce{H2} network by promoting carbon capture from point sources and reducing reliance on Direct Air Capture (DAC).
+ 
 \subsection{Addressing uncertainty in energy system models}
-WORK-IN-PROGRESS-INCOMPLETE. 
+While the previous section have examined the value of \ce{CO2} and \ce{H2} in low-carbon energy systems, they do not take into account potential uncertainties regarding future policy targets or infrastructure build-outs. 
+Energy system models can address such uncertainties through a range of approaches, including scenario analysis, sensitivity analysis, stochastic programming, and regret-based methods. Within the scope of this research, we focus on the (deterministic) scenario analysis and regret-based methods, as they are particularly suitable for complex, large-scale, sector-coupled system models.
 
-\begin{itemize}
-  \item Regret analysis common in economics, also in energy system modelling
-  \item Carbon networks
-  \item Regret
-  \item Cite Hobbs, Iegor, Möbius and Riepin two-stage, stochastic, regret approach  \cite{mobiusRegretAnalysisInvestment2020a}
-  PCI projects gas
-  
-\end{itemize}
+\paragraph{Regret analysis}
+A regret analysis is a common and widely established approach in economics that systematically evaluates the regret, i.e., additional system costs, incurred by not having made the optimal decision in hindsight. Usually, a regret-analysis is designed in two steps, first, a set of scenarios is defined, which represent different future developments, such as policy targets, infrastructure build-out, or technology costs. In a second step, the performance of first-stage investment is evaluated under the realisation of second-stage or short-term realisations of the future \cite{salvatoreManagerialEconomicPrinciples2008}. It is particularly useful in energy system modelling, where future uncertainties can significantly impact the performance of investments in infrastructure and technologies.
 
+Möbius and Riepin \cite{mobiusRegretAnalysisInvestment2020} investigate the regret of investment decisions into electricity generation capacities, by developing a two-stage, stochastic cost-minimisation model of the European electricity and gas markets. In the first stage, the model determines optimal investment decisions, accounting for three TYNDP scenarios, while the second step solves the optimal dispatch for all assets in the electricity and gas sector. They find that ignoring uncertainty may result in investment decisions that lead to higher costs and regrets. 
+
+Van der Weijde and Hobbes \cite{vanderweijdeEconomicsPlanningElectricity2012} demonstrate the importance of considering uncertainty in energy system models, by applying a two-stage optimisation model to evaluate grid reinforcements in Great Britain. Including the status quo scenario, they consider six scenarios, which represent different future developments of electricity demand, generation, fuel, and \ce{CO2} prices. As part of their study, they calculate the regret for given first-stage transmission decisions under the realisation of second-stage scenarios. Note that the regret matrix is symmetric, i.e., the regret of each first-stage decision is evaluated under all second-stage scenarios. 
 
 \section{Research gaps and our contribution}
+Based on the literature review, we have identified that there is still a lack of comprehensive studies that assess the complex interaction of \ce{CO2} and \ce{H2} infrastructure in a large-scale, sector-coupled energy system model. Further, not many studies have considered real planned projects, such as PCI-PMI projects, potentially neglecting investment options that may not be perfectly cost-optimal, but are politically supported and have a high likelihood of being implemented \cite{greevenbroekLittleLoseCase2024,trutnevyteDoesCostOptimization2016}. To the best of our knowledge, the performance of PCI-PMI projects has not yet been evaluated in a sector-coupled energy system model. Given the variety of project promoters involved, the complexity and the high cost of these projects, we believe it is crucial to transparently assess the impact of these projects on the European energy system and key EU policy targets.
 
-TODO NOVELTIES:
-\begin{itemize}
-  \item basically mega PINT CBA, which was not done before, neither for PCI projects nor for the sectors
-  \item Chicken and egg problem. Assess real planned projects
-  \item high spatial and temporal resolution
-  \item regret matrix approach
-  \item Time, myopic, iterative dimension, usually studies look directly at the target 2050, yielding overly optimistic results (overnight 2050 optimisation will yield different result than pathway-dependent solutions)
-\end{itemize}
+Our study aims to fill this gap by evaluating different build-out levels of \ce{CO2} and \ce{H2} infrastructure, including PCI-PMI projects and their performance under a chosen set of short-term scenarios. By using a myopic and hence, iterative modelling approach, we consider long-term pathway effects. This also reduces the risk of overly optimistic results that are often observed in studies that look directly at the target year 2050.
+We implement a deterministic, two-stage regret matrix approach to assess the performance of different scenarios under three short-term occurrences for each planning horizon, individually. This allows us to consider future uncertainties, including changes in policy ambitions and infrastructure delays. By limiting the analysis to a discrete set of scenarios, the regret analysis is manageable and computationally feasible. We deliberately keep a deterministic approach, as this would increase the complexity of the model and the computational time significantly.
 
-This paper aims to evaluate the impact of PCI-PMI projects on the European energy system and EU energy policies. We focus on the following key research questions:
+With this study, we also bring more certainty into the chicken-and-egg problem of investing into \ce{CO2} and \ce{H2} infrastructure first vs. waiting for their demand to materialise.
+
+Our paper aims in particular to address the following research questions:
 
 \begin{enumerate} 
-  \item What is the impact of delay in PCI-PMI projects' realisation on the EU's policy targets for 2030?
+  \item What are the benefits of PCI-PMI projects for the European energy system, especially concerning reaching European policies
   \item What are the costs associated with adhering to the EU policy targets, even if PCI-PMI projects are delayed? 
-  \item Do the green hydrogen production and carbon sequestration targets conflict with the cost-effective achievement of the greenhouse gas emission reduction goals? 
 \end{enumerate}
 
-Key motivations for the questions as the EU targets especially for 2030 have have been criticised as unrealistic, primarily politically motivated. \cite{europeancourtofauditorsEUsIndustrialPolicy2024,greevenbroekLittleLoseCase2024}
-
-
-\newpage
 \section{Methodology}
 \label{sec:methodology}
+In this section we first describe the basic energy system model PyPSA-Eur, before detailing the implementation of the PCI-PMI projects, the scenarios, and the regret matrix.
+
 We build on the open-source, sector-coupled energy system model PyPSA-Eur \cite{neumannPotentialRoleHydrogen2023,frysztackiComparisonClusteringMethods2022,glaumOffshorePowerHydrogen2024,horschPyPSAEurOpenOptimisation2018} to optimise investment and dispatch decisions in the European energy system. The model's endogenous decisions include the expansion and dispatch of renewable energy sources, dispatchable power plants, electricity storage, power-to-X conversion capacities, and transmission infrastructure for power, hydrogen, and \ce{CO2}. It also encompasses heating technologies and various hydrogen production methods (gray, blue, green).
 PyPSA-Eur integrates multiple energy carriers (e.g., electricity, heat, hydrogen, \ce{CO2}, methane, methanol, liquid hydrocarbons, and biomass) with corresponding conversion technologies across multiple sectors (i.e., electricity, transport, heating, biomass, industry, shipping, aviation, agriculture and fossil fuel feedstock). The model features high spatial and temporal resolution across Europe, incorporating existing power plant stocks \cite{gotzensPerformingEnergyModelling2019}, renewable potentials, and availability time series \cite{hofmannAtliteLightweightPython2021}. It includes the current high-voltage transmission grid (AC \SI{220}{kV} to \SI{750}{kV} and DC \SI{150}{kV} and above) \cite{xiongModellingHighvoltageGrid2025}. Furthermore, electricity transmission projects from the TYNDP (SOURCE) and German Netzentwicklungsplan (SOURCE) are also enabled.
 
@@ -315,13 +301,17 @@ As part of the PyPSA-Eur model, we source all technology-specific assumptions in
 
 \paragraph{Demand and \ce{CO2} emissions}
 \label{sec:demand_and_co2_emissions}
-Energy and fuel carrier demand in the modelled sectors, as well as non-abatable \ce{CO2} process emissions are taken from various sources \cite{mantzosJRCIDEES20152018,eurostatCompleteEnergyBalances2022,manzGeoreferencedIndustrialSites2018,muehlenpfordtTimeSeries2019,krienOemofDemandlibV0222025} and are shown in Figure \ref{fig:exogenous_demand}. Regionally and temporally resolved demand includes electricity, heat, gas, biomass and transport. Internal combustion engine vehicles in land transport are expected to fully phase out in favour of electric vehicles by 2050 \cite{zeyenShiftingBurdensHow2025a}. Demand for hydrocarbons, including methanol and kerosene are primarily driven by the shipping, aviation and industry sector and are not spatially resolved.
+Energy and fuel carrier demand in the modelled sectors, as well as non-abatable \ce{CO2} process emissions are taken from various sources \cite{mantzosJRCIDEES20152018,eurostatCompleteEnergyBalances2022,manzGeoreferencedIndustrialSites2018,muehlenpfordtTimeSeries2019,krienOemofDemandlibV0222025} and are shown in Figure \ref{fig:exogenous_demand}. Regionally and temporally resolved demand includes electricity, heat, gas, biomass and transport. 
+
+Gas (methane/\ce{CH4}) demand includes direct use in gas-based industrial processes, as well as fuel in the electricity and heating sector. Note that we do not explicitly enable the gas transmission grid as opposed to the \ce{CO2} and \ce{H2} infrastructure. We do this for different reasons: (i) the modelled PCI-PMI projects overlap in some parts with the gas grid, i.e., include \ce{CH4} pipelines that will be retrofitted to \ce{H2} pipelines, however, input data is not always clear; (ii) we do not assume the gas transport to be bottlenecked by the existing gas grid, as such, gas transport is assumed to be copper plated; and (iii) the computational complexity is already high due to the geospatial and temporal resolution, as well as the number of components. Instead, given the focus on the \ce{CO2} and \ce{H2} sector, we decide to make trade-offs here.
+
+Internal combustion engine vehicles in land transport are expected to fully phase out in favour of electric vehicles by 2050 \cite{zeyenShiftingBurdensHow2025a}. Demand for hydrocarbons, including methanol and kerosene are primarily driven by the shipping, aviation and industry sector and are not spatially resolved.
 To reach net-zero \ce{CO2} emissions by 2050, the yearly emission budget follows the EU's 2030 (\SI{-55}{\percent}) and 2040 (\SI{-90}{\percent}) targets \cite{europeancommissionFit55Delivering2021, europeancommission.directorategeneralforclimateaction.IndepthReportResults2024}, translating into a carbon budget of 2072 Mt p.a. in 2030 and 460 Mt p.a. in 2040, respectively (see Table \ref{tab:targets}).
 
 \paragraph{PCI-PMI projects implementation}
 \label{sec:pci-pmi_projects_implementation}
 
-We implement all PCI-PMI projects of the electricity, \ce{CO2} and \ce{H2} sectors (excl. offshore energy islands and hybrid interconnectors, as they are not the focus of our research) by accessing the REST API of the PCI-PMI Transparency Platform and associated public project sheets provided by the European Commission \cite{europeancommissionPCIPMITransparencyPlatform2024}. We add all \ce{CO2} sequestration sites and connected pipelines, \ce{H2} pipelines and storage sites, as well as proposed pumped-hydro storages and transmission lines (AC and DC) to the PyPSA-Eur model. We consider the exact geographic information, build year, as well as available static technical parameters when adding individual assets to the respective modelling year. An overview of the implemented PCI-PMI projects is provided in Figure \ref{fig:regional_scope_map}.
+We implement all PCI-PMI projects of the electricity, \ce{CO2} and \ce{H2} sectors (excl. offshore energy islands and hybrid interconnectors, as they are not the focus of our research) by accessing the REST API of the PCI-PMI Transparency Platform and associated public project sheets provided by the European Commission \cite{europeancommissionPCIPMITransparencyPlatform2024}. We add all \ce{CO2} sequestration sites and connected pipelines, \ce{H2} pipelines and storage sites, as well as proposed pumped-hydro storage units and transmission lines (AC and DC) to the PyPSA-Eur model. We consider the exact geographic information, build year, as well as available static technical parameters when adding individual assets to the respective modelling year. An overview of the implemented PCI-PMI projects is provided in Figure \ref{fig:regional_scope_map}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\linewidth]{map_adm_pcipmi}
@@ -345,6 +335,9 @@ To assess the long-term impact of PCI-PMI projects on the European energy system
 \paragraph{Scenario definition}
 \label{sec:definition}
 We define the long-term scenarios based on the degree of \ce{CO2} and \ce{H2} infrastructure build-out, including the roll-out of PCI-PMI projects as well additional pipeline investments. In total, we implement five long-term scenarios, (i) a pessimistic scenario (Decentral Islands --- DI) without any \ce{H2} pipeline and onshore \ce{CO2} pipeline infrastructure, (ii) a scenario that considers the on-time commissioning of all PCI-PMI \ce{CO2} and \ce{H2} projects (PCI-PMI --- PCI) only, (iii) more ambitious scenarios that further allow investments into national and (iv) international pipelines (PCI-PMI nat. --- PCI-n and PCI-PMI internat. --- PCI-in), and (v) a scenario that does not assume any fixed PCI-PMI infrastructure but allows for a centralised, purely needs-based build-out of \ce{CO2} and \ce{H2} pipelines (Centralised Planning --- CP). An overview of the long-term scenarios and their associated model-endogenous decision variables is provided in Table \ref{tab:long-term_scenarios}. 
+
+\todo[inline]{Regarding Depleted oil and gas fields in table, TB: depleted fields is only one type of sequestration site - most is saline aquifers, oder? or are these PCI-PMI? is there any overlap between PCI-PMI sites and the depleted Oil and Gas? some details here would be useful}
+\todo[inline]{Regarding endogenous H2 storage build-out, TB: does this respect salt deposit availability?}
 
 \begin{table*}[htbp]
   \centering
@@ -385,7 +378,8 @@ We define the long-term scenarios based on the degree of \ce{CO2} and \ce{H2} in
 
 \paragraph{Targets}
 \label{sec:targets}
-In all long-term scenarios, emission, technology, sequestration and production targets have to be met for each planning horizon (see Table \ref{tab:targets}). For the year 2030, these targets are directly derived from the EU's policy targets, including a \SI{55}{\percent} reduction in greenhouse gas emissions compared to 1990 levels \cite{europeancommissionFit55Delivering2021}, \SI{10}{Mt} p.a. of domestic green \ce{H2} production \cite{europeancommissionREPowerEUPlanCommunication2022} and \SI{40}{GW} \cite{europeancommissionCommunicationCommissionEuropean2020}, and \SI{50}{Mt} p.a. of \ce{CO2} sequestration capacity \cite{europeanparliamentRegulationEU20242024}. For 2050, the \ce{CO2} sequestration target is derived from impact assessment, modelling for European Commission's 2024 industrial carbon management strategy, in which 250 Mt p.a. out of 450 Mt p.a. (Carbon Capture Utilisation and Storage) is sequestered \cite{europeancommissionCommunicationCommissionEuropean2024}. \ce{H2} production targets for 2050 are based on the European Commission's METIS 3 study S5 \cite{europeancommission.directorategeneralforenergy.METIS3Study2023}, modelling possible pathways for industry decarbonisations until 2040. For 2040, we interpolate linearly between the 2030 and 2050 targets. The electrolyser capacities for 2040 and 2050 are scaled by the ratio of \ce{H2} production to electrolyser capacity in 2030. An overview of the targets and their values is provided in Table \ref{tab:targets}. Note that we implement the green \ce{H2 production} target as a minimum \ce{H2} production constraint from elecrolysers, hence we will refer to this \ce{H2} as electrolytic \ce{H2} within the scope of this paper.
+In all long-term scenarios, emission, technology, sequestration and production targets have to be met for each planning horizon (see Table \ref{tab:targets}). For the year 2030, these targets are directly derived from the EU's policy targets, including a \SI{55}{\percent} reduction in greenhouse gas emissions compared to 1990 levels \cite{europeancommissionFit55Delivering2021}, \SI{10}{Mt} p.a. of domestic green \ce{H2} production \cite{europeancommissionREPowerEUPlanCommunication2022} and \SI{40}{GW} of electrolyser capacity \cite{europeancommissionCommunicationCommissionEuropean2020}, and \SI{50}{Mt} p.a. of \ce{CO2} sequestration capacity \cite{europeanparliamentRegulationEU20242024}. For 2050, the \ce{CO2} are based on the modelling the impact assessment for the EU's 2040 climate targets, in 250 Mt p.a. need to be sequestered \cite{europeancommissionCommunicationCommissionEuropean2024}. \ce{H2} production targets for 2050 are based on the European Commission's METIS 3 study S5 \cite{europeancommission.directorategeneralforenergy.METIS3Study2023}, modelling possible pathways for industry decarbonisation until 2040. For 2040, we interpolate linearly between the 2030 and 2050 targets. The electrolyser capacities for 2040 and 2050 are scaled by the ratio of \ce{H2} production to electrolyser capacity in 2030. An overview of the targets and their values is provided in Table \ref{tab:targets}. Note that we implement the green \ce{H2 production} target as a minimum \ce{H2} production constraint from electrolysis
+, hence we will refer to this \ce{H2} as electrolytic \ce{H2} within the scope of this paper.
 
 \begin{table*}[htbp]
   \centering
@@ -408,9 +402,9 @@ In all long-term scenarios, emission, technology, sequestration and production t
 
 \subsubsection{Short-term scenarios}
 \label{sec:short-term_scenarios}
-In a second step, we assess the impact of three short-term scenarios on the long-term scenarios, by fixing or removing pipeline capacities (depending on the scenario). Further, the model can still react by investing into additional generation, storage, or conversion, or carbon-removal technologies in the short-term, assuming the technical potential was not exceeded in the long-term optimisation. In \textit{Reduced targets}, we remove all of the long-term targets (Table \ref{tab:targets}) except for the GHG emission reduction targets to assess the value of the \ce{CO2} and \ce{H2} infrastructure in a less ambitious policy environment. In \textit{Delayed pipelines}, we assume that all PCI-PMI and endogenous pipelines are delayed by one period, i.e., the commissioning of the project is shifted to the next planning horizon. Lastly, we remove all pipeline capacities in \textit{No pipelines}, including the PCI-PMI projects, allowing us to evaluate the impact of a complete lack of planned infrastructure. 
+In a second step, we assess the impact of three short-term scenarios on the long-term scenarios, i.e., the \ce{CO2} and \ce{H2} pipeline capacities built in the long-term scenarios are either frozen or removed. Further, the model can still react by investing into additional generation, storage, or conversion, or carbon-removal technologies in the short-term, assuming the technical potential was not exceeded in the long-term optimisation. In \textit{Reduced targets}, we remove all of the long-term targets (Table \ref{tab:targets}) except for the GHG emission reduction targets to assess the value of the \ce{CO2} and \ce{H2} infrastructure in a less ambitious policy environment \cite{europeancourtofauditorsEUsIndustrialPolicy2024}. In \textit{Delayed pipelines}, we assume that all PCI-PMI and endogenous pipelines are delayed by one period, i.e., the commissioning of the project is shifted to the next planning horizon. Lastly, we remove all pipeline capacities in \textit{No pipelines}, including the PCI-PMI projects, allowing us to evaluate the impact of a complete lack of planned infrastructure. 
 
-Table \ref{tab:regret_matrix_setup} gives an overview of this regret-analysis and their individual assumptions, where the long-term scenario serves as the \textit{planned} or \textit{anticipated} and the short-term scenario serves as the hypothetically \textit{realised} outcome. By comparing the system costs of related long-term and short-term scenarios, we can calculate its associated economic regret. 
+Table \ref{tab:regret_matrix_setup} gives an overview of this regret-analysis and their individual assumptions, where the long-term scenario serves as the \textit{planned} or \textit{anticipated} and the short-term scenario serves as the hypothetically \textit{realised} outcome. A regret matrix provides a decision-making framework that evaluates the potential loss (\textit{regret}) associated with choosing one strategy over the other by comparing the outcomes, i.e., the total system costs. Here, the regret is quantified as the difference between system costs of the short-term scenario and the long-term (anticipated) scenario for each scenario. 
 In total, we run 60 optimisations on a cluster, taking up to 160 GB of RAM and 8 to 16 hours each to solve: ($n_{LT} \times n_{planning\,horizons}) \times (1+n_{ST}) = 60$. The models are solved using Gurobi.
 
 \begin{table*}[htbp]
@@ -461,6 +455,7 @@ In all long-term runs, we observe the highest total annual system costs in the p
 \end{figure}
 
 Starting in 2040, all scenarios with PCI-PMI and endogenous pipeline investments unlock significant cost savings, from more than 30 bn. \euro{} p.a. in the \textit{PCI} up to 50 bn. \euro{} p.a. in the \textit{PCI-in} scenario. By giving the model complete freedom in pipeline expansions, additional annual cost savings of 6 to 7 bn. \euro{} are unlocked by investing in fewer, but more optimally located \ce{CO2} and \ce{H2} pipelines from a systemic perspective (see \textit{PCI-in} pipeline utilisation in Figures \ref{fig:PCI-in_lt_2030} to \ref{fig:PCI-in_lt_2050} compared to \textit{CP} pipeline utilisation in Figures \ref{fig:CP_lt_2030} to \ref{fig:CP_lt_2050}). Further, this reduces the reliance on larger investments into wind generation and more expensive Direct Air Capture (DAC) technologies near the sequestration sites. These effects are slightly less pronounced in the 2050 model results, system costs can be reduced by 26 to 41 bn. \euro{} p.a. with PCI-PMI and endogenous pipeline investments. 
+\todo[inline]{TB: why? perhaps more CCU and FT and H2 makes system more flexible}
 
 \begin{figure*}[htbp]
   \centering
@@ -474,7 +469,7 @@ Starting in 2040, all scenarios with PCI-PMI and endogenous pipeline investments
 We find that most of the differences in system cost and savings can be attributed to the production and utilisation of \ce{CO2}, as shown in Figure \ref{fig:balances_overview_co2_stored}. Lacking the option to transport \ce{CO2} from industry and other point sources to the offshore sequestration sites, the model has to invest in expensive DAC technologies in the \textit{DI} scenario. While the sequestration target of 50 Mt p.a. in 2030 is binding for the \textit{DI} scenario, all other scenarios sequester more \ce{CO2}, the higher their \ce{CO2} pipeline build-out. The 53.9 Mt p.a. \ce{CO2} sequestered in the \textit{CP} serve as an indicator for what would be a cost-optimal amount for 2030 with perfectly located pipelines. With the inclusion of PCI-PMI projects, \ce{CO2} sequestration ranges from 58.7 Mt p.a. in the \textit{PCI} to 75 Mt p.a. in the \textit{PCI-in} scenario. 
 Looking at 2040 and 2050, in place of expensive DAC in the \textit{DI} scenario, the model equips biomass-based industrial processes primarily located in Belgium, the Netherlands and Western regions of Germany (see Figures \ref{fig:PCI_lt_2030_co2}, \ref{fig:PCI_lt_2040_co2}, and \ref{fig:PCI_lt_2050_co2}). 
 
-In 2040 and 2050, all sequestration targets (Table \ref{tab:targets}) are overachieved, as the full combined \ce{CO2} sequestration potential of 398 Mt p.a. is exploited in all scenarios where PCI-PMI projects are included (\textit{PCI} to \textit{CP}. Emissions are captured from industrial processes equipped with carbon capture units, with biomass-based industry providing the largest share in carbon capture from point sources, ranging from 119 to 241 Mt p.a. in 2040 and 149 to 287 Mt p.a. in 2050, increasing with the build-out of \ce{CO2} infrastructure (from left to right, see Figure \ref{fig:balances_overview_co2_stored}). Being the most expensive carbon capture option, only up to 8 Mt p.a. of \ce{CO2} is captured from SMR CC processes in the \textit{PCI} scenario in 2050. 
+In 2040 and 2050, all sequestration targets (Table \ref{tab:targets}) are overachieved, as the full combined \ce{CO2} sequestration potential of 398 Mt p.a. is exploited in all scenarios where PCI-PMI projects are included (\textit{PCI} to \textit{CP}). Emissions are captured from industrial processes equipped with carbon capture units, with biomass-based industry providing the largest share in carbon capture from point sources, ranging from 119 to 241 Mt p.a. in 2040 and 149 to 287 Mt p.a. in 2050, increasing with the build-out of \ce{CO2} infrastructure (from left to right, see Figure \ref{fig:balances_overview_co2_stored}). Being the most expensive carbon capture option, only up to 8 Mt p.a. of \ce{CO2} is captured from SMR CC processes in the \textit{PCI} scenario in 2050. 
 With a lower sequestration potential of 286 Mt p.a. in \textit{DI} scenario, more \ce{CO2} is used as a precursor for the synthesis of Fischer-Tropsch fuels instead --- 221 Mt p.a. vs. 115-127 Mt p.a. (2040) and 206 Mt p.a. vs 153-163 Mt p.a. (2050), to meet the emission reduction targets for 2040 and 2050, respectively. 
 Given the fixed exogenous demand for (shipping) methanol (Figure \ref{fig:exogenous_demand}), \ce{CO2} demand for methanolisation is constant across all scenarios (39 Mt p.a. in 2030, 89 Mt p.a. in 2040, and 127 Mt p.a. in 2050). 
 
@@ -555,7 +550,7 @@ In this section, we assess the impact of the short-term scenarios on the long-te
 \label{sec:regret_analysis}
 We calculate the regret terms by subtracting the annual total system costs of the long-term scenarios (row) from the short-term scenarios (columns). Positive values reflect higher costs in the short-term scenarios compared to the long-term ones. Figure \ref{fig:regret_matrix_results} shows the regret matrix for all scenarios and planning horizons. From left to right, the first column shows the regret terms for the \textit{Reduced targets} scenario, where all long-term targets are removed except for the GHG emission reduction target. The second column shows the regret terms for the \textit{Delayed pipelines} scenario, where all PCI-PMI and endogenous pipelines are delayed by one period. The third column shows the regret terms for the \textit{No pipelines} scenario, where all pipeline capacities are removed.
 
-In the \textit{Reduced targets} scenario, system costs barely change through the relaxation of the targets. The long-term results have shown that the model was overachieving the \ce{H2} production targets in 2040. As for the \ce{CO2} sequestration targets, the model is still incentivised by GHG emission targets, especially in 2040 and 2050. Only in 2030, we see minimal changes in total system costs. In all of the long-term scenarios, we have observed that in 2030 that especially \ce{CO2} pipeline infrastructure is not essential yet (see Figure \ref{fig:CP_lt_2030_co2}). As for \ce{H2} pipeline infrastructure, the solution space seems to be quite flat, as the costs for the \textit{DI} scenario without any pipelines (Figure \ref{fig:DI_lt_2030_co2}) and the \textit{CP} scenario (Figure \ref{fig:CP_lt_2030_co2}) with notable pipeline investments are almost identical. By removing the \ce{H2} production and \ce{CO2} sequestration targets, pipelines become even less relevant, although the cost savings due to the dropped targets are minimal, ranging from 4.3 to 5 bn. \euro{} p.a. in 2030 and 2040.
+In the \textit{Reduced targets} scenario, system costs barely change through the relaxation of the targets. The long-term results have shown that the model was overachieving the \ce{H2} production targets in 2040. As for the \ce{CO2} sequestration targets, the model is still incentivised by GHG emission targets, especially in 2040 and 2050. Only in 2030, we see minimal changes in total system costs, as the 2030 targets are not cost-optimal. However, they are required to stimulate the build-out necessary to reach 2040 and 2050 targets. In all of the long-term scenarios, we have observed that in 2030 that especially \ce{CO2} pipeline infrastructure is not essential yet (see Figure \ref{fig:CP_lt_2030_co2}). As for \ce{H2} pipeline infrastructure, the solution space seems to be quite flat, as the costs for the \textit{DI} scenario without any pipelines (Figure \ref{fig:DI_lt_2030_co2}) and the \textit{CP} scenario (Figure \ref{fig:CP_lt_2030_co2}) with notable pipeline investments are almost identical. By removing the \ce{H2} production and \ce{CO2} sequestration targets, pipelines become even less relevant, although the cost savings due to the dropped targets are minimal, ranging from 4.3 to 5 bn. \euro{} p.a. in 2030 and 2040.
 
 \begin{figure*}[htbp]
   \centering
@@ -564,10 +559,9 @@ In the \textit{Reduced targets} scenario, system costs barely change through the
   \label{fig:regret_matrix_results}
 \end{figure*}
 
-For the same reasons, the 2030 results for the \textit{Delayed pipelines} and \textit{No pipelines} scenarios show only minor differences in system costs compared to the long-term scenarios. Cost savings of 3.4 to 5.1 bn. \euro{} p.a. in the \textit{PCI} long-term scenario indicate that for 2030, forcing in PCI-PMI projects are is cost- and topologically optimal in the short run. Whereas slight regret/cost increase of 3.9 to 5.1 bn \euro{} p.a. in the \textit{CP} shows a small dependency on the invested pipeline infrastructure (Figure \ref{fig:CP_lt_2030}), being the most cost-optimal solution.
+For the same reasons, the 2030 results for the \textit{Delayed pipelines} and \textit{No pipelines} scenarios show only minor differences in system costs compared to the long-term scenarios. Cost savings of 3.4 to 5.1 bn. \euro{} p.a. in the \textit{PCI} long-term scenario indicate that for 2030, forcing in PCI-PMI projects is not cost- and topologically optimal in the short run. Whereas slight regret/cost increase of 3.9 to 5.1 bn \euro{} p.a. in the \textit{CP} shows a small dependency on the invested pipeline infrastructure (Figure \ref{fig:CP_lt_2030}), being the most cost-optimal solution.
 
-When looking at the more long-term perspective, we see significant regrets in the \textit{Delayed pipelines} and \textit{No pipelines} scenarios. Having originally planned the energy system layout (incl. generation, transport, conversion technologies and storages) in the long-term scenario with PCI-PMI projects and/or endogenous pipelines, the model has to find alternative investments to still meet all targets, as the pipelines now materialise one period later or not at all. Regrets peak in 2040, where a delay of pipelines costs the system between 0.6 to 24.2 bn. \euro{} p.a. in the scenarios with PCI-PMI projects and up to 35.2 bn. \euro{} p.a. in the \textit{CP} scenario. 
-Note that in the \textit{PCI} scenario, almost all pipelines are originally commissioned by 2030. So a delay of projects from 2040 to 2050 only mildly impacts the system costs by 0.6 bn. \euro{} p.a. The more pipelines invested beyond those of PCI-PMI projects, the higher the regret if they are delayed. In 2050, very few additional \ce{CO2} and \ce{H2} pipelines are built, as such, a delay only increases system costs by 0.9 to 1.4 bn. \euro{} p.a. 
+When looking at the more long-term perspective, we see significant regrets in the \textit{Delayed pipelines} and \textit{No pipelines} scenarios. Having originally planned the energy system layout (incl. generation, transport, conversion technologies and storage) in the long-term scenario with PCI-PMI projects and/or endogenous pipelines, the model has to find alternative investments to still meet all targets, as the pipelines now materialise one period later or not at all. Regrets peak in 2040, where a delay of pipelines costs the system between 0.6 to 24.2 bn. \euro{} p.a. in the scenarios with PCI-PMI projects and up to 35.2 bn. \euro{} p.a. in the \textit{CP} scenario. 2050 regrets are lower than 2040 regrets, as almost all PCI-PMI pipelines are originally commissioned by 2030. So a delay of projects from 2040 to 2050 only mildly impacts the system costs by 0.6 bn. \euro{} p.a. The more pipelines invested beyond those of PCI-PMI projects, the higher the regret if they are delayed. In 2050, very few additional \ce{CO2} and \ce{H2} pipelines are built, as such, a delay only increases system costs by 0.9 to 1.4 bn. \euro{} p.a. 
 The short-term scenario \textit{No pipelines} shows the highest regrets, ranging from 14.8 to 45.6 bn. \euro{} p.a. in 2040 and 15.9 to 39.4 bn. \euro{} p.a. in 2050. Note that this scenario serves more of a hypothetical worst case as it is not likely to build out an energy system with pipelines in mind but none materialising at all.
 
 Consistently throughout all short-term scenarios, most of the additional cost stem from the need to invest into additional carbon capture, renewable generation, and conversion technologies (see Figure \ref{fig:capacities_overview_extended}). Additional renewable generation capacities are made up of solar PV and wind. A significant higher amount of electrolyser capacity of more than 50 GW is needed in 2040 if pipelines are delayed. 
@@ -590,7 +584,8 @@ On the \ce{H2} side, we find that the electrolytic \ce{H2} production target of 
 
 \subsection{Value of PCI-PMI projects}
 \label{sec:value_of_pcipmi_projects}
-Looking at long-run we find that PCI-PMI projects, while not completely cost-optimal compared to a centrally planned system, are still cost-beneficial. Compared to a complete lack of \ce{H2} and \ce{CO2} pipeline infrastructure as well as lower \ce{CO2} sequestration potential, the \textit{PCI} scenario unlocks annual cost savings in up to 30.7 bn. \euro{} p.a (Figure \ref{fig:totex_heatmap}). Even when accounting for the additional costs of 0.6 bn. \euro{} faced in the \textit{Delayed pipelines} and up to 15.9 bn. \euro{} p.a. in the \textit{No pipelines} scenario, a net positive is achieved, indicating that investing into the PCI-PMI infrastructure is a no-regret option. By connecting further \ce{H2} production sites and \ce{CO2} point sources to the pipeline network. additional cost savings of up to 18.4 bn. \euro{} p.a. can be achieved in the \textit{PCI-in} scenario. The \textit{CP} scenario serves as a theoretical benchmark, allowing the model to invest freely, not bound by \textit{forced} PCI-PMI projects. The model can invest in fewer, but more optimally located \ce{CO2} and \ce{H2} pipelines from a systemic perspective. Economic benefits pf all pipeline investments materialise after 2030, yielding lower net present values (NPV) of total system costs of potentially at least 75 bn. \euro{} over the course of the assets' lifetime. 
+Looking at long-run we find that PCI-PMI projects, while not completely cost-optimal compared to a centrally planned system, are still cost-beneficial. Compared to a complete lack of \ce{H2} and \ce{CO2} pipeline infrastructure as well as lower \ce{CO2} sequestration potential, the \textit{PCI} scenario unlocks annual cost savings in up to 30.7 bn. \euro{} p.a. Figure \ref{fig:totex_heatmap} shows the total system costs (TOTEX) p.a. split into CAPEX and OPEX p.a., as well as the net present value of total system costs (NPV) until 2060, discounted at an interest rate of \SI{7}{\percent} p.a.
+Even when accounting for the additional costs of 0.6 bn. \euro{} faced in the \textit{Delayed pipelines} and up to 15.9 bn. \euro{} p.a. in the \textit{No pipelines} scenario, a net positive is achieved, indicating that investing into the PCI-PMI infrastructure is a no-regret option. By connecting further \ce{H2} production sites and \ce{CO2} point sources to the pipeline network. additional cost savings of up to 18.4 bn. \euro{} p.a. can be achieved in the \textit{PCI-in} scenario. The \textit{CP} scenario serves as a theoretical benchmark, allowing the model to invest freely, not bound by \textit{forced} PCI-PMI projects. The model can invest in fewer, but more optimally located \ce{CO2} and \ce{H2} pipelines from a systemic perspective. Economic benefits of all pipeline investments materialise after 2030, yielding lower net present values (NPV) of total system costs of potentially at least 75 bn. \euro{} over the course of the assets' lifetime. 
 
 \begin{figure*}[htbp]
   \centering
@@ -606,26 +601,30 @@ Looking at long-run we find that PCI-PMI projects, while not completely cost-opt
 While our study assesses a variety of topologies, planning horizons, and potential regret scenarios, it is not exhaustive and comes with limitations.
 As we focus on the impact of continental European PCI-PMI infrastructure, we neglect fuel and energy imports from outside Europe. \ce{H2} and \ce{CO2} demand is directly driven by fixed, exogenous demands for the respective carrier or their derivatives.
 
-Regarding the modelling of both \ce{H2} and \ce{CO2} pipelines, we assume a level playing field for all pipeline projects through standardised costs and applying haversine distance, i.e., no discrimination between PCI-PMI projects and other projects, this is a simplification as real costs may differ. We also do not discretise the pipelines (due to computational complexity) and allow any capacity to be built. This assumption can lead to underestimation of the true costs of pipeline investments.
+Regarding the modelling of both \ce{H2} and \ce{CO2} pipelines, we assume a level playing field for all pipeline projects through standardised costs and applying haversine distance, i.e., no discrimination between PCI-PMI projects and other projects, this is a simplification as real costs may differ. We also do not discretise the endogenously built pipelines (due to computational complexity) and allow any capacity to be built. This assumption can lead to underestimation of the true costs of pipeline investments.
 
 Further, all results are based on a single weather year, i.e., 2013.
 Other limitations include geographic and temporal clustering to make the problem solving computationally feasible.
 \section{Conclusion}
 \label{sec:conclusion}
 
-\todo[inline]{Formulate full conclusions}
+In this study, we have assessed the impact of PCI-PMI projects on reaching European climate targets on its path to net-zero by 2050. We have modelled the European energy system with a focus on \ce{H2} and \ce{CO2} infrastructure, and evaluated the performance of different levels of pipeline roll-out under three short-term scenarios. 
 
-\begin{itemize}
-  \item While PCI-PMI projects are not cost-optimal from a system perspective compared to an ideal centrally planned system, they have a positive impact on the system costs and are likely a no-regret investment based on our results.
-  \item Additional cost savings can be unlocked with single, strategically placed pipelines to connect additional \ce{H2} production sites and \ce{CO2} point sources to the pipeline network.
-  \item Further, the success of large-scale investment projects is largely driven by political support, public acceptance, which is especially given for PCI-PMI projects.
-  \item \ce{H2} pipelines projects help distribute more affordable green H$_2$ from northern and south-western Europe to high-demand regions in central Europe; ii) \ce{CO2} transport and storage projects help decarbonising the industry by connecting major industrial sites and their process emissions to offshore sequestration sites in the North Sea (Denmark, Norway, and the Netherlands).
-  \item Pipelines basically serve as a tool to hedge risks of overbuilding solar and wind generation capacities and reduce excessive reliance on single carbon capture technologies like DAC and carbon capture at point sources.
-  \item At the same time, there is a theoretical risk of needing more DAC investments, if pipelines do not materialise at all.
-  \item Confirm findings of \cite{hofmannH2CO2Network2025} findings, notably with higher sequestration costs and real planned projects.
-  \item PCI-PMI projects including additional pipeline build-outs allow a lower-cost and less technology-dependent transition towards a decarbonised system compared to a system without any pipeline infrastructure. They help achieving the EUs ambitious policy targets in the long run.
 
-\end{itemize}
+\paragraph{Economic viability and policy targets}
+Our findings demonstrate that PCI-PMI \ce{CO2} and \ce{H2} infrastructure generate a net positive impact on total system costs, even when accounting for potential additional costs involved with the delay of pipelines. This positions PCI-PMI projects as a no-regret investment option for the European energy system. 
+Their economic benefit increases considerably when strategic pipeline extensions are implemented, connecting additional \ce{H2} production sites and \ce{CO2} point sources to the pipeline network. 
+Compared to a system without any pipeline infrastructure, PCI-PMI projects help to achieve the EU's ambitious policy targets, including net-zero emissions, \ce{H2} production and \ce{CO2} sequestration targets, while reducing system costs and technology dependencies.
+
+\paragraph{CCUS and hydrogen utilisation}
+The pipeline infrastructure serves dual purposes in Europe's decarbonisation strategy, \ce{H2} pipelines facilitate the distribution of more affordable green \ce{H2} from northern and south-western regions rich in renewable energy potential to high-demand regions in central Europe. Complementarily, \ce{CO2} transport and offshore sequestration sites enable industrial decarbonisation by linking major industrial sites and their process emissions to offshore sequestration sites in the North Sea, particularly in Denmark, Norway, and the Netherlands.
+
+\paragraph{Technology diversification}
+The build-out of pipelines serves as an essential risk hedging mechanism against overbuilding solar and wind generation capacities while reducing excessive reliance on singular carbon capture technologies such as direct air capture (DAC) and point-source carbon capture, confirming the findings of \cite{hofmannH2CO2Network2025}. This diversification further enhances system resilience towards uncertainties involved with technologies that are not yet commercially available at scale, such as DAC.
+
+\paragraph{Political support and public acceptance} 
+While PCI-PMI may not achieve perfect cost-optimality in their entirety compared to a theoretically centrally planned system, they possess benefits beyond pure economic viability. The success of large-scale infrastructure investments highly depend on continuous political support and public acceptance --- factors that are particularly favourable for PCI-PMI projects. Being directly supported by the European Commission, PCI-PMI projects see stronger political backing, institutional support structures with regard to financing, access to grants, acceleration in permitting processes. Being required to frequent and transparent progress reports, PCI-PMI projects are more likely to be accepted by the public.
+
 
 \clearpage
 \section*{CRediT authorship contribution statement}
@@ -771,33 +770,33 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
   \caption{$\Delta$\ce{CO2} balances --- Short-term minus long-term runs.}
   \label{fig:balances_overview_extended_co2_stored}
 \end{figure*}
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{delta_balances_process emissions CC}
   \caption{$\Delta$\ce{CO2} balances --- Process emissions including Carbon Capture.}
   \label{fig:delta_balances_process_emissions_CC}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{delta_balances_solid biomass for industry CC}
   \caption{$\Delta$\ce{CO2} balances --- Carbon capture from solid biomass for industry point sources.}
   \label{fig:delta_balances_biomass_industry_cc}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{delta_balances_SMR CC}
   \caption{$\Delta$\ce{CO2} balances --- Carbon capture from steam methane reforming point sources.}
   \label{fig:delta_balances_smr_cc}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{delta_balances_gas for industry CC}
   \caption{$\Delta$\ce{CO2} balances --- Carbon captured from gas for industry point sources.}
   \label{fig:delta_balances_gas_for_industry}
-\end{figure}
+\end{figure*}
 
 \begin{figure*}[htbp]
   \centering
@@ -806,12 +805,26 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
   \label{fig:balances_overview_extended_H2_stored}
 \end{figure*}
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{delta_balances_H2 Electrolysis}
   \caption{Delta balances --- Electrolytic \ce{H2} production}
   \label{fig:delta_balances_h2_electrolysis}
-\end{figure}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{balances_overview_gas}
+  \caption{\ce{CH4} balances in long-term scenarios.}
+  \label{fig:balances_overview_gas}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{balances_overview_extended_gas}
+  \caption{$\Delta$\ce{CH4} balances --- Short-term minus long-term runs.}
+  \label{fig:balances_overview_extended_gas}
+\end{figure*}
 
 
 \clearpage
