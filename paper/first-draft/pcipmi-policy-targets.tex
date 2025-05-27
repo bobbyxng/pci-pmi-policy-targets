@@ -139,12 +139,9 @@
 
 %% Abstract
 \begin{abstract}
-  OLD OUTDATED IEW-EXTENDED-ABSTRACT. The European Union (EU) aims to achieve climate-neutrality by 2050, with ambitious 2030 target, such as \SI{55}{\percent} greenhouse gas emissions reduction compared to 1990 levels, \SI{10}{Mt} p.a. of a domestic green \ce{H2} production, and \SI{50}{Mt} p.a. of \ce{CO2} injection capacity, which should be sequestered within the EU. 
-  The European Commission selects so-called Projects of Common Interest (PCI) and Projects of Mutual Interest (PMI)---a large infrastructure projects for electricity, hydrogen and \ce{CO2} transport, and storage---that are of transnational importance as they link the energy systems of European countries.
-  In this work, we evaluate the impact of PCI-PMI projects for the European energy system and EU energy policies. To achieve this, we investigate how delays in these projects could affect the EU's policy targets and examine potential conflicts between various policy objectives and the overarching greenhouse gas reduction goal. 
-  Our preliminary results for 2030 indicate that policy targets can be met even without PCI-PMI projects; however, these projects offer additional benefits: (i) \ce{H2} pipelines enhance the affordability and distribution of green \ce{H2}, thereby jumpstarting the hydrogen economy, and (ii) \ce{CO2} transport projects connect major industrial emissions to offshore sequestration sites in the North Sea.
-  In our future work, we will analyse long-term pathway effects up to 2050, and incorporate hybrid interconnectors and \ce{CO2} shipping routes from the PCI-PMI list. 
-  Overall, our findings highlight the critical interplay between cross-border cooperation, infrastructure investments, and policy targets in the European energy transition across all sectors.
+The European Union (EU) aims to achieve climate-neutrality by 2050, with interim 2030 targets including \SI{55}{\percent} greenhouse gas emissions reduction compared to 1990 levels, \SI{10}{Mt} p.a. of a domestic green \ce{H2} production, and \SI{50}{Mt} p.a. of domestic \ce{CO2} injection capacity. To support these targets, Projects of Common and Mutual Interest (PCI-PMI) --- large infrastructure projects for electricity, hydrogen and \ce{CO2} transport, and storage --- are identified by the European Commission. This study focuses on PCI-PMI projects related to hydrogen and carbon value chains, assessing their long-term system value and the impact of policy delays or relaxations using a myopic, deterministic two-stage regret analysis.
+
+Our study finds that PCI-PMI projects contribute to reaching a net-zero energy system in a more cost-efficient way compared to a system without any pipeline build-out. Hydrogen pipelines facilitate the distribution of more affordable green hydrogen from northern and south-western regions rich in renewables to high-demand regions in central Europe while \ce{CO2} pipelines link major industrial sites and process emissions to offshore sequestration sites. Finally, our results show that the build-out of pipelines serve as a hedge against overbuilding in solar and wind generation capacities while reducing excessive reliance on single technologies, such as Direct Air Capture (DAC) for \ce{CO2} removal.
 \end{abstract}
 
 % %%Graphical abstract
@@ -179,6 +176,7 @@ energy system modelling \sep policy targets \sep infrastructure \sep resilience 
 %% main text
 %%
 
+\newpage
 %% Use \section commands to start a section.
 \section*{List of abbreviations}
 
@@ -206,25 +204,16 @@ energy system modelling \sep policy targets \sep infrastructure \sep resilience 
 
 \section{Introduction}
 \label{sec:introduction}
-WORK-IN-PROGRESS-INCOMPLETE. On the pathway to a climate-neutral Europe by 2050, the European Union (EU) has set ambitious targets for 2030. These targets include a reduction of \SI{55}{\percent} in greenhouse gas emissions compared to 1990 levels \cite{europeancommissionFit55Delivering2021}, \SI{10}{Mt} p.a. domestic green \ce{H2} production \cite{europeancommissionREPowerEUPlanCommunication2022}, and \SI{50}{Mt} p.a. of \ce{CO2} injection capacity with sequestration in within the EU \cite{europeanparliamentRegulationEU20242024}.
+On the pathway to a climate-neutral Europe by 2050, the European Union (EU) has set ambitious targets for 2030. These targets include a reduction of \SI{55}{\percent} in greenhouse gas emissions compared to 1990 levels \cite{europeancommissionFit55Delivering2021}, \SI{10}{Mt} p.a. domestic green \ce{H2} production \cite{europeancommissionREPowerEUPlanCommunication2022}, and \SI{50}{Mt} p.a. of \ce{CO2} injection capacity with sequestration in within the EU \cite{europeanparliamentRegulationEU20242024}.
+For the long-term planning horizon, e.g. 2050, concrete targets for \ce{H2} and \ce{CO2} are still missing beyond reaching a net-zero GHG emissions. Recent studies \cite{fleiterHydrogenInfrastructureFuture2025,neumannPotentialRoleHydrogen2023,hofmannH2CO2Network2025} agree that a mixture of investments into \ce{H2} and \ce{CO2} infrastructure including carbon removal technologies are cost-optimal and needed for a net-zero energy system, especially in the hard-to-abate sectors, such as industry, aviation, and shipping. 
 
-To support reaching these targets, the European Commission bi-annually identifies a list of Projects of Common Interest (PCI), which are key cross-border infrastructure projects that link the energy systems of the EU members, including transmission and storage projects for electricity, hydrogen and \ce{CO2} \cite{europeancommissionCommissionDelegatedRegulation2023}. 
-The pool of project sutable for PCI status is based on projects submitted by transmission system operators, consortia, or third parties. Projects of Mutual Interest (PMI) further include cooperations with countries outside the EU, such as Norway or the United Kingdom. With a PCI-PMI status, project awardees receive strong political support and are, amongst others, eligible for financial support (e.g. through funding of the Connecting Europe Facility) and see accelerated permitting processes. On the other hand, project promoters are obliged to undergo comprehensive reporting and monitoring processes. 
-In order for projects to be eligible for PCI-PMI status, their \textit{potential benefits need to outweigh their costs} \cite{europeancommissionCommissionDelegatedRegulation2023}. Given the political and lighthouse character, these projects are highly likely to be implemented. However, any large infrastructure project, including PCI-PMI projects, commonly face delays due to permitting, financing, procurement bottlenecks, etc. \cite
-{acerConsolidatedReportProgress2023}.
+\todo[inline]{Add two paragraphs on H2 and CO2 use}
 
-\begin{itemize}
-  \item Net zero law by 2050 \citet{europeanparliamentRegulationEU20242024}
-\end{itemize}
+To meet the regionally distributed need for \ce{H2} and \ce{CO2}, significant investments into its transport and storage/sequestration investment are needed. A recent report by the European Commission \cite{europeancommission.directorategeneralforenergy.InvestmentNeedsEuropean2025} confirms that investment needs into the EU's energy infrastructure will grow continuously, with the largest share (around 1200 bn. \euro{}) of the investment volume going into electricity distribution and transmission by 2040. Beyond the electricity sector, the report also emphasises on significant investments into \ce{H2} and \ce{CO2} infrastructure, expecting around 170 bn. \euro{} and up to 20 bn. \euro{} p.a. by 2040, respectively. Their findings also highlight the higher uncertainty and risks involved with investments into \ce{H2} and \ce{CO2} infrastructure, as these sectors are still in their infancy.
 
-\subsection{Fuels, carriers, targets}
-\paragraph{Hydrogen (\ce{H2})}
-\begin{itemize}
-  \item "net zero systems: H2 feedstock for synthetic fuels, fuel transportation sector, feedstock and heat source in industry," \cite{greevenbroekLittleLoseCase2024}, \cite{beresWillHydrogenSynthetic2024}
-\end{itemize}
-
-\subsection{Projects of Common/Mutual Interest}
-
+To support storing and distributing electricity, \ce{CO2} and \ce{H2} efficiently, the European Commission bi-annually identifies a list of Projects of Common Interest (PCI), which are key cross-border (and national) infrastructure projects that link the energy systems of the EU members \cite{europeancommissionCommissionDelegatedRegulation2023}. Projects suitable for PCI-PMI status are based on candidates submitted by transmission system operators, consortia, or third parties. Projects of Mutual Interest (PMI) further include cooperations with countries outside the EU, such as Norway or the United Kingdom. With a PCI-PMI status, project awardees receive strong political support and are, amongst others, eligible for financial support (e.g. through funding of the Connecting Europe Facility) and see accelerated permitting processes. On the other hand, project promoters are obliged to undergo comprehensive reporting and monitoring processes. 
+In order for projects to be eligible for PCI-PMI status, their \textit{potential benefits need to outweigh their costs} \cite{europeancommissionCommissionDelegatedRegulation2023}. Given the political and lighthouse character, these projects are highly likely to be implemented \cite{europeancommission.directorategeneralforenergy.InvestmentNeedsEuropean2025}. At the same time, any large infrastructure project, including PCI-PMI projects, commonly face delays due to permitting, financing, procurement bottlenecks, etc. \cite
+{acerConsolidatedReportProgress2023}. 
 
 \newpage
 \section{Literature review}
@@ -270,6 +259,7 @@ We implement a deterministic, two-stage regret matrix approach to assess the per
 With this study, we also bring more certainty into the chicken-and-egg problem of investing into \ce{CO2} and \ce{H2} infrastructure first vs. waiting for their demand to materialise.
 
 Our paper aims in particular to address the following research questions:
+\todo[inline]{Maybe rephrase/finetune RQs a bit?}
 
 \begin{enumerate} 
   \item What are the benefits of PCI-PMI projects for the European energy system, especially concerning reaching European policies
@@ -322,10 +312,14 @@ We implement all PCI-PMI projects of the electricity, \ce{CO2} and \ce{H2} secto
 Our implementation can adapt to the needs and configuration of the model, including selected technologies, geographical and temporal resolution, as well as the level of sector-coupling. Here, all projects are mapped to the 99 NUTS regions, in this process, pipelines are are aggregated and connect all overpassing regions. Similar to how all electricity lines and carrier links are modelled in PyPSA-Eur, lengths are calculated using the haversine formula multiplied by a factor of 1.25 to account for the non-straight shape of pipelines.
 We apply standardised cost assumptions \cite{zeyenPyPSATechnologydataV01012025} across all existing brownfield assets, model-endogenously selected projects, and exogenously specified PCI-PMI projects, equally. Our approach is motivated by two key considerations: (i) cost data submitted by project promoters are often incomplete and may differ in terms of included components, underlying assumptions, and risk margins; and (ii) applying uniform cost assumptions ensures comparability and a level playing field across all potential investments, including both PCI-PMI and model-endogenous options. 
 
-\paragraph{\ce{CO2} sequestration sites}
+\paragraph{\ce{CO2} sequestration and \ce{H2 storage} sites}
 \label{sec:co2_sequestration_sites}
-Beyond \ce{CO2} sequestration site projects included in the latest PCI-PMI list (around 114 Mt p.a.), we consider additional technical potential from the European \ce{CO2} storage database \cite{europeancommissionEuropeanCO2Storage2020,hofmannH2CO2Network2025}. While social and commercial acceptance of \ce{CO2} storage has been increasing in recent years, however, concerns still exist regarding its long-term purpose and safety \cite{vanalphenSocietalAcceptanceCarbon2007}. For this reason, we only consider conservative estimates from depleted oil and gas fields, which are primarily located offshore in the British, Norwegian, and Dutch North Sea (see Figure \ref{fig:regional_scope_map}), yielding a total sequestration potential of \SI{7164}{Mt}. Spread over a lifetime of 25 years, this translates into an annual sequestration potential of up to 286 Mt p.a. We then cluster all offshore potential within a buffer radius of \SI{50}{km} per offshore bus region in each modelled NUTS region and connect them through offshore \ce{CO2} pipelines to the closest onshore bus (TODO: add reference to cost assumptions in appendix). 
+Beyond \ce{CO2} sequestration site projects included in the latest PCI-PMI list (around 114 Mt p.a.), we consider additional technical potential from the European \ce{CO2} storage database \cite{europeancommissionEuropeanCO2Storage2020,hofmannH2CO2Network2025}. The dataset includes storage potential from depleted oil and gas fields as well as saline aquifers. While social and commercial acceptance of \ce{CO2} storage has been increasing in recent years, concerns still exist regarding its long-term purpose and safety \cite{vanalphenSocietalAcceptanceCarbon2007}.
+We only consider conservative estimates from depleted oil and gas fields, which are primarily located offshore in the British, Norwegian, and Dutch North Sea (see Figure \ref{fig:regional_scope_map}), yielding a total sequestration potential of \SI{7164}{Mt}. Our focus is motivated by the following reasons: (i) infrastructure such as wells, platforms, and pipelines already exist for depleted oil and gas fields and can be repurposed, significantly lowering costs and project risk; (ii) depleted fields are generally better understood geologically and have demonstrated sealing capacities, further reducing uncertainty; and (iii) repurposing former production sites is often more publicly and politically acceptable than developing entirely new storage locations, entirely. In contrast, while saline aquifers represent a substantial share of the total technical potential, they carry higher development costs and risks and are less likely to be advanced without strong policy and financial support \cite{europeancommissionEuropeanCO2Storage2020}. Note that the PCI-PMI project list includes some aquifer-based sequestration projects, however, their inclusion as PCI-PMI project indicates a higher likelihood of development.
 
+Spread over a lifetime of 25 years, the selected depleted oil and gas fields translate into an annual sequestration potential of up to 286 Mt p.a. We then cluster all offshore potential within a buffer radius of \SI{50}{km} per offshore bus region in each modelled NUTS region and connect them through offshore \ce{CO2} pipelines to the closest onshore bus (TODO: add reference to cost assumptions in appendix).
+
+The model also includes \ce{H2} storage sites from the PCI-PMI list and allows for endogenous build-out of additional storage capacities by repurposing salt caverns \cite{neumannPotentialRoleHydrogen2023}.
 
 \subsection{Scenario setup and regret matrix}
 \label{sec:scenario_setup}
@@ -335,9 +329,6 @@ To assess the long-term impact of PCI-PMI projects on the European energy system
 \paragraph{Scenario definition}
 \label{sec:definition}
 We define the long-term scenarios based on the degree of \ce{CO2} and \ce{H2} infrastructure build-out, including the roll-out of PCI-PMI projects as well additional pipeline investments. In total, we implement five long-term scenarios, (i) a pessimistic scenario (Decentral Islands --- DI) without any \ce{H2} pipeline and onshore \ce{CO2} pipeline infrastructure, (ii) a scenario that considers the on-time commissioning of all PCI-PMI \ce{CO2} and \ce{H2} projects (PCI-PMI --- PCI) only, (iii) more ambitious scenarios that further allow investments into national and (iv) international pipelines (PCI-PMI nat. --- PCI-n and PCI-PMI internat. --- PCI-in), and (v) a scenario that does not assume any fixed PCI-PMI infrastructure but allows for a centralised, purely needs-based build-out of \ce{CO2} and \ce{H2} pipelines (Centralised Planning --- CP). An overview of the long-term scenarios and their associated model-endogenous decision variables is provided in Table \ref{tab:long-term_scenarios}. 
-
-\todo[inline]{Regarding Depleted oil and gas fields in table, TB: depleted fields is only one type of sequestration site - most is saline aquifers, oder? or are these PCI-PMI? is there any overlap between PCI-PMI sites and the depleted Oil and Gas? some details here would be useful}
-\todo[inline]{Regarding endogenous H2 storage build-out, TB: does this respect salt deposit availability?}
 
 \begin{table*}[htbp]
   \centering
@@ -620,7 +611,7 @@ Compared to a system without any pipeline infrastructure, PCI-PMI projects help 
 The pipeline infrastructure serves dual purposes in Europe's decarbonisation strategy, \ce{H2} pipelines facilitate the distribution of more affordable green \ce{H2} from northern and south-western regions rich in renewable energy potential to high-demand regions in central Europe. Complementarily, \ce{CO2} transport and offshore sequestration sites enable industrial decarbonisation by linking major industrial sites and their process emissions to offshore sequestration sites in the North Sea, particularly in Denmark, Norway, and the Netherlands.
 
 \paragraph{Technology diversification}
-The build-out of pipelines serves as an essential risk hedging mechanism against overbuilding solar and wind generation capacities while reducing excessive reliance on singular carbon capture technologies such as direct air capture (DAC) and point-source carbon capture, confirming the findings of \cite{hofmannH2CO2Network2025}. This diversification further enhances system resilience towards uncertainties involved with technologies that are not yet commercially available at scale, such as DAC.
+The build-out of pipelines serves as an essential risk hedging mechanism against overbuilding solar and wind generation capacities while reducing excessive reliance on single carbon capture technologies such as direct air capture (DAC) and point-source carbon capture, confirming the findings of \cite{hofmannH2CO2Network2025}. This diversification further enhances system resilience towards uncertainties involved with technologies that are not yet commercially available at scale, such as DAC.
 
 \paragraph{Political support and public acceptance} 
 While PCI-PMI may not achieve perfect cost-optimality in their entirety compared to a theoretically centrally planned system, they possess benefits beyond pure economic viability. The success of large-scale infrastructure investments highly depend on continuous political support and public acceptance --- factors that are particularly favourable for PCI-PMI projects. Being directly supported by the European Commission, PCI-PMI projects see stronger political backing, institutional support structures with regard to financing, access to grants, acceleration in permitting processes. Being required to frequent and transparent progress reports, PCI-PMI projects are more likely to be accepted by the public.
