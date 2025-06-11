@@ -104,6 +104,9 @@
 }
 \newcolumntype{L}{>{\rowfonttype}l}
 
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{listingsutf8}
+
 % Custom commands
 \usepackage{caption}
 \renewcommand{\figurename}{} % Removes the "Figure" text
@@ -387,7 +390,7 @@
 
 \begin{frame}{Pathway for implemented long-term (LT) targets}
   \scriptsize
-  \begin{tabularx}{\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     \textbf{Planning horizon} & \textbf{2030} & \textbf{2040} & \textbf{2050} \\
     \midrule
@@ -400,23 +403,40 @@
   \end{tabularx}
   \scriptsize 
   \centering
+  \newline
   Model targets based on \cite{europeancommissionFit55Delivering2021,europeancommissionREPowerEUPlanCommunication2022,europeanparliamentRegulationEU20242024,europeancommissionCommunicationCommissionEuropean2024,europeancommission.directorategeneralforenergy.METIS3Study2023}
+  \source{Own illustration.}
 
 \end{frame}
 
 \begin{frame}{Exogenous demand}
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.52\textwidth]{exogenous_demand}
-  \end{figure}
-  \scriptsize
-  asdf
+  \centering
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{exogenous_demand}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \footnotesize
+      \begin{itemize}
+        \item Demand for electricity, heat, gas, biomass, and transport is regionally and temporally resolved
+        \item ICE vehicles in land transport expected to fully phase out in favour of EV by 2050
+        \item Demand for methanol and hydrocarbons, including kerosene primarily driven by shipping, aviation, and industry sector (not spatially resolved)
+        \item Unabatable process emissions from industry sector, e.g. cement, also considered
+        \item \ce{CO2} sequestration cost assumed at \euro{15}/t\ce{CO2} (mid-range estimate)
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
 \end{frame}
 
 
 \begin{frame}{Long-term scenarios}
   \scriptsize
-  \begin{tabularx}{\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
       \toprule
       \textbf{Long-term scenarios} & 
       \textbf{DI} & 
@@ -444,14 +464,16 @@
       PCI-PMI extendable & -- & -- & -- & -- & $\blacksquare$ \\
       \bottomrule
   \end{tabularx}
+  \source{Own illustration.}
   \vspace{0.5em}
   \centering
+  \newline
   {\scriptsize $\blacksquare$ enabled \quad -- disabled \quad * approx. 286 Mt p.a. \quad ** approx. 114 Mt p.a.}
 \end{frame}
 
 \begin{frame}{Regret-matrix setup}
   \scriptsize
-  \begin{tabularx}{\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     \textbf{Short-term} & \textbf{Reduced targets} & \textbf{Delayed pipelines} & \textbf{No pipelines} \\
     \midrule
@@ -475,9 +497,36 @@
     \ce{H2} pipelines & $\blacksquare$ &  $\square$ &  -- \\
     \bottomrule
   \end{tabularx}
+  \source{Own illustration.}
   \centering
+  \newline
   \scriptsize $\blacksquare$ enabled \quad $\square$ delayed by one period \quad -- disabled
 
+\end{frame}
+\section{Results \& Discussion}
+
+\begin{frame}{LT --- Total system costs}
+  \centering
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{costs_overview}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \footnotesize
+      \begin{itemize}
+        \item Highest total annual system costs in 2040: \euro{912}-\euro{968} billion per year, driven by sharp decarbonisation pathway
+        \item Adding PCI-PMI projects in 2030 increases costs only marginally
+        \item Strong system cost savings from pipeline investments starting in 2040, around \euro{30}-\euro{50} billion per year
+        \item Complete freedom in pipeline expansion unlocks another \euro{7} billion per year in cost savings
+        \item Cost savings stem primarily from reducing reliance into costly DAC technologies and excessive investments into solar and wind
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
 \end{frame}
 
 \begin{frame}{LT --- PCI: 2030 regional \ce{H2}, \ce{CO2} balances and transport}
@@ -500,25 +549,25 @@
   \source{Own illustration.}
 \end{frame}
 
-\begin{frame}{LT --- PCI: 2040 regional \ce{H2}, \ce{CO2} balances and transport}
-  \centering
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \footnotesize
-      \begin{figure}
-        \centering
-        \includegraphics[width=0.8\textwidth]{maps/pcipmi/base_s_adm___2040-balance_map_H2}
-      \end{figure}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{figure}
-        \centering
-        \includegraphics[width=0.8\textwidth]{maps/pcipmi/base_s_adm___2040-balance_map_co2_stored}
-      \end{figure}
-    \end{column}
-  \end{columns}
-  \source{Own illustration.}
-\end{frame}
+% \begin{frame}{LT --- PCI: 2040 regional \ce{H2}, \ce{CO2} balances and transport}
+%   \centering
+%   \begin{columns}
+%     \begin{column}{0.5\textwidth}
+%       \footnotesize
+%       \begin{figure}
+%         \centering
+%         \includegraphics[width=0.8\textwidth]{maps/pcipmi/base_s_adm___2040-balance_map_H2}
+%       \end{figure}
+%     \end{column}
+%     \begin{column}{0.5\textwidth}
+%       \begin{figure}
+%         \centering
+%         \includegraphics[width=0.8\textwidth]{maps/pcipmi/base_s_adm___2040-balance_map_co2_stored}
+%       \end{figure}
+%     \end{column}
+%   \end{columns}
+%   \source{Own illustration.}
+% \end{frame}
 
 \begin{frame}{LT --- PCI: 2050 regional \ce{H2}, \ce{CO2} balances and transport}
   \centering
@@ -540,47 +589,81 @@
   \source{Own illustration.}
 \end{frame}
 
-
-\section{Results \& Discussion}
-\begin{frame}{LT --- Total system costs}
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.65\textwidth]{costs_overview}
-    % \caption{Total annual system costs (CAPEX + OPEX) by technology group.}
-  \end{figure}
+\begin{frame}{LT --- \ce{CO2} balances}
+  \centering
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{balances_overview_co2 stored}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \footnotesize
+      \begin{itemize}
+        \item With increasing pipeline build-out to transport \ce{CO2} from industry and other point sources to sequestration sites, DAA utilisation decreases by almost half (left to right)
+        \item In 2030, 50 Mt p.a. sequestration target is binding, if no pipelines are built. With pipeline build-out, up to 75 Mt p.a. are sequestered
+        \item In 2040 and 2050, all sequestration targets are overachieved, potential of 398 Mt p.a. is exploited in all scenarios with PCI-PMI projects.
+        \item Biomass-based industry contributing the largest share of point-source carbon capture
+        \item With lower sequestration potential of 386 Mt p.a. in \textit{DI} scenario, more \ce{CO2} goes into carbon utilisation (Fischer-Tropsch synthesis) instead
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
 \end{frame}
 
-\begin{frame}{LT --- \ce{CO2} balances}
+\begin{frame}{LT --- \ce{CO2} balances: Direct Air Capture utilisation}
   \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\textwidth]{delta_balances_dac}
   \end{figure}
 \end{frame}
 
-\begin{frame}{LT --- \ce{CO2} balances: Direct Air Capture (DAC) utilisation}
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.65\textwidth]{balances_overview_co2 stored}
-    % \caption{Total annual system costs (CAPEX + OPEX) by technology group.}
-  \end{figure}
-\end{frame}
-
 \begin{frame}{LT --- \ce{H2} balances}
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.65\textwidth]{balances_overview_H2}
-    % \caption{Total annual system costs (CAPEX + OPEX) by technology group.}
-  \end{figure}
+  \centering
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{balances_overview_H2}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \footnotesize
+      \begin{itemize}
+        \item \ce{H2} production primarily driven by demand for Fischer-Tropsch fuels and methanol
+        \item In 2050, Fischer-Tropsch fuels primarily used to satisfy kerosene in aviation and industrial naphta
+        \item When no pipelines are built, \ce{H2} production is significantly higher, given the need for additional Fischer-Tropsch synthesis to bind \ce{CO2} as an alternative to sequestration
+        \item \ce{H2} from Steam Methane Reforming (71 to 102 TWh p.a.) without pipelines.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
 \end{frame}
 
-\begin{frame}{Regret matrix}
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.65\textwidth]{regret_matrix}
-  \end{figure}
-  \scriptsize
+\begin{frame}{Regret analysis}
   \centering
-  Regret terms are calculated by subtracting system costs of long-term scenarios (rows) from short-term scenarios (columns). Positive values reflect higher costs in the short-term scenarios compared to the long-term ones.
+  \begin{columns}
+  \begin{column}{0.4\textwidth}
+      \footnotesize
+      \begin{itemize}
+        \item Regret is calculated by subtracting annual total system costs of long-term from short-term scenarios
+        \item Regret terms represent additional cost incurred by given short-term incident relative to benchmark scenario
+        \item Positive values indicate higher costs, driven by increased investments into alternative generation, conversion, storage, and CDR technologies, as well as changes in their operation
+        \item Negative values indicate cost savings, which may arise under relaxed policy ambitions 
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{regret_matrix}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
 \end{frame}
 
 \begin{frame}{Value of PCI-PMI projects in the long run}
@@ -590,21 +673,71 @@
   \end{figure}
 \end{frame}
 
-
 \section{Conclusion}
-\begin{frame}{Conclusion}
-  \footnotesize
-  \begin{enumerate}
-    \setlength\itemsep{0.3em}
-    \item PCI-PMI projects have a positive impact on total system costs and are likely a no-regret investment based on our results (though not perfectly cost-optimal compared to theoretical \textit{CP} scenario).
-    \item Additional cost savings can be unlocked with single, strategically placed pipelines to connect additional \ce{H2} production sites and \ce{CO2} point sources to the pipeline network.
-    \item Further, the success of large-scale investment projects is largely driven by political support, public acceptance, which is especially given for PCI-PMI projects.
-    \item \ce{H2} pipelines projects help distribute more affordable green H$_2$ from northern and south-western Europe to high-demand regions in central Europe; ii) \ce{CO2} transport and storage projects help decarbonising the industry by connecting major industrial sites and their process emissions to offshore sequestration sites in the North Sea (Denmark, Norway, and the Netherlands).
-    \item Pipelines basically serve as a tool to hedge risks of overbuilding solar and wind generation capacities and reduce excessive reliance on single carbon capture technologies like DAC and carbon capture at point sources $\rightarrow$ confirms previous findings of \cite{hofmannH2CO2Network2025}.
-    \item Overall, PCI-PMI projects including additional pipeline build-outs allow a lower-cost and less technology-dependent transition towards a decarbonised system compared to a system without any pipeline infrastructure. They support achieving the EUs ambitious policy targets in the long run.
-  \end{enumerate}
 
+\begin{frame}{Conclusion}
+\vspace{-0.4cm}
+\begin{columns}[t,onlytextwidth]
+  \footnotesize
+  \column{0.49\textwidth}
+    \begin{tcolorbox}[colback=blue!5, colframe=blue!40!black, fonttitle=\bfseries, title=Economic viability \& policy targets]
+    \centering
+    \scriptsize
+    \begin{itemize}
+      \item PCI-PMI pipelines bring net system cost reductions, visible in the long-run
+      \item Strategic extensions amplify benefits  
+      \item Support EU GHG reduction, H\textsubscript{2}, and CO\textsubscript{2} sequestration targets  
+      \item Low-regret investment, even when accounting for delays
+    \end{itemize}
+    \end{tcolorbox}
+    
+    \vspace{0.02cm}
+    \begin{tcolorbox}[colback=orange!5, colframe=orange!60!black, fonttitle=\bfseries, title=Tech \& risk diversification]
+    \centering
+    \scriptsize
+    \begin{itemize}
+      \item Pipelines boost more efficient use from RES  
+      \item Reduce reliance on point source CC and costly, low-TRL CDR technologies, such as DAC  
+    \end{itemize}
+    \end{tcolorbox}
+
+  \column{0.49\textwidth}
+    \begin{tcolorbox}[colback=green!5, colframe=green!40!black, fonttitle=\bfseries, title=CCUS \& hydrogen utilisation]
+    \centering
+    \scriptsize
+    \begin{itemize}
+      \item Dual purpose: \ce{H2} pipelines link high RES regions to demand centers while \ce{CO2} pipelines connect industry to sequestration sites  
+      \item Enable decarbonisation of hard-to-abate sectors and industrial processing including non-abatle process emissions
+    \end{itemize}
+    \end{tcolorbox}
+    
+    \vspace{-0.2cm}
+    
+    \begin{tcolorbox}[colback=red!5, colframe=red!50!black, fonttitle=\bfseries, title=Political support \& acceptance]
+    \centering
+    \scriptsize
+     \begin{itemize}
+      \item EU backing ensures funding \& fast permitting  
+      \item Frequent reporting \& transparency builds public trust and acceptance
+      \item Advantage over purely cost-optimal, theoretical plans
+    \end{itemize}
+    \end{tcolorbox}
+\end{columns}
 \end{frame}
+
+% \begin{frame}{Conclusion}
+%   \footnotesize
+%   \begin{enumerate}
+%     \setlength\itemsep{0.3em}
+%     \item PCI-PMI projects have a positive impact on total system costs and are likely a no-regret investment based on our results (though not perfectly cost-optimal compared to theoretical \textit{CP} scenario).
+%     \item Additional cost savings can be unlocked with single, strategically placed pipelines to connect additional \ce{H2} production sites and \ce{CO2} point sources to the pipeline network.
+%     \item Further, the success of large-scale investment projects is largely driven by political support, public acceptance, which is especially given for PCI-PMI projects.
+%     \item \ce{H2} pipelines projects help distribute more affordable green H$_2$ from northern and south-western Europe to high-demand regions in central Europe; ii) \ce{CO2} transport and storage projects help decarbonising the industry by connecting major industrial sites and their process emissions to offshore sequestration sites in the North Sea (Denmark, Norway, and the Netherlands).
+%     \item Pipelines basically serve as a tool to hedge risks of overbuilding solar and wind generation capacities and reduce excessive reliance on single carbon capture technologies like DAC and carbon capture at point sources $\rightarrow$ confirms previous findings of \cite{hofmannH2CO2Network2025}.
+%     \item Overall, PCI-PMI projects including additional pipeline build-outs allow a lower-cost and less technology-dependent transition towards a decarbonised system compared to a system without any pipeline infrastructure. They support achieving the EUs ambitious policy targets in the long run.
+%   \end{enumerate}
+
+% \end{frame}
 
 
 % \begin{frame}[allowframebreaks]{References (excerpt)}
@@ -643,6 +776,31 @@
   }}
 \end{frame}
 
+\begin{frame}{Cost assumptions for key technologies}
+  \scriptsize
+  \centering
+  \begin{tabularx}{0.8\textwidth}{R{2.4cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>
+  {\centering\arraybackslash}X}
+    \toprule
+    & \textbf{Unit} & \textbf{CAPEX} & \textbf{FOM} \\
+    \midrule
+    \textbf{\ce{Pipeline infrastructure}} & & & \\
+    \ce{CO2} onshore pipelines & \euro{}/t\ce{CO2}/hkm & \num{2116} & \SI{0.9}{\percent/a} \\
+    \ce{CO2} offshore pipelines & \euro{}/t\ce{CO2}/hkm & \num{4233} & \SI{0.5}{\percent/a} \\
+    \ce{H2} onshore pipelines & \euro{}/MW$_{H_2}$/km & \num{304} & 1.5-\SI{3.2}{\percent/a} \\
+    \ce{H2} offshore pipelines & \euro{}/MW$_{H_2}$/km & \num{456} & \SI{3.0}{\percent/a} \\
+    \midrule
+    \textbf{\ce{Conversion}} & & & \\
+    Electrolysis & \euro{}/kW$_e$ & \num{1000}-\num{1500} & \SI{4.0}{\percent/a} \\
+    SMR & \euro{}/MW$_{CH_4}$ & \num{522201} & \SI{5.0}{\percent/a} \\
+    SMR CC & \euro{}/MW$_{CH_4}$ & \num{605753} & \SI{5.0}{\percent/a} \\
+
+    \bottomrule
+  \end{tabularx}
+  \source{Own illustration.}
+
+\end{frame}
+
 \begin{frame}{LT --- Installed capacities}
   \begin{figure}[htbp]
     \centering
@@ -653,28 +811,28 @@
 \begin{frame}{ST --- Delta system costs}
   \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.53\textwidth]{costs_overview_extended}
+    \includegraphics[width=0.36\textwidth]{costs_overview_extended}
   \end{figure}
 \end{frame}
 
 \begin{frame}{ST --- Delta capacities}
   \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.49\textwidth]{capacities_overview_extended}
+    \includegraphics[width=0.45\textwidth]{capacities_overview_extended}
   \end{figure}
 \end{frame}
 
 \begin{frame}{ST --- Delta balances \ce{CO2}}
   \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.49\textwidth]{balances_overview_extended_co2 stored}
+    \includegraphics[width=0.44\textwidth]{balances_overview_extended_co2 stored}
   \end{figure}
 \end{frame}
 
 \begin{frame}{ST --- Delta balances \ce{H2}}
   \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.49\textwidth]{balances_overview_extended_H2}
+    \includegraphics[width=0.45\textwidth]{balances_overview_extended_H2}
   \end{figure}
 \end{frame}
 
