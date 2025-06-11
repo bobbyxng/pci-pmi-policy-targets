@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber pcipmi-policy-targets-iew"] 1749618395.31716 "pcipmi-policy-targets-iew.bcf" "pcipmi-policy-targets-iew.bbl" "pcipmi-policy-targets-iew" 1749618539.99935 0
-  "pcipmi-policy-targets-iew.bcf" 1749618539.87376 109279 5468edb1e9e067d72007cbb48f80dceb "pdflatex"
+["biber pcipmi-policy-targets-iew"] 0 "pcipmi-policy-targets-iew.bcf" "pcipmi-policy-targets-iew.bbl" "pcipmi-policy-targets-iew" 1749619444.27735 -1
+  "pcipmi-policy-targets-iew.bcf" 1749619444.14562 109279 5468edb1e9e067d72007cbb48f80dceb "pdflatex"
   "references.bib" 1748444339.42755 78925 e0e616a61f76e02811c37f68a6070760 ""
   (generated)
   "pcipmi-policy-targets-iew.bbl"
   "pcipmi-policy-targets-iew.blg"
   (rewritten before read)
-["pdflatex"] 1749618534.4635 "/home/bobby/projects/pcipmi-policy-targets/presentation/2025-06-12_iew_nara/presentation/pcipmi-policy-targets-iew.tex" "pcipmi-policy-targets-iew.pdf" "pcipmi-policy-targets-iew" 1749618539.99962 0
+["pdflatex"] 1749619437.86991 "/home/bobby/projects/pcipmi-policy-targets/presentation/2025-06-12_iew_nara/presentation/pcipmi-policy-targets-iew.tex" "pcipmi-policy-targets-iew.pdf" "pcipmi-policy-targets-iew" 1749619444.27762 0
   "../../../paper/first-draft/figures/balances_overview_H2.pdf" 1749387074.91724 28864 1ee99af23429c2ad02c1b6336f65ae66 ""
   "../../../paper/first-draft/figures/balances_overview_co2 stored.pdf" 1749387081.98532 31496 74312ad61048d64977b1651e26793e77 ""
   "../../../paper/first-draft/figures/balances_overview_extended_H2.pdf" 1749387076.06326 35831 33ec48aab0d5ed0119629df685d0f208 ""
@@ -18,13 +18,21 @@
   "../../../paper/first-draft/figures/delta_balances_DAC.pdf" 1749390523.86096 22271 3410e37bbee1950969168bd7f135facd ""
   "../../../paper/first-draft/figures/exogenous_demand.pdf" 1749398481.72099 48647 b302cef17d51f3cd9132cd5423d4f402 ""
   "../../../paper/first-draft/figures/map_adm_pcipmi.pdf" 1749395836.45085 3789362 f581015852e00a7964b2f1e1cf4a38ff ""
+  "../../../paper/first-draft/figures/maps/greenfield-pipelines/base_s_adm___2050-balance_map_H2.jpg" 1749396192.14806 171274 d2d7b1691dab82952e9c6c5768969894 ""
+  "../../../paper/first-draft/figures/maps/greenfield-pipelines/base_s_adm___2050-balance_map_co2_stored.jpg" 1749396216.18435 193043 edf9320eea9d762869488ee429ad6f14 ""
+  "../../../paper/first-draft/figures/maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_H2.jpg" 1749396261.3599 158134 d1fa2fc3e494b834dee5c69ea79d10a1 ""
+  "../../../paper/first-draft/figures/maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_co2_stored.jpg" 1749396226.90348 173753 4241f48f800543bfbd287392d30634d7 ""
+  "../../../paper/first-draft/figures/maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_H2.jpg" 1749396203.3442 174859 1a18c9e85f87b16770da3e1535ab344a ""
+  "../../../paper/first-draft/figures/maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_co2_stored.jpg" 1749396238.95963 174803 c51901cc9eafdef87fe65de744cefaea ""
+  "../../../paper/first-draft/figures/maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2.jpg" 1749396158.39066 177955 1c9d5368f0543686b650d4ce1fee8086 ""
+  "../../../paper/first-draft/figures/maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored.jpg" 1749396284.45818 191152 119193e94d6dd13b9317cca8989bcaff ""
   "../../../paper/first-draft/figures/maps/pcipmi/base_s_adm___2030-balance_map_H2.jpg" 1749396293.92429 159334 1ceca3cdc5764d7364796fdc1f8e92ec ""
   "../../../paper/first-draft/figures/maps/pcipmi/base_s_adm___2030-balance_map_co2_stored.jpg" 1749396169.12479 162485 659d455906da3536c6581061beabc7ef ""
   "../../../paper/first-draft/figures/maps/pcipmi/base_s_adm___2050-balance_map_H2.jpg" 1749396282.51716 170169 14c9b83e81921b7c133d2c80efd62f3f ""
   "../../../paper/first-draft/figures/maps/pcipmi/base_s_adm___2050-balance_map_co2_stored.jpg" 1749396180.42892 176710 07eae1371a49f28bbc29af3212e5c88f ""
   "../../../paper/first-draft/figures/regret_matrix.pdf" 1749388476.14545 21164 0c3cd40d4b0295487dd7adb81825eb84 ""
   "../../../paper/first-draft/figures/totex_heatmap.pdf" 1749388722.60215 22422 19c5087bcd4cb0e5c5dc27d02d73639c ""
-  "/home/bobby/projects/pcipmi-policy-targets/presentation/2025-06-12_iew_nara/presentation/pcipmi-policy-targets-iew.tex" 1749618528.90659 36100 b1c9dd8e8cc7928e69e4e76273d07734 ""
+  "/home/bobby/projects/pcipmi-policy-targets/presentation/2025-06-12_iew_nara/presentation/pcipmi-policy-targets-iew.tex" 1749619426.8955 38776 6129b8c2ab3c104960990918623f44f7 ""
   "/home/bobby/texlive/2025/texmf-dist/fonts/enc/dvips/roboto/rbto_5xgh2b.enc" 1576101225 3167 77bc12697e37f56677cab0d82d1d1400 ""
   "/home/bobby/texlive/2025/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc" 1576101225 2976 14f3c84565dd1bc57c13b9dc0aaeea06 ""
   "/home/bobby/texlive/2025/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc" 1576101225 3314 42351250ac95a91f488e14b5633f75ce ""
@@ -378,12 +386,12 @@
   "graphics/other/carbon_networks_cost_bar.png" 1748444339.36155 163471 3a19b0831a57b3ad2dfe6a2c189887d5 ""
   "graphics/other/hydrogen_balance.pdf" 1748444339.36255 26849 dbad68694cc2af467a0465b597adee78 ""
   "graphics/pci_pmi_map.png" 1748444339.37955 754709 850060fef5ef7ba33e8bf0cc588b9acb ""
-  "pcipmi-policy-targets-iew.aux" 1749618539.87076 7512 7795afcc6c1ff5270dd19b419bab0bd7 "pdflatex"
+  "pcipmi-policy-targets-iew.aux" 1749619444.14162 8028 946c597c5119d7696dea1c44913be3a1 "pdflatex"
   "pcipmi-policy-targets-iew.bbl" 1749618396.05541 12705 e2a8114e3ffef16f3e26f8e43c900c93 "biber pcipmi-policy-targets-iew"
-  "pcipmi-policy-targets-iew.nav" 1749618539.87476 3929 d065df8bec82a7a051755ffbdc101dc6 "pdflatex"
-  "pcipmi-policy-targets-iew.out" 1749618539.87176 696 c162a74aaa7c8767e97d4a0c3ee968b4 "pdflatex"
-  "pcipmi-policy-targets-iew.run.xml" 1749618539.87476 2493 c5794ab42f0648bd06ea187f85c8556d "pdflatex"
-  "pcipmi-policy-targets-iew.tex" 1749618528.90659 36100 b1c9dd8e8cc7928e69e4e76273d07734 ""
+  "pcipmi-policy-targets-iew.nav" 1749619444.14662 4301 96350864ff60b02cc919e8f2922c57d4 "pdflatex"
+  "pcipmi-policy-targets-iew.out" 1749619444.14362 696 c162a74aaa7c8767e97d4a0c3ee968b4 "pdflatex"
+  "pcipmi-policy-targets-iew.run.xml" 1749619444.14662 2493 c5794ab42f0648bd06ea187f85c8556d "pdflatex"
+  "pcipmi-policy-targets-iew.tex" 1749619426.8955 38776 6129b8c2ab3c104960990918623f44f7 ""
   (generated)
   "pcipmi-policy-targets-iew.aux"
   "pcipmi-policy-targets-iew.bcf"

@@ -353,12 +353,12 @@
 
   \end{columns}
 
-  \vspace{2.2cm}
+  \vspace{2.1cm}
 
-  \begin{enumerate}
-    \item Do PCI-PMI projects contribute to achieving the EU's energy policy targets and a net-zero transition in the long run?
-    \item What are the costs associated with adhering to the EU policy targets, even if PCI-PMI projects are delayed? 
-  \end{enumerate}
+\begin{enumerate} 
+  \item What is the long-term value of PCI-PMI projects in supporting the EU’s climate and energy policy targets, and what are the associated costs?
+  \item What are the costs of adhering to the EU policy targets, even when the implementation of PCI-PMI projects is delayed?
+\end{enumerate}
 
   \source{\url{https://energy.ec.europa.eu/topics/infrastructure_en} \\ and \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer}}
 
@@ -388,27 +388,6 @@
   \source{Own illustration based on data extracted from \url{https://ec.europa.eu/energy/infrastructure/transparency_platform/map-viewer}}
 \end{frame}
 
-\begin{frame}{Pathway for implemented long-term (LT) targets}
-  \scriptsize
-  \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
-    \toprule
-    \textbf{Planning horizon} & \textbf{2030} & \textbf{2040} & \textbf{2050} \\
-    \midrule
-    \textbf{Targets} & & & \\
-    GHG emission reduction &  \SI{-55}{\percent} & \SI{-90}{\percent} & \SI{-100}{\percent} \\
-    \ce{CO2} sequestration & 50 Mt p.a. & 150 Mt p.a. & 250 Mt p.a. \\
-    Electrolytic \ce{H2} production & 10 Mt p.a. & 27.5 Mt p.a. & 45 Mt p.a. \\
-    \ce{H2} electrolyser capacity & \SI{40}{GW} &  \SI{110}{GW} &  \SI{180}{GW} \\
-    \bottomrule
-  \end{tabularx}
-  \scriptsize 
-  \centering
-  \newline
-  Model targets based on \cite{europeancommissionFit55Delivering2021,europeancommissionREPowerEUPlanCommunication2022,europeanparliamentRegulationEU20242024,europeancommissionCommunicationCommissionEuropean2024,europeancommission.directorategeneralforenergy.METIS3Study2023}
-  \source{Own illustration.}
-
-\end{frame}
-
 \begin{frame}{Exogenous demand}
   \centering
   \begin{columns}
@@ -434,7 +413,29 @@
 \end{frame}
 
 
-\begin{frame}{Long-term scenarios}
+\begin{frame}{Long-term scenarios: Implemented targets}
+  \scriptsize
+  \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+    \textbf{Planning horizon} & \textbf{2030} & \textbf{2040} & \textbf{2050} \\
+    \midrule
+    \textbf{Targets} & & & \\
+    GHG emission reduction &  \SI{-55}{\percent} & \SI{-90}{\percent} & \SI{-100}{\percent} \\
+    \ce{CO2} sequestration & 50 Mt p.a. & 150 Mt p.a. & 250 Mt p.a. \\
+    Electrolytic \ce{H2} production & 10 Mt p.a. & 27.5 Mt p.a. & 45 Mt p.a. \\
+    \ce{H2} electrolyser capacity & \SI{40}{GW} &  \SI{110}{GW} &  \SI{180}{GW} \\
+    \bottomrule
+  \end{tabularx}
+  \scriptsize 
+  \centering
+  \newline
+  Model targets based on \cite{europeancommissionFit55Delivering2021,europeancommissionREPowerEUPlanCommunication2022,europeanparliamentRegulationEU20242024,europeancommissionCommunicationCommissionEuropean2024,europeancommission.directorategeneralforenergy.METIS3Study2023}
+  \source{Own illustration.}
+\end{frame}
+
+
+
+\begin{frame}{Long-term scenarios: Definition}
   \scriptsize
   \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
       \toprule
@@ -471,7 +472,7 @@
   {\scriptsize $\blacksquare$ enabled \quad -- disabled \quad * approx. 286 Mt p.a. \quad ** approx. 114 Mt p.a.}
 \end{frame}
 
-\begin{frame}{Regret-matrix setup}
+\begin{frame}{Regret matrix setup}
   \scriptsize
   \begin{tabularx}{0.8\textwidth}{R{3.9cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
@@ -529,20 +530,20 @@
   \source{Own illustration.}
 \end{frame}
 
-\begin{frame}{LT --- PCI: 2030 regional \ce{H2}, \ce{CO2} balances and transport}
+\begin{frame}{LT --- PCI: 2030 regional \ce{H2}, \ce{CO2} balances, transport, and prices}
   \centering
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \footnotesize
       \begin{figure}
         \centering
-        \includegraphics[width=0.8\textwidth]{maps/pcipmi/base_s_adm___2030-balance_map_H2}
+        \includegraphics[width=0.76\textwidth]{maps/pcipmi/base_s_adm___2030-balance_map_H2}
       \end{figure}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{figure}
         \centering
-        \includegraphics[width=0.8\textwidth]{maps/pcipmi/base_s_adm___2030-balance_map_co2_stored}
+        \includegraphics[width=0.76\textwidth]{maps/pcipmi/base_s_adm___2030-balance_map_co2_stored}
       \end{figure}
     \end{column}
   \end{columns}
@@ -604,7 +605,7 @@
       \begin{itemize}
         \item With increasing pipeline build-out to transport \ce{CO2} from industry and other point sources to sequestration sites, DAA utilisation decreases by almost half (left to right)
         \item In 2030, 50 Mt p.a. sequestration target is binding, if no pipelines are built. With pipeline build-out, up to 75 Mt p.a. are sequestered
-        \item In 2040 and 2050, all sequestration targets are overachieved, potential of 398 Mt p.a. is exploited in all scenarios with PCI-PMI projects.
+        \item In 2040 and 2050, all sequestration targets are overachieved, potential of 398 Mt p.a. is fully exploited in all scenarios with PCI-PMI projects.
         \item Biomass-based industry contributing the largest share of point-source carbon capture
         \item With lower sequestration potential of 386 Mt p.a. in \textit{DI} scenario, more \ce{CO2} goes into carbon utilisation (Fischer-Tropsch synthesis) instead
       \end{itemize}
@@ -636,7 +637,7 @@
         \item \ce{H2} production primarily driven by demand for Fischer-Tropsch fuels and methanol
         \item In 2050, Fischer-Tropsch fuels primarily used to satisfy kerosene in aviation and industrial naphta
         \item When no pipelines are built, \ce{H2} production is significantly higher, given the need for additional Fischer-Tropsch synthesis to bind \ce{CO2} as an alternative to sequestration
-        \item \ce{H2} from Steam Methane Reforming (71 to 102 TWh p.a.) without pipelines.
+        \item \ce{H2} 71 to 102 TWh p.a. from Steam Methane Reforming without pipelines.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -834,6 +835,86 @@
     \centering
     \includegraphics[width=0.45\textwidth]{balances_overview_extended_H2}
   \end{figure}
+\end{frame}
+
+\begin{frame}{DI --- PCI: 2050 regional \ce{H2}, \ce{CO2} balances, transport, and prices}
+  \centering
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_H2}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_co2_stored}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+\end{frame}
+
+\begin{frame}{PCI-n --- PCI: 2050 regional \ce{H2}, \ce{CO2} balances, transport, and prices}
+  \centering
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_H2}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_co2_stored}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+\end{frame}
+
+\begin{frame}{PCI-in --- PCI: 2050 regional \ce{H2}, \ce{CO2} balances, transport, and prices}
+  \centering
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
+\end{frame}
+
+\begin{frame}{CP --- PCI: 2050 regional \ce{H2}, \ce{CO2} balances, transport, and prices}
+  \centering
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/greenfield-pipelines/base_s_adm___2050-balance_map_H2}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.76\textwidth]{maps/greenfield-pipelines/base_s_adm___2050-balance_map_co2_stored}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \source{Own illustration.}
 \end{frame}
 
 \begin{frame}{\textbf{Why H$_2$?} Most H$_2$ is used for derivative fuels and chemicals!}
