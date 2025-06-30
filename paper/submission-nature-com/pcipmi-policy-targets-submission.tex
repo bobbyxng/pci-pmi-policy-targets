@@ -274,7 +274,7 @@ We define the long-term scenarios based on the degree of CO$_2$ and H$_2$ infras
   \caption{Overview of long-term scenarios and their key assumptions.}
   \label{tab:long-term_scenarios}
   \scriptsize
-  \begin{tabularx}{\linewidth}{R{3.8cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{\linewidth}{R{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     \textbf{Long-term scenarios} & 
     \textbf{DI} & 
@@ -316,7 +316,7 @@ In all long-term scenarios, emission, technology, sequestration and production t
   \caption{Pathway for implemented targets. Climate and energy policy targets based on \cite{europeancommissionFit55Delivering2021,europeancommissionREPowerEUPlanCommunication2022,europeanparliamentRegulationEU20242024,europeancommissionCommunicationCommissionEuropean2024,europeancommission.directorategeneralforenergy.METIS3Study2023}}
   \label{tab:targets}
   \scriptsize
-  \begin{tabularx}{\linewidth}{R{3.8cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{\linewidth}{R{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     \textbf{Planning horizon} & \textbf{2030} & \textbf{2040} & \textbf{2050} \\
     \midrule
@@ -339,7 +339,7 @@ In these short-term scenarios, the model can still react by investing into addit
   \caption{Regret matrix setup: Long-term and short-term scenarios. $\blacksquare$ enabled, $\square$ delayed by one period, -- disabled}
   \label{tab:regret_matrix_setup}
   \scriptsize
-  \begin{tabularx}{\linewidth}{R{3.8cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+  \begin{tabularx}{\linewidth}{R{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
     \toprule
     \textbf{Short-term} & \textbf{Reduced targets} & \textbf{Delayed pipelines} & \textbf{No pipelines} \\
     \midrule
@@ -540,41 +540,372 @@ Backed directly by the European Commission, PCI-PMI projects benefit from strong
 
 \backmatter
 
-\bmhead{Data availability}
+\section*{Data availability}
 A dataset of the model results is published on Zenodo under \href{https://doi.org/XX.YYYY/zenodo.10000000}{https://doi.org/XX.YYYY/zenodo.10000000}. Data on techno-economic assumptions can be found at \href{https://github.com/PyPSA/technology-data}{https://github.com/PyPSA/technology-data}
 
-\bmhead{Code availability}
+\section*{Code availability}
 The entire code and workflow to reproduce the results is available at \href{https://github.com/bobbyxng/pcipmi-policy-targets}{https://github.com/bobbyxng/pcipmi-policy-targets}, which is based on a derivative of PyPSA-Eur v2025.01.0. We also refer to the documentation of PyPSA-Eur at \href{https://pypsa-eur.readthedocs.io/en/v2025.01.0}{https://pypsa-eur.readthedocs.io/en/v2025.01.0} for more information on the model.
 
-\bmhead{Acknowledgements}
+\section*{Acknowledgements}
 B.X. and I.R. gratefully acknowledge funding from the RESILIENT project supported by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A. 
 
-\bmhead{Author contributions}
+\section*{Author contributions}
 B.X.: Conceptualisation, Methodology, Software, Validation, Investigation, Data Curation, Writing --- Original Draft, Review \& Editing, Visualisation. I.R.: Conceptualisation, Methodology, Investigation, Writing --- Review \& Editing, Project Administration, Supervision. T.B.: Investigation, Resources, Writing --- Review \& Editing, Supervision, Funding acquisition.
 
-\bmhead{Funding}
+\section*{Funding}
 This project has been funded by partners of the CETPartnership (\href{https://cetpartnership.eu}{https://cetpartnership.eu}) through the Joint Call 2022. As such, this project has received funding from the European Union's Horizon Europe research and innovation programme under grant agreement no. 101069750.
+
+\section*{Competing interests}
+The authors declare no competing interests.
 
 \clearpage
 \begin{appendices}
 
-\section{Section title of first appendix}\label{secA1}
+\section{Data \& methodology}\label{app:data_methodology}
 
-An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/exogenous_demand}
+  \caption{Exogenous demand.}
+  \label{fig:exogenous_demand}
+\end{figure}
 
-%%=============================================%%
-%% For submissions to Nature Portfolio Journals %%
-%% please use the heading ``Extended Data''.   %%
-%%=============================================%%
+\begin{table}[htbp]
+  \centering
+  \caption{Cost assumptions for key technologies based on \cite{zeyenPyPSATechnologydataV01012025}.}
+  \label{tab:cost_assumptions}
+  \scriptsize
+  \begin{tabularx}{\linewidth}{R{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>
+  {\centering\arraybackslash}X}
+    \toprule
+    & \textbf{Unit} & \textbf{CAPEX} & \textbf{FOM} \\
+    \midrule
+    \textbf{Pipeline infrastructure} & & & \\
+    CO$_2$ onshore pipelines & €/tCO$_2$/hkm & 2116 & 0.9\%/a \\
+    CO$_2$ offshore pipelines & €/tCO$_2$/hkm & 4233 & 0.5\%/a \\
+    H$_2$ onshore pipelines & €/MW$_{H_2}$/km & 304 & 1.5-3.2\%/a \\
+    H$_2$ offshore pipelines & €/MW$_{H_2}$/km & 456 & 3.0\%/a \\
+    \midrule
+    \textbf{Conversion} & & & \\
+    Electrolysis & €/kW$_e$ & 1000-1500 & 4.0\%/a \\
+    SMR & €/MW$_{CH_4}$ & 522201 & 5.0\%/a \\
+    SMR CC & €/MW$_{CH_4}$ & 605753 & 5.0\%/a \\
 
-%%=============================================================%%
-%% Sample for another appendix section			       %%
-%%=============================================================%%
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-%% \section{Example of another appendix section}\label{secA2}%
-%% Appendices may be used for helpful, supporting or essential material that would otherwise 
-%% clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
-%% tables and equations etc.
+\begin{table}[htbp]
+  \centering
+  \caption{Regional clustering: A total of 99 regions are modelled, excluding offshore buses.}
+  \label{tab:regional_clustering}
+  \scriptsize
+  \begin{tabularx}{\linewidth}{R{3cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X}
+    \toprule
+     & \textbf{Country} & \textbf{Buses} \\
+    \midrule
+    \textbf{Admin. level} & $\bm\sum$ & \textbf{99} \\
+    NUTS2 & Finland (FI) & 4 \\
+          & Norway (NO) & 6 \\
+    \midrule
+    NUTS1 & Belgium (BE)\footnotemark[1] & 2 \\
+          & Switzerland (CH) & 1 \\
+          & Czech Republic (CZ) & 1 \\
+          & Germany (DE)\footnotemark[1] & 13 \\
+          & Denmark (DK) & 1 \\
+          & Estonia (EE) & 1 \\
+          & Spain (ES)\footnotemark[1] & 5 \\
+          & France (FR) & 13 \\
+          & Great Britain (GB)\footnotemark[1] & 11 \\
+          & Greece (GR) & 3 \\
+          & Ireland (IE) & 1 \\
+          & Italy (IT)\footnotemark[1] & 6 \\
+          & Lithuania (LT) & 1 \\
+          & Luxembourg (LU) & 1 \\
+          & Latvia (LV) & 1 \\
+          & Montenegro (ME) & 1 \\
+          & Macedonia (MK) & 1 \\
+          & Netherlands (NL) & 4 \\
+          & Poland (PL) & 7 \\
+          & Portugal (PT) & 1 \\
+          & Sweden (SE) & 3 \\
+          & Slovenia (SI) & 1 \\
+          & Slovakia (SK) & 1 \\
+    \midrule
+    NUTS0 & Albania (AL) & 1 \\
+          & Austria (AT) & 1 \\
+          & Bosnia and Herzegovina (BA) & 1 \\
+          & Bulgaria (BG) & 1 \\
+          & Croatia (HR) & 1 \\
+          & Hungary (HU) & 1 \\
+          & Romania (RO) & 1 \\
+          & Serbia (RS) & 1 \\
+          & Kosovo (XK) & 1 \\
+    \bottomrule
+  \end{tabularx}
+  \centering
+  \footnotetext{Sardinia and Sicily are modelled as two separate regions.}
+  \footnotetext[1]{City-states, i.e., Berlin, Bremen, Hamburg, Madrid, London, and regions without substations are merged with neighbours.}
+\end{table}
+
+\clearpage
+\section{Results}\label{app:results}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/capacities_overview}
+  \caption{Installed capacities in long-term scenarios.}
+  \label{fig:capacities_overview}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/capacities_overview_extended}
+  \caption{$\Delta$Capacities --- Short-term minus long-term runs.}
+  \label{fig:capacities_overview_extended}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/costs_overview_extended}
+  \caption{$\Delta$System costs --- Short-term minus long-term runs.}
+  \label{fig:costs_overview_extended}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/delta_balances_H2 Electrolysis}
+  \caption{Delta balances --- Electrolytic H$_2$ production}
+  \label{fig:delta_balances_h2_electrolysis}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/balances_overview_extended_co2 stored}
+  \caption{$\Delta$CO$_2$ balances --- Short-term minus long-term runs.}
+  \label{fig:balances_overview_extended_co2_stored}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/balances_overview_extended_H2}
+  \caption{$\Delta$H$_2$ balances --- Short-term minus long-term runs.}
+  \label{fig:balances_overview_extended_H2_stored}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/delta_balances_process emissions CC}
+  \caption{$\Delta$CO$_2$ balances --- Process emissions including Carbon Capture.}
+  \label{fig:delta_balances_process_emissions_CC}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/delta_balances_solid biomass for industry CC}
+  \caption{$\Delta$CO$_2$ balances --- Carbon capture from solid biomass for industry point sources.}
+  \label{fig:delta_balances_biomass_industry_cc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/delta_balances_SMR CC}
+  \caption{$\Delta$CO$_2$ balances --- Carbon capture from SMR point sources.}
+  \label{fig:delta_balances_smr_cc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/delta_balances_gas for industry CC}
+  \caption{$\Delta$CO$_2$ balances --- Carbon captured from gas for industry point sources.}
+  \label{fig:delta_balances_gas_for_industry}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/balances_overview_gas}
+  \caption{CH$_4$ balances in long-term scenarios.}
+  \label{fig:balances_overview_gas}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{figures/balances_overview_extended_gas}
+  \caption{$\Delta$CH$_4$ balances --- Short-term minus long-term runs.}
+  \label{fig:balances_overview_extended_gas}
+\end{figure}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2030-balance_map_H2.jpg}
+      \caption{H$_2$ 2030.}
+      \label{fig:DI_lt_2030_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2040-balance_map_H2.jpg}
+      \caption{H$_2$ 2040.}
+      \label{fig:DI_lt_2040_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_H2.jpg}
+    \caption{H$_2$ 2050.}
+    \label{fig:DI_lt_2050_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2030.}
+      \label{fig:DI_lt_2030_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2040.}
+      \label{fig:DI_lt_2040_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2050.}
+      \label{fig:DI_lt_2050_co2}
+  \end{subfigure}
+  \vspace{0.3cm}
+  \caption{\textit{Decentral Islands} long-term scenario --- Regional distribution of H$_2$ and CO$_2$ production, utilisation, storage, transport and price. Note that both the H$_2$ and CO$_2$ price refer to their value as a commodity, i.e., price is higher where there is a demand for it.}
+  \label{fig:DI_lt}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2030-balance_map_H2.jpg}
+      \caption{H$_2$ 2030.}
+      \label{fig:PCI-n_lt_2030_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2040-balance_map_H2.jpg}
+      \caption{H$_2$ 2040.}
+      \label{fig:PCI-n_lt_2040_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_H2.jpg}
+    \caption{H$_2$ 2050.}
+    \label{fig:PCI-n_lt_2050_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2030.}
+      \label{fig:PCI-n_lt_2030_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2040.}
+      \label{fig:PCI-n_lt_2040_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2050.}
+      \label{fig:PCI-n_lt_2050_co2}
+  \end{subfigure}
+  \vspace{0.3cm}
+  \caption{\textit{PCI-PMI nat.} long-term scenario --- Regional distribution of H$_2$ and CO$_2$ production, utilisation, storage, transport and price. Note that both the H$_2$ and CO$_2$ price refer to their value as a commodity, i.e., price is higher where there is a demand for it.}
+  \label{fig:PCI-n_lt}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_H2.jpg}
+      \caption{H$_2$ 2030.}
+      \label{fig:PCI-in_lt_2030_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_H2.jpg}
+      \caption{H$_2$ 2040.}
+      \label{fig:PCI-in_lt_2040_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2.jpg}
+    \caption{H$_2$ 2050.}
+    \label{fig:PCI-in_lt_2050_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2030.}
+      \label{fig:PCI-in_lt_2030_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2040.}
+      \label{fig:PCI-in_lt_2040_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2050.}
+      \label{fig:PCI-in_lt_2050_co2}
+  \end{subfigure}
+  \vspace{0.3cm}
+  \caption{\textit{PCI-PMI internat.} long-term scenario --- Regional distribution of H$_2$ and CO$_2$ production, utilisation, storage, transport and price. Note that both the H$_2$ and CO$_2$ price refer to their value as a commodity, i.e., price is higher where there is a demand for it.}
+  \label{fig:PCI-in_lt}
+\end{figure*}
+
+\begin{figure*}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2030-balance_map_H2.jpg}
+      \caption{H$_2$ 2030.}
+      \label{fig:CP_lt_2030_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2040-balance_map_H2.jpg}
+      \caption{H$_2$ 2040.}
+      \label{fig:CP_lt_2040_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2050-balance_map_H2.jpg}
+    \caption{H$_2$ 2050.}
+    \label{fig:CP_lt_2050_h2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2030.}
+      \label{fig:CP_lt_2030_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2040.}
+      \label{fig:CP_lt_2040_co2}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.32\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \caption{CO$_2$ 2050.}
+      \label{fig:CP_lt_2050_co2}
+  \end{subfigure}
+  \vspace{0.3cm}
+  \caption{\textit{Central Planning} long-term scenario --- Regional distribution of H$_2$ and CO$_2$ production, utilisation, storage, transport and price. Note that both the H$_2$ and CO$_2$ price refer to their value as a commodity, i.e., price is higher where there is a demand for it.}
+  \label{fig:CP_lt}
+\end{figure*}
 
 \end{appendices}
 
@@ -585,6 +916,7 @@ An appendix contains supplementary information that is not an essential part of 
 %% file, and delete the associated \verb+\bibliography+ commands.                            %%
 %%===========================================================================================%%
 
+\clearpage
 \bibliography{references}% common bib file
 %% if required, the content of .bbl file can be included here once bbl is generated
 %%\input sn-article.bbl

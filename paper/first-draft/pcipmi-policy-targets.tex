@@ -321,7 +321,7 @@ We implement all PCI-PMI projects of the electricity, \ce{CO2} and \ce{H2} secto
 Our implementation can adapt to the needs and configuration of the model, including selected technologies, geographical and temporal resolution, as well as considered sectors. Within this study, all projects are mapped to the 99 NUTS regions. In the mapping process, pipelines are aggregated and connect all regions that they are overpassing. Similar to how all electricity lines and carrier links are modelled in PyPSA-Eur, lengths are calculated using the haversine formula multiplied by a factor of 1.25 to account for the non-straight shape of pipelines.
 We apply standardised cost assumptions \cite{zeyenPyPSATechnologydataV01012025} across all existing brownfield assets, exogenously specified PCI-PMI projects, and projects endogenously selected by the model, equally. Our approach is motivated by two considerations: (i) cost data submitted by project promoters are often incomplete and may differ in terms of included components, underlying assumptions, and risk margins; and (ii) applying uniform cost assumptions ensures comparability and a level playing field across all potential investments, including both PCI-PMI projects and endogenous model decisions.
 
-\paragraph{\ce{CO2} sequestration and \ce{H2 storage} sites}
+\paragraph{\ce{CO2} sequestration and \ce{H2} storage sites}
 \label{sec:co2_sequestration_sites}
 Beyond \ce{CO2} sequestration site projects included in the latest PCI-PMI list (around 114 Mt p.a.), we consider additional technical potential from the European \ce{CO2} storage database \cite{europeancommissionEuropeanCO2Storage2020,hofmannH2CO2Network2025}. The dataset includes storage potential from depleted oil and gas fields and saline aquifers. While social and commercial acceptance of \ce{CO2} storage has been increasing in recent years, concerns still exist regarding its long-term role and safety \cite{vanalphenSocietalAcceptanceCarbon2007}.
 We only consider conservative estimates from depleted oil and gas fields, which are primarily located offshore in the British, Norwegian, and Dutch North Sea (see Figure \ref{fig:regional_scope_map}), yielding a technical sequestration potential of \SI{7164}{Mt}. Our focus is motivated by the following reasons: (i) infrastructure such as wells, platforms, and pipelines already exist for depleted oil and gas fields and can be repurposed, significantly lowering costs and project risk; (ii) depleted fields are generally better understood geologically and have demonstrated sealing capacities, further reducing uncertainty; and (iii) repurposing former production sites is often more publicly and politically acceptable than developing entirely new storage locations, entirely. In contrast, while saline aquifers represent a substantial share of the total technical potential, they carry higher development costs and risks and are less likely to be advanced without strong policy and financial support \cite{europeancommissionEuropeanCO2Storage2020}. Note that the PCI-PMI project list includes some aquifer-based sequestration projects, however, their inclusion as PCI-PMI project indicates a higher likelihood of development.
@@ -440,7 +440,7 @@ In total, we run 60 optimisations on a cluster: ($n_{LT} \times n_{planning\,hor
 
 \section{Results and discussion}
 \label{sec:results_and_discussion}
-We structure the results and discussion into three main sections. First, we present the results of the long-term scenarios. Then, we look at the impact of the short-term scenarios on the long-term scenarios, by comparing the economic regret and impacts on \ce{CO2} and \ce{H2 balances}. Finally, we assess the benefits of the PCI-PMI projects with regard to reduced system costs and discuss the implications of our findings for the European energy system and its policy targets. 
+We structure the results and discussion into three main sections. First, we present the results of the long-term scenarios. Then, we look at the impact of the short-term scenarios on the long-term scenarios, by comparing the economic regret and impacts on \ce{CO2} and \ce{H2} balances. Finally, we assess the benefits of the PCI-PMI projects with regard to reduced system costs and discuss the implications of our findings for the European energy system and its policy targets. 
 
 \subsection{Long-term scenarios}
 \label{sec:long-term_scenarios}
@@ -658,13 +658,13 @@ This work was supported by the German Federal Ministry for Economic Affairs and 
     \toprule
     & \textbf{Unit} & \textbf{CAPEX} & \textbf{FOM} \\
     \midrule
-    \textbf{\ce{Pipeline infrastructure}} & & & \\
+    \textbf{Pipeline infrastructure} & & & \\
     \ce{CO2} onshore pipelines & \euro{}/t\ce{CO2}/hkm & \num{2116} & \SI{0.9}{\percent/a} \\
     \ce{CO2} offshore pipelines & \euro{}/t\ce{CO2}/hkm & \num{4233} & \SI{0.5}{\percent/a} \\
     \ce{H2} onshore pipelines & \euro{}/MW$_{H_2}$/km & \num{304} & 1.5-\SI{3.2}{\percent/a} \\
     \ce{H2} offshore pipelines & \euro{}/MW$_{H_2}$/km & \num{456} & \SI{3.0}{\percent/a} \\
     \midrule
-    \textbf{\ce{Conversion}} & & & \\
+    \textbf{Conversion} & & & \\
     Electrolysis & \euro{}/kW$_e$ & \num{1000}-\num{1500} & \SI{4.0}{\percent/a} \\
     SMR & \euro{}/MW$_{CH_4}$ & \num{522201} & \SI{5.0}{\percent/a} \\
     SMR CC & \euro{}/MW$_{CH_4}$ & \num{605753} & \SI{5.0}{\percent/a} \\
