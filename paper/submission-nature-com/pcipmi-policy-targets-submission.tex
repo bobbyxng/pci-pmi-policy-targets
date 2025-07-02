@@ -119,7 +119,7 @@
 \abstract{
     The European Union aims to achieve climate-neutrality by 2050, with interim 2030 targets including 55\% greenhouse gas emissions reduction compared to 1990 levels, 10 Mt p.a. of a domestic green H$_2$ production, and 50 Mt p.a. of domestic CO$_2$ injection capacity. To support these targets, Projects of Common and Mutual Interest (PCI-PMI) --- large infrastructure projects for electricity, hydrogen and CO$_2$ transport, and storage --- have been identified by the European Commission. This study focuses on PCI-PMI projects related to hydrogen and carbon value chains, assessing their long-term system value and the impact of pipeline delays and shifting policy targets using the sector-coupled energy system model PyPSA-Eur.
     Our study shows that PCI-PMI projects enable a more cost-effective transition to a net-zero energy system compared to scenarios without any pipeline expansion.
-    Hydrogen pipelines help distribute affordable green hydrogen from renewable-rich regions in the north and southwest to high-demand areas in central Europe, while CO$_2$ pipelines link major industrial emitters with offshore storage sites. Although these projects are not essential in 2030, they begin to significantly reduce annual system costs --- by more than €26 billion --- from 2040 onward. Delaying implementation beyond 2040 could increase system costs by up to €24.2 billion per year, depending on the extent of additional infrastructure development. Moreover, our results show that PCI-PMI projects reduce the need for excess wind and solar capacity and lower reliance on individual CO$_2$ removal technologies, such as Direct Air Capture, by 13 to 136 Mt annually, depending on the build-out scenario.
+    Hydrogen pipelines help distribute affordable green hydrogen from renewable-rich regions in the north and southwest to high-demand areas in central Europe, while CO$_2$ pipelines link major industrial emitters with offshore storage sites. Although these projects are not essential in 2030, they begin to significantly reduce annual system costs by more than €26 billion from 2040 onward. Delaying implementation beyond 2040 could increase system costs by up to €24.2 billion per year, depending on the extent of additional infrastructure development. Moreover, our results show that PCI-PMI projects reduce the need for excess wind and solar capacity and lower reliance on individual CO$_2$ removal technologies, such as Direct Air Capture, by 13 to 136 Mt annually, depending on the build-out scenario.
 }
 
 \keywords{energy system modelling, policy targets, infrastructure, resilience, hydrogen, carbon, Europe}
@@ -182,11 +182,11 @@ To meet the need for green electricity, green H$_2$ and CO$_2$, significant inve
 \end{figure}
 
 Within the transition towards net-zero, the EU has established a framework to support the development of key cross-border and national infrastructure projects, which are considered essential for achieving the EU's energy policy targets. These Projects of Common Interest (PCI) are projects that link the energy systems of two or more EU member states \cite{europeancommissionRegulationEUNo2022}. In a biennial selection process, PCIs are identified through regional stakeholder groups and evaluated based on their contribution to the EU's energy security, e.g. by improving market integration, diversification of energy supply, and integration of renewables. So-called Projects of Mutual Interest (PMI) transfer the same concept to projects that link the EU's energy system with third countries, such as Norway or the United Kingdom, the Western Balkans or North Africa, as long as they align with EU climate and energy objectives \cite{europeancommissionCommissionDelegatedRegulation2023}. Approved PCI-PMI projects benefit from accelerated permitting and access to EU funding under the Connecting Europe Facility (CEF). Given the strong political and project promoter support, comprehensive reporting and monitoring processes, as well as their role as technological lighthouses, projects on the PCI-PMI list are more likely to be implemented than others \cite{europeancommission.directorategeneralforenergy.InvestmentNeedsEuropean2025}. Nonetheless, large infrastructure projects—including those on the PCI-PMI list—often face delays due to permitting hurdles, financing constraints, procurement bottlenecks, and other implementation challenges \cite{acerConsolidatedReportProgress2023}. 
-As a direct result of the revised TEN-E Regulation (EU 2022/869) \cite{europeanparliamentRegulationEU20222022}, the 2023 PCI-PMI list \cite{europeancommissionCommissionDelegatedRegulation2023,europeancommissionPCIPMITransparencyPlatform2024} for the first time includes H$_2$ and CO$_2$ transport and storage projects, alongside electricity and gas projects. A continent-wide hydrogen backbone --- connecting regions rich in renewable energy potential to industrial and storage hubs --- is viewed essential for transporting H$_2$ where it is needed. Likewise, CO$_2$ pipelines and sequestration sites are needed to capture, transport and sequester emissions from industrial processes and power plants. An overview of the these PCI-PMI projects is provided in Figure \ref{fig:regional_scope_map}. With around 14 projects in the priority thematic area `cross-border carbon dioxide network' and 32 projects listed in `hydrogen interconnections' (including pipelines and electrolysers), this PCI-PMI list lays the foundation for a future pan-European H$_2$ and CO$_2$ value chain \cite{europeancommissionAnnexFirstUnion2023}.
+As a direct result of the revised TEN-E Regulation (EU 2022/869) \cite{europeanparliamentRegulationEU20222022}, the 2023 PCI-PMI list \cite{europeancommissionCommissionDelegatedRegulation2023,europeancommissionPCIPMITransparencyPlatform2024} for the first time includes H$_2$ and CO$_2$ transport and storage projects, alongside electricity and gas projects. A continent-wide hydrogen backbone --- connecting regions rich in renewable energy potential to industrial and storage hubs --- is viewed essential for transporting H$_2$ where it is needed. Likewise, CO$_2$ pipelines and sequestration sites are needed to capture, transport and sequester emissions from industrial processes and power plants. An overview of the PCI-PMI projects is provided in Figure \ref{fig:regional_scope_map}. With around 14 projects in the priority thematic area `cross-border carbon dioxide network' and 32 projects listed in `hydrogen interconnections' (including pipelines and electrolysers), this PCI-PMI list lays the foundation for a future pan-European H$_2$ and CO$_2$ value chain \cite{europeancommissionAnnexFirstUnion2023}.
 % \paragraph{Addressing uncertainty in energy system models}
 % While the reviewed research works examined the value of CO$_2$ and H$_2$ in low-carbon energy systems, they do not account for potential uncertainties regarding future policy targets or infrastructure build-outs. 
 % Energy system models can address such uncertainties through a range of approaches, including, but not limited to, scenario analysis, Modelling to Generate Alternatives (MGA) and exploration of near-optimal solution space \cite{neumannNearoptimalFeasibleSpace2021,vangreevenbroekLittleLoseCase2025,priceModellingGenerateAlternatives2017}, stochastic programming, and others. 
-% Yue et al. \cite{yueReviewApproachesUncertainty2018} provide a comprehensive review of approaches to uncertainty in energy system models. Having performed a broad literature review on primary studies involving energy system models and uncertainty, the authors provide guidance for selecting the appropriate approach based on the the modelling context and problem size.
+% Yue et al. \cite{yueReviewApproachesUncertainty2018} provide a comprehensive review of approaches to uncertainty in energy system models. Having performed a broad literature review on primary studies involving energy system models and uncertainty, the authors provide guidance for selecting the appropriate approach based on the modelling context and problem size.
 % Van der Weijde and Hobbs \cite{vanderweijdeEconomicsPlanningElectricity2012} demonstrate the importance of considering uncertainty in energy system models, by applying a two-stage optimisation model to evaluate grid reinforcements in Great Britain (GB). Including the status quo scenario, they consider six scenarios, which represent different future developments of electricity demand, generation, fuel, and CO$_2$ prices. As part of their study, they calculate the regret for given first-stage transmission decisions under the realisation of second-stage scenarios. For GB, they find that the expected cost of ignoring uncertainty can be as high as up to \pounds111 million (present value) over a planning horizon of 50 years.
 % Möbius and Riepin \cite{mobiusRegretAnalysisInvestment2020} investigate the regret of investment decisions into electricity generation capacities, by developing a two-stage, stochastic cost-minimisation model of the European electricity and gas markets. They find that electricity system planning exercise that ignores uncertainty associated to electricity demand yields an expected regret of €674 million per year and ignoring CO$_2$ price uncertainty by €314 million per year. This underscores the importance of accounting for these uncertainties in energy planning, as overlooking them can lead to significantly higher system costs and suboptimal investment decisions. 
 
@@ -336,37 +336,37 @@ Geographically, H$_2$ production is concentrated in regions with high solar PV p
   \centering
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi/base_s_adm___2030-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/pci___base_s_adm___2030-balance_map_H2.jpg}
       \caption{H$_2$ 2030.}
       \label{fig:PCI_lt_2030_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi/base_s_adm___2040-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/pci___base_s_adm___2040-balance_map_H2.jpg}
       \caption{H$_2$ 2040.}
       \label{fig:PCI_lt_2040_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
     \vspace{0pt}
-    \includegraphics[width=1\textwidth]{figures/maps/pcipmi/base_s_adm___2050-balance_map_H2.jpg}
+    \includegraphics[width=1\textwidth]{figures/pci___base_s_adm___2050-balance_map_H2.jpg}
     \caption{H$_2$ 2050.}
     \label{fig:PCI_lt_2050_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci___base_s_adm___2030-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2030.}
       \label{fig:PCI_lt_2030_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci___base_s_adm___2040-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2040.}
       \label{fig:PCI_lt_2040_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci___base_s_adm___2050-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2050.}
       \label{fig:PCI_lt_2050_co2}
   \end{subfigure}
@@ -433,7 +433,7 @@ Other limitations include geographic and temporal clustering to make the problem
 
 
 \paragraph{Economic viability and policy targets}
-Our findings demonstrate that PCI-PMI CO$_2$ and H$_2$ infrastructure generate a net positive impact on total system costs, even when accounting for potential additional costs involved withh the delay of pipelines. This positions PCI-PMI projects as a no-regret investment option for the European energy system, when treated as a whole.
+Our findings demonstrate that PCI-PMI CO$_2$ and H$_2$ infrastructure generate a net positive impact on total system costs, even when accounting for potential additional costs involved with the delay of pipelines. This positions PCI-PMI projects as a no-regret investment option for the European energy system, when treated as a whole.
 Their economic benefit increases considerably when strategic pipeline extensions are implemented, connecting additional H$_2$ production sites and CO$_2$ point sources to the pipeline network. 
 Compared to a system without any pipeline infrastructure, PCI-PMI projects help to achieve the EU's ambitious policy targets, including net-zero emissions, H$_2$ production and CO$_2$ sequestration targets, while reducing system costs and technology dependencies.
 
@@ -505,7 +505,7 @@ In all long-term scenarios, emission, technology, sequestration and production t
 \backmatter
 
 \section*{Data availability}
-A dataset of the model results is published on Zenodo under \href{https://doi.org/XX.YYYY/zenodo.10000000}{https://doi.org/XX.YYYY/zenodo.10000000}. Data on techno-economic assumptions can be found at \href{https://github.com/PyPSA/technology-data}{https://github.com/PyPSA/technology-data}
+A dataset of the model results is published on Zenodo under \href{https://doi.org/10.5281/zenodo.15790593}{https://doi.org/10.5281/zenodo.15790593} \cite{xiongResultDataRole2025}. Data on techno-economic assumptions can be found at \href{https://github.com/PyPSA/technology-data}{https://github.com/PyPSA/technology-data}
 
 \section*{Code availability}
 The entire code and workflow to reproduce the results is available at \href{https://github.com/bobbyxng/pcipmi-policy-targets}{https://github.com/bobbyxng/pcipmi-policy-targets}, which is based on a derivative of PyPSA-Eur v2025.01.0. We also refer to the documentation of PyPSA-Eur at \href{https://pypsa-eur.readthedocs.io/en/v2025.01.0}{https://pypsa-eur.readthedocs.io/en/v2025.01.0} for more information on the model.
@@ -703,37 +703,37 @@ The authors declare no competing interests.
   \centering
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2030-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/di___base_s_adm___2030-balance_map_H2.jpg}
       \caption{H$_2$ 2030.}
       \label{fig:DI_lt_2030_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2040-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/di___base_s_adm___2040-balance_map_H2.jpg}
       \caption{H$_2$ 2040.}
       \label{fig:DI_lt_2040_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
     \vspace{0pt}
-    \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_H2.jpg}
+    \includegraphics[width=1\textwidth]{figures/di___base_s_adm___2050-balance_map_H2.jpg}
     \caption{H$_2$ 2050.}
     \label{fig:DI_lt_2050_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/di___base_s_adm___2030-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2030.}
       \label{fig:DI_lt_2030_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/di___base_s_adm___2040-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2040.}
       \label{fig:DI_lt_2040_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/no-pipelines-no-pcipmi/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/di___base_s_adm___2050-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2050.}
       \label{fig:DI_lt_2050_co2}
   \end{subfigure}
@@ -746,37 +746,37 @@ The authors declare no competing interests.
   \centering
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2030-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/pci-n___base_s_adm___2030-balance_map_H2.jpg}
       \caption{H$_2$ 2030.}
       \label{fig:PCI-n_lt_2030_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2040-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/pci-n___base_s_adm___2040-balance_map_H2.jpg}
       \caption{H$_2$ 2040.}
       \label{fig:PCI-n_lt_2040_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
     \vspace{0pt}
-    \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_H2.jpg}
+    \includegraphics[width=1\textwidth]{figures/pci-n___base_s_adm___2050-balance_map_H2.jpg}
     \caption{H$_2$ 2050.}
     \label{fig:PCI-n_lt_2050_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci-n___base_s_adm___2030-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2030.}
       \label{fig:PCI-n_lt_2030_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci-n___base_s_adm___2040-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2040.}
       \label{fig:PCI-n_lt_2040_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-expansion/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci-n___base_s_adm___2050-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2050.}
       \label{fig:PCI-n_lt_2050_co2}
   \end{subfigure}
@@ -789,37 +789,37 @@ The authors declare no competing interests.
   \centering
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/pci-in___base_s_adm___2030-balance_map_H2.jpg}
       \caption{H$_2$ 2030.}
       \label{fig:PCI-in_lt_2030_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/pci-in___base_s_adm___2040-balance_map_H2.jpg}
       \caption{H$_2$ 2040.}
       \label{fig:PCI-in_lt_2040_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
     \vspace{0pt}
-    \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_H2.jpg}
+    \includegraphics[width=1\textwidth]{figures/pci-in___base_s_adm___2050-balance_map_H2.jpg}
     \caption{H$_2$ 2050.}
     \label{fig:PCI-in_lt_2050_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci-in___base_s_adm___2030-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2030.}
       \label{fig:PCI-in_lt_2030_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci-in___base_s_adm___2040-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2040.}
       \label{fig:PCI-in_lt_2040_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/pcipmi-national-international-expansion/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/pci-in___base_s_adm___2050-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2050.}
       \label{fig:PCI-in_lt_2050_co2}
   \end{subfigure}
@@ -832,37 +832,37 @@ The authors declare no competing interests.
   \centering
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2030-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/cp___base_s_adm___2030-balance_map_H2.jpg}
       \caption{H$_2$ 2030.}
       \label{fig:CP_lt_2030_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2040-balance_map_H2.jpg}
+      \includegraphics[width=1\textwidth]{figures/cp___base_s_adm___2040-balance_map_H2.jpg}
       \caption{H$_2$ 2040.}
       \label{fig:CP_lt_2040_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
     \vspace{0pt}
-    \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2050-balance_map_H2.jpg}
+    \includegraphics[width=1\textwidth]{figures/cp___base_s_adm___2050-balance_map_H2.jpg}
     \caption{H$_2$ 2050.}
     \label{fig:CP_lt_2050_h2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2030-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/cp___base_s_adm___2030-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2030.}
       \label{fig:CP_lt_2030_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2040-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/cp___base_s_adm___2040-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2040.}
       \label{fig:CP_lt_2040_co2}
   \end{subfigure}
   \begin{subfigure}[t]{0.32\textwidth}
       \vspace{0pt}
-      \includegraphics[width=1\textwidth]{figures/maps/greenfield-pipelines/base_s_adm___2050-balance_map_co2_stored.jpg} 
+      \includegraphics[width=1\textwidth]{figures/cp___base_s_adm___2050-balance_map_co2_stored.jpg} 
       \caption{CO$_2$ 2050.}
       \label{fig:CP_lt_2050_co2}
   \end{subfigure}
