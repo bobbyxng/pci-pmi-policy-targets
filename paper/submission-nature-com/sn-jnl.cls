@@ -1793,11 +1793,4 @@ $\kern\wd\@ne\kern -\@tempdima\left\@firstoftwo#1%
 \fi%
 %% url macros %%
 
-\gdef\orcidlogo{%
-\includegraphics{Orcidlogo.eps}%
-}%
-
-\gdef\orcid#1{\href{#1}{\orcidlogo}}%
-
-
 \endinput
