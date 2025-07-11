@@ -1,0 +1,154 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+%Version for spanish users, by dgarhdez
+\PassOptionsToPackage{colorlinks=true, linkcolor=blue, filecolor=blue, urlcolor=blue, citecolor=blue}{hyperref}
+
+\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage[english, spanish]{babel}
+\hyphenation{}
+\usepackage{eurosym}
+\usepackage{threeparttable} % allow the use of footnote within tables
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{xurl} % allow line breaks anywhere in URL string
+\usepackage{xr} 
+\externaldocument{supplementarymaterial}
+
+%to add the number to the lines
+\usepackage{lineno}
+\modulolinenumbers[5]
+
+
+\modulolinenumbers[1]
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage[europeanresistors,americaninductors]{circuitikz}
+\usepackage{adjustbox}
+\usepackage{xspace}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{multicol, multirow}
+\usepackage{float}
+\usepackage{graphicx,dblfloatfix}
+\usepackage{csvsimple}
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{etoolbox}
+\usepackage{longtable}
+\usepackage{csquotes}
+\usepackage{ragged2e}
+
+% Define dark blue color
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+
+\usepackage[numbers,sort&compress]{natbib}
+
+% [The rest of your preamble content, if any]
+
+%% new commands
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\ubar}[1]{\text{\b{$#1$}}}
+\newcommand*\OK{\ding{51}}
+\newcolumntype{L}{>{\begin{math}}l<{\end{math}}}%
+\newcolumntype{C}{>{\begin{math}}c<{\end{math}}}%
+%\renewcommand*\nompostamble{\end{multicols}}
+\newcommand{\specialcell}[2][c]{%
+\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+\def\co{CO${}_2$}
+\def\el{${}_{\textrm{el}}$}
+\def\th{${}_{\textrm{th}}$}
+\newcommand{\mwth}{\ \officialeuro /MWh$_{\text{th}}$}
+\newcommand{\mwh}{\ \officialeuro /MWh\ }
+\newcommand{\mw}{\ \officialeuro /MW\ }
+\newcommand{\kw}{\ \officialeuro /kW}
+\newcommand{\kwe}{\ \officialeuro /kW$_{\text{elec}}$\ }
+\newcommand{\kwee}{\ \officialeuro /kW$_{\text{elec}}$}
+\newcommand{\mwhend}{\ \officialeuro /MWh}
+\newcommand{\scenario}[1]{\textbf{\hyperlink{retro+}{#1}}}
+\newcommand{\budget}[1]{+{#1}$^\text{o}$C budget}
+\newcommand{\ce}[1]{+{#1}$^\text{o}$C}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+% To add an 'S' prefix to a reference
+\newcommand*\sref[1]{%
+S\ref{#1}}
+
+
+% moderncv themes
+\moderncvstyle{classic}                            % style
+\moderncvcolor{black}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Bobby}{Xiong}
+\title{The role of Projects of Common Interest in reaching Europe's energy policy targets}                     
+\address{Dep. of Digital Transformation in Energy Systems\\Technische Universität Berlin\\ Einsteinufer 25, 10587 Berlin, Germany}
+\email{xiong@tu-berlin.de}  
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bib\usepackage[numbers]{natbib}liographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{To}{Editorial Board of IOP Environmental Research Letters\vspace{-0.25cm}}
+\date{\selectlanguage{english}\today}
+
+\subject{Cover letter for manuscript submission\vspace{-0.6cm}}
+\opening{Dear Prof. Kammen}
+\makelettertitle
+\justifying
+Hereby we submit a manuscript titled \textit{\enquote{The role of Projects of Common Interest in reaching Europe's energy policy targets}} for consideration in IOP Environmental Research Letters. 
+
+\textbf{Quick summary:} The European Union (EU) has set ambitious climate and energy policy targets to reach net zero by 2050, including hydrogen production and CO$_2$ sequestration. To facilitate reaching these targets, investments into large-scale, trans-national CO$_2$ and hydrogen infrastructure is needed. For the first time, the European Commission has included CO$_2$ and hydrogen infrastructure in the so-called list of Projects of Common Interest (PCI) and Projects of Mutual Interest (PMI). Building on the open-source, sector-coupled model PyPSA-Eur, this article assesses the role and value of PCI-PMI projects in reaching the EU's energy policy targets. It further evaluates the effect of short-term events, such as policy changes, project delays or cancellations using a regret-analysis.
+
+\textbf{Pitch:} 
+There is a growing consensus that hydrogen and CO$_2$ see their primary values in the decarbonisation of hard-to-abate sectors, including industry, transport, shipping, and aviation \cite{vangreevenbroekLittleLoseCase2025,reigstadMovingLowcarbonHydrogen2022,cerniauskasOptionsNaturalGas2020}. To produce the needed synthetic fuels, including methanol, Fischer-Tropsch fuels, and methane, hydrogen is expected to serve as a precursor and CO$_2$ as a feedstock. Already by 2030, the EU aims to supply hydrogen from at least 40 GW electrolysis capacity domestically \cite{europeancommissionCommunicationCommissionEuropean2020,europeancommissionREPowerEUPlanCommunication2022,europeanparliamentRegulationEU20242024}. Remaining CO$_2$ emissions will need to be stored in geological formations, such as depleted oil and gas fields. Here, the European Commission foresees a sequestration target of 50 million tonnes of CO$_2$ by 2030 \cite{europeancommissionREPowerEUPlanCommunication2022}. Beyond investments into renewable capacity, electrolysers and storage, large-scale continent-wide investments into pipeline and storage facilities will be required to transport these carriers to where they are needed. Initiatives like the European Hydrogen backbone envision a hydrogen pipeline network of almost 53000 km by 2040 \cite{europeanhydrogenbackboneinitiativeEuropeanHydrogenBackbone2022}. While recent studies have begun to explore the interplay between hydrogen, CO$_2$ infrastructure and the electricity system \cite{hofmannH2CO2Network2025,kountourisUnifiedEuropeanHydrogen2024,neumannPotentialRoleHydrogen2023,neumannGreenEnergySteel2025}, key aspects remain underexplored. In particular, the role of real-world planned infrastructure, dynamics of transformation pathways, and impact of future uncertainty are often overlooked. This can lead to the exclusion of infrastructure options that are not strictly cost-optimal, but have a high likelihood of implementation due to strong political backing \cite{trutnevyteDoesCostOptimization2016} --- a gap our study directly addresses. We show that a delay in CO$_2$ infrastructure creates significant economic regrets and forces the system to pivot to costly Direct Air Capture, if Europe maintains its climate and energy policy goals.
+
+\textbf{Article length justification:}
+We acknowledge that the manuscript somewhat exceeds the 4,000-word limit for letters ($\sim$5,100 words). However, the topic necessitates a thorough discussion of the role of hydrogen and CO$_2$ in decarbonised energy systems, as well as a comprehensive presentation of our scenario-specific findings. We have taken care to keep the manuscript concise and focused while providing sufficient depth. Additional information that supports but is not essential to the main findings is included in the Supplementary Material.
+
+% Ultimately, the aim of this article is to reduce uncertainty surrounding the `chicken-and-egg' dilemma in infrastructure investment --- whether to develop CO$_2$ and hydrogen infrastructure in advance or wait for demand to materialise. By explicitly including real-world PCI-PMI planned projects, we demonstraof the model and its implications.te that social welfare can be increased by more than €26 billion annually from 2040 onwards compared to a system without any pipeline infrastructure. Our findings offer a data-driven foundation for aligning infrastructure policy with Europe's long-term decarbonisation goals, ensuring that strategic investments today yield systemic benefits tomorrow.
+
+We hope you agree that the topic is timely and of broad interest to the IOP Environmental Research Letters readership.
+
+Kind regards,\\
+Bobby Xiong (corresponding author), Prof. Dr. Tom Brown \& Dr. Iegor Riepin
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
+
+
