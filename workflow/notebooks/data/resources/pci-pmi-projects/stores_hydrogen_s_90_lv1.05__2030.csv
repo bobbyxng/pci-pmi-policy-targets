@@ -1,5 +1,0 @@
-id,bus,build_year,e_nom,carrier,tags
-DE0 4 H2 Store,DE0 4 H2,2030,205000.0,H2 Store,['PCI-9.22.1']
-DE0 6 H2 Store,DE0 6 H2,2028,154000.0,H2 Store,['PCI-9.22.2']
-ES0 4 H2 Store,ES0 4 H2,2030,367764.0,H2 Store,"['PCI-9.24.1', 'PCI-9.24.2']"
-FR0 7 H2 Store,FR0 7 H2,2029,250000.0,H2 Store,['PCI-9.23-01']
