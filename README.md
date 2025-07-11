@@ -11,10 +11,20 @@ To start you need to clone the repository. Since the repository relies on git su
 
 ## Initialisation
 
-When running the workflow for the first time, please run in this order:
+Before running the workflow for the first time, please run in this order:
 
 * `conda env create -f workflow/pypsa-eur-resilient/envs/environment.yaml` to create the environment and installing dependencies
 * `conda activate pypsa-eur` to activate the environment
+
+## Run the workflow
+
+To reproduce the workflow of the study, please run in the CI:
+* `cd workflow/pypsa-eur-resilient`
+* `snakemake solve_sector_networks --configfile config/pcipmi.config.yaml` (add `-n` for dry-run)
+
+To recreate the figures of the study, please run:
+* `snakemake create_paper_plots --configfile config/pcipmi.config.yaml`
+
 
 ## Abstract
 
