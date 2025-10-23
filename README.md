@@ -37,6 +37,6 @@ The energy transition faces many uncertainties, but planning tools are often det
 [Project website](https://resilient-project.github.io)
 
 
-### License
+## License
 
 There are different open licenses for different types of files in the repository. See [specifications here](.reuse/dep5).
