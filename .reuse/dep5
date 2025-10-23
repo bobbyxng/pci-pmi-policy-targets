@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: pci-pmi-policy-targets
+Upstream-Contact: Bobby Xiong <xiong@tu-berlin.de>
+Source: https://github.com/bobbyxng/pci-pmi-policy-targets
+
+Files: *
+Copyright: : 2025 Bobby Xiong, Tom Brown, Iegor Riepin
+License: CC0-1.0
+
+Files: config/*
+Copyright: : 2025 Bobby Xiong, Tom Brown, Iegor Riepin
+License: CC-BY-4.0
+
+Files: workflow/*
+Copyright: : 2025 Bobby Xiong, Tom Brown, Iegor Riepin
+License: MIT

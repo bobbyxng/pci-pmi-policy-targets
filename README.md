@@ -35,3 +35,8 @@ The European Union aims to achieve climate-neutrality by 2050, with interim 2030
 The energy transition faces many uncertainties, but planning tools are often deterministic. Our proposal will develop the first truly multi-vector energy infrastructure planning tool that represents this uncertain environment, both at a regional and national as well as the European level. We will build on the existing widely-used, open-source, sector-coupled energy planning tool for Europe, PyPSA-Eur, and add stochastic optimisation capabilities as well as a deeper representation of industry transformation, e-fuel conversion, biomass and carbon capture infrastructure. We will look at uncertainties that include the cost of fuels and technologies, hydrogen availability, network expansion delays for electricity, hydrogen and carbon dioxide, value chain restructuring in industry, imports of e-fuels and secondary materials, renewables build-out and social acceptance. We will examine novel computational techniques to address stochastic problems in a performant way. For this proposal, we have assembled a team of leading academic researchers and need-owners from industry who are at the cutting edge of energy system modelling. We will demonstrate the capabilities of our planning tool in several case studies for resilient infrastructure planning, together with our need-owners in France, Germany, Sweden and Finland. We plan several workshops and training events with a broader circle of need owners and stakeholders to ensure a wide uptake of our innovative project results.
 
 [Project website](https://resilient-project.github.io)
+
+
+### License
+
+There are different open licenses for different types of files in the repository. See [specifications here](.reuse/dep5).
