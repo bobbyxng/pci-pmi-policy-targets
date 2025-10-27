@@ -11,19 +11,32 @@ To start you need to clone the repository. Since the repository relies on git su
 
 ## Initialisation
 
-Before running the workflow for the first time, please run in this order:
+When running the workflow for the first time, please run in this order:
 
 * `conda env create -f workflow/pypsa-eur-resilient/envs/environment.yaml` to create the environment and installing dependencies
-* `conda activate pypsa-eur` to activate the environment
+* `conda activate pcipmi` to activate the environment
 
-## Run the workflow
+## Reproducing the paper
+### Main results
+To reproduce the main workflow of the study, please run in the CI:
 
-To reproduce the workflow of the study, please run in the CI:
-* `cd workflow/pypsa-eur-resilient`
-* `snakemake solve_sector_networks --configfile config/pcipmi.config.yaml` (add `-n` for dry-run)
+`cd workflow/pypsa-eur-resilient`
 
-To recreate the figures of the study, please run:
-* `snakemake create_paper_plots --configfile config/pcipmi.config.yaml`
+`snakemake --configfile config/pcipmi.config.yaml`
+
+and
+
+`snakemake solve_operations_sector_networks --configfile config/pcipmi.config.yaml`
+
+### Sensitivities I/II
+To run the sensitivity analysis including varying pipeline costs, weather years, and enabled hydrogen imports, please run
+
+`snakemake --configfile config/sensitivities.config.yaml`
+
+### Sensitivities II/II
+To obtain the sensitivity runs for postdiscretisation, the main results need to be computed first. Then, please run
+
+`snakemake solve_operations_sector_networks --configfile config/postdiscretised.config.yaml`
 
 
 ## Abstract
@@ -35,8 +48,3 @@ The European Union aims to achieve climate-neutrality by 2050, with interim 2030
 The energy transition faces many uncertainties, but planning tools are often deterministic. Our proposal will develop the first truly multi-vector energy infrastructure planning tool that represents this uncertain environment, both at a regional and national as well as the European level. We will build on the existing widely-used, open-source, sector-coupled energy planning tool for Europe, PyPSA-Eur, and add stochastic optimisation capabilities as well as a deeper representation of industry transformation, e-fuel conversion, biomass and carbon capture infrastructure. We will look at uncertainties that include the cost of fuels and technologies, hydrogen availability, network expansion delays for electricity, hydrogen and carbon dioxide, value chain restructuring in industry, imports of e-fuels and secondary materials, renewables build-out and social acceptance. We will examine novel computational techniques to address stochastic problems in a performant way. For this proposal, we have assembled a team of leading academic researchers and need-owners from industry who are at the cutting edge of energy system modelling. We will demonstrate the capabilities of our planning tool in several case studies for resilient infrastructure planning, together with our need-owners in France, Germany, Sweden and Finland. We plan several workshops and training events with a broader circle of need owners and stakeholders to ensure a wide uptake of our innovative project results.
 
 [Project website](https://resilient-project.github.io)
-
-
-## License
-
-There are different open licenses for different types of files in the repository. See [specifications here](.reuse/dep5).
